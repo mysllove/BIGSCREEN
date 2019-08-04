@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>浦东安监实时监控sss</title>
+    <link rel="stylesheet" href="css/platform.css">
+</head>
+<body class="body-style">
+    <div class="topBar">
+        <div class="topBar-time">2019年09月28日  星期五  14:30</div>
+        <h1 class="topBar-title">浦东安监智能实时监管</h1>
+    </div>
+    <div class="platform-wrap">
+        <div class="platform-fluid">
+            <div class="platform-left">         
+        <div class="platform-card">
+            <div class="platform-card-header">
+                <h3><i></i>参数报警</h3>
+                <span class="iconfont icon-full full"></span>
+            </div>
+            <div class="platform-body">
+                <div class="headBar">
+                    <span class="parameter1">报警类型</span>
+                    <span class="parameter2">次数</span>
+                    <span class="parameter3"></span>
+                </div>
+                <div class="headBar-li">
+                        <span class="parameter1">温度异常</span>
+                        <span class="parameter2 orange-m">174</span>
+                        <span class="parameter3 orange-m">12.37%</span>
+                </div>
+                <div class="headBar-li">
+                        <span class="parameter1">液压超标</span>
+                        <span class="parameter2 orange-m">112</span>
+                        <span class="parameter3 orange-m">8.45%</span>
+                </div>
+                <div class="headBar-li">
+                        <span class="parameter1">高位报警</span>
+                        <span class="parameter2 orange-m">131</span>
+                        <span class="parameter3 orange-m">9.32%</span>
+                </div>
+                <div class="headBar-li">
+                        <span class="parameter1">气体检测</span>
+                        <span class="parameter2 orange-m">112</span>
+                        <span class="parameter3 orange-m">8.45%</span>
+                </div>
+                <div class="headBar-li">
+                        <span class="parameter1">存量报警</span>
+                        <span class="parameter2 orange-m">101</span>
+                        <span class="parameter3 orange-m">7.37%</span>
+                </div>
+            </div>
+        </div>
+        <div class="platform-card">
+                <div class="platform-card-header">
+                    <h3><i></i>总体存量统计</h3>
+                    <span></span>
+                </div>
+                <div class="platform-body">
+                    <div id="chartStatistics" style="width: 14.6vw;height:24.1vh"></div>
+                </div>
+            </div>
+            <div class="platform-card">
+                    <div class="platform-card-header">
+                        <h3><i></i>参数报警</h3>
+                        <span></span>
+                    </div>
+                    <div class="platform-body">
+                        <div class="headBar">
+                            <span class="parameter1">报警类型</span>
+                            <span class="parameter2">次数</span>
+                            <span class="parameter3"></span>
+                        </div>
+                        <div class="headBar-li">
+                                <span class="parameter1">温度异常</span>
+                                <span class="parameter2 orange-m">174</span>
+                                <span class="parameter3 orange-m">12.37%</span>
+                        </div>
+                        <div class="headBar-li">
+                                <span class="parameter1">液压超标</span>
+                                <span class="parameter2 orange-m">112</span>
+                                <span class="parameter3 orange-m">8.45%</span>
+                        </div>
+                        <div class="headBar-li">
+                                <span class="parameter1">高位报警</span>
+                                <span class="parameter2 orange-m">131</span>
+                                <span class="parameter3 orange-m">9.32%</span>
+                        </div>
+                        <div class="headBar-li">
+                                <span class="parameter1">气体检测</span>
+                                <span class="parameter2 orange-m">112</span>
+                                <span class="parameter3 orange-m">8.45%</span>
+                        </div>
+                        <div class="headBar-li">
+                                <span class="parameter1">存量报警</span>
+                                <span class="parameter2 orange-m">101</span>
+                                <span class="parameter3 orange-m">7.37%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            <div class="platform-mid">
+                <div class="all-view">
+                    <div class="view-bar">
+                        <div class="leading">
+                            <span class="leadding-allIcon"><i class="iconfont icon-map"></i></span>
+                            <span class="leadding-txt">全区</span>
+                        </div>
+                        <div class="view-tab"></div>
+                    </div>
+                    <div class="preview-wrapper">
+                        <div class="previewBox">
+                            <span class="prev iconfont icon-jiantou_zuo"></span><span class="next iconfont icon-jiantou_you"></span>
+                            <ul class="storageList">
+                                <li>
+                                    <div class="storage">
+                                        <h2 class="storage-title">上海振义企业发展有限公司</h2>
+                                        <div class="storage-body">
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="storage">
+                                        <h2 class="storage-title">上海振义企业发展有限公司2</h2>
+                                        <div class="storage-body">
+                                            
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="storage">
+                                        <h2 class="storage-title">上海振义企业发展有限公司</h2>
+                                        <div class="storage-body">
+                                            
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="platform-right">
+                    <div class="platform-card">
+                            <div class="platform-card-header">
+                                <h3><i></i>参数报警</h3>
+                                <span></span>
+                            </div>
+                            <div class="platform-body">
+                                <div class="headBar">
+                                    <span class="parameter1">报警类型</span>
+                                    <span class="parameter2">次数</span>
+                                    <span class="parameter3"></span>
+                                </div>
+                                <div class="headBar-li">
+                                        <span class="parameter1">温度异常</span>
+                                        <span class="parameter2 orange-m">174</span>
+                                        <span class="parameter3 orange-m">12.37%</span>
+                                </div>
+                                <div class="headBar-li">
+                                        <span class="parameter1">液压超标</span>
+                                        <span class="parameter2 orange-m">112</span>
+                                        <span class="parameter3 orange-m">8.45%</span>
+                                </div>
+                                <div class="headBar-li">
+                                        <span class="parameter1">高位报警</span>
+                                        <span class="parameter2 orange-m">131</span>
+                                        <span class="parameter3 orange-m">9.32%</span>
+                                </div>
+                                <div class="headBar-li">
+                                        <span class="parameter1">气体检测</span>
+                                        <span class="parameter2 orange-m">112</span>
+                                        <span class="parameter3 orange-m">8.45%</span>
+                                </div>
+                                <div class="headBar-li">
+                                        <span class="parameter1">存量报警</span>
+                                        <span class="parameter2 orange-m">101</span>
+                                        <span class="parameter3 orange-m">7.37%</span>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    const previewBox = document.querySelector(".previewBox");
+    const storageList = document.querySelector(".storageList");
+    const storageLi = document.querySelectorAll(".storageList li");
+    const prev = document.querySelector(".prev");
+    const next = document.querySelector(".next");
+    const imgWidth = storageLi[0].offsetWidth;
+    //console.log( imgWidth)
+  var index=0;
+  next.onclick = function () {
+    if(index<storageLi.length-1){
+      index++;
+      animate(storageList,-index*imgWidth);
+    }
+  };
+  prev.onclick = function () {
+    if(index > 0){
+        index--;
+      animate(storageList, -index*imgWidth);
+    }
+  };
+  
+
+    function animate(obj,target){
+        clearInterval(obj.timer)
+        obj.timer = setInterval(function(){
+            var leader = obj.offsetLeft;
+            var step = 10;
+            step = leader<target?step:-step;
+            if(Math.abs(leader-target)>=Math.abs(step)){
+                leader = leader + step;
+                obj.style.left = leader + "px"
+            }else{
+                obj.style.left =target + "px";
+                clearInterval(obj.timer)
+            }
+        },15)
+    }
+
+
+    var fullscreen = false;
+    let btn = document.querySelector('.full');
+    let fullarea = document.querySelector('.platform-card')
+    btn.addEventListener('click',function(){  
+      if (fullscreen) {    // 退出全屏
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.webkitCancelFullScreen) {
+          document.webkitCancelFullScreen();
+        } else if (document.mozCancelFullScreen) {
+          document.mozCancelFullScreen();
+        } else if (document.msExitFullscreen) {
+          document.msExitFullscreen();
+        }
+      } else {    // 进入全屏
+        if (fullarea.requestFullscreen) {
+          fullarea.requestFullscreen();
+        } else if (fullarea.webkitRequestFullScreen) {
+          fullarea.webkitRequestFullScreen();
+        } else if (fullarea.mozRequestFullScreen) {
+          fullarea.mozRequestFullScreen();
+        } else if (fullarea.msRequestFullscreen) {
+          // IE11
+          fullarea.msRequestFullscreen();
+        }
+      }
+      fullscreen = !fullscreen;
+    })
+    </script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+    <script>
+        const chartStatistics = echarts.init(document.getElementById('chartStatistics'));
+        var scale = 1;
+        option1 = {
+    color: ['#16abfe','#ff7070'],
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'cross',
+            crossStyle: {
+                color: '#999'
+            }
+        }
+    },
+    legend: {
+        data: ['访问次数']
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '0',
+        containLabel: true
+    },
+    xAxis: [{
+        type: 'category',
+        data: ['甲类危化品', '乙类危化品', '丙类危化品'],
+        axisPointer: {
+            type: 'shadow'
+        },
+        axisLabel: {
+            textStyle: {
+                color: "#c0dff2",
+                fontSize: 14 * scale,
+            }
+        },
+    }],
+    yAxis: [
+        {
+            type: 'value',
+            name: '访问次数',
+            axisLabel: {
+                formatter: '{value}',
+            textStyle: {
+                color: "#c0dff2",
+                fontSize: 14 * scale,
+            }},
+        }],
+    series: [{
+            name: '访问次数',
+            type: 'bar',
+            yAxisIndex: 0,
+            data: [261, 259, 290]
+        },       
+    ]
+};
+        chartStatistics.setOption(option1)
+        window.addEventListener("resize",function(){
+            chartStatistics.resize()
+        })
+    </script>
+</body>
+</html>
