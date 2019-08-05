@@ -53,51 +53,22 @@
                 </div>
             </div>
         </div>
-        <div class="platform-card">
+        <div class="platform-card card-style">
                 <div class="platform-card-header">
-                    <h3><i></i>总体存量统计</h3>
+                    <h3><i></i>流量流向上报统计</h3>
                     <span></span>
                 </div>
                 <div class="platform-body">
-                    <div id="chartStatistics" style="width: 14.6vw;height:24.1vh"></div>
+                   
                 </div>
             </div>
-            <div class="platform-card">
+            <div class="platform-card card-style">
                     <div class="platform-card-header">
-                        <h3><i></i>参数报警</h3>
+                        <h3><i></i>智能发现趋势分析</h3>
                         <span></span>
                     </div>
                     <div class="platform-body">
-                        <div class="headBar">
-                            <span class="parameter1">报警类型</span>
-                            <span class="parameter2">次数</span>
-                            <span class="parameter3"></span>
-                        </div>
-                        <div class="headBar-li">
-                                <span class="parameter1">温度异常</span>
-                                <span class="parameter2 orange-m">174</span>
-                                <span class="parameter3 orange-m">12.37%</span>
-                        </div>
-                        <div class="headBar-li">
-                                <span class="parameter1">液压超标</span>
-                                <span class="parameter2 orange-m">112</span>
-                                <span class="parameter3 orange-m">8.45%</span>
-                        </div>
-                        <div class="headBar-li">
-                                <span class="parameter1">高位报警</span>
-                                <span class="parameter2 orange-m">131</span>
-                                <span class="parameter3 orange-m">9.32%</span>
-                        </div>
-                        <div class="headBar-li">
-                                <span class="parameter1">气体检测</span>
-                                <span class="parameter2 orange-m">112</span>
-                                <span class="parameter3 orange-m">8.45%</span>
-                        </div>
-                        <div class="headBar-li">
-                                <span class="parameter1">存量报警</span>
-                                <span class="parameter2 orange-m">101</span>
-                                <span class="parameter3 orange-m">7.37%</span>
-                        </div>
+
                     </div>
                 </div>
             </div>  
@@ -108,17 +79,26 @@
                             <span class="leadding-allIcon"><i class="iconfont icon-map"></i></span>
                             <span class="leadding-txt">全区</span>
                         </div>
-                        <div class="view-tab"></div>
+                        <div class="view-tab">
+                            <div class="view-tab-box tab-box-style">
+                                <select name="" id="tab-select" class="tab-select" onchange="choose()">
+                                    <option value="0" selected>危化品仓储（15）</option>
+                                    <option value="1" >1</option>
+                                </select>
+                            </div>
+                            <div class="view-tab-box">危化品生产（2）</div>
+                            <div class="view-tab-box">加油站（2）</div>
+                        </div>
                     </div>
                     <div class="preview-wrapper">
-                        <div class="previewBox">
+                        <div class="previewBox all current">
                             <span class="prev iconfont icon-jiantou_zuo"></span><span class="next iconfont icon-jiantou_you"></span>
                             <ul class="storageList">
                                 <li>
                                     <div class="storage">
                                         <h2 class="storage-title">上海振义企业发展有限公司</h2>
                                         <div class="storage-body">
-
+                                            <img src="images/screen1.png" alt="">
                                         </div>
                                     </div>
                                 </li>
@@ -126,7 +106,7 @@
                                     <div class="storage">
                                         <h2 class="storage-title">上海振义企业发展有限公司2</h2>
                                         <div class="storage-body">
-                                            
+                                            <img src="images/screen1.png" alt="">
                                         </div>
                                     </div>
                                 </li>
@@ -140,45 +120,121 @@
                                 </li>
                             </ul>
                         </div>
+                        <div class="previewBox">
+                            <h2 class="storage-title storage-lef-ttitle">上海振义企业发展有限公司</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="platform-card platform-mid-card">
+                    <div class="platform-card-header">
+                        <h3><i></i>智能发现</h3>
+                        <span></span>
+                    </div>
+                    <div class="platform-body">
+                        <div class="main">
+                            <div class="intelligent-discovery">
+                            <div class="cycle">
+                                <ul>
+                                    <li class="active">日</li>
+                                    <li>周</li>
+                                    <li>月</li>
+                                </ul>
+                            </div>
+                            <div class="cycle-content">
+                                <div class="cycle-item up">
+                                    <ul class="cycle-item-list">
+                                        <li>
+                                            <img src="images/icon1.png" alt="">
+                                            <p>不佩戴安全帽</p>
+                                            <div class="num">00</div>
+                                        </li>
+                                        <li>
+                                                <img src="images/icon2.png" alt="">
+                                                <p>不佩戴安全帽</p>
+                                                <div class="num">00</div>
+                                            </li>
+                                            <li>
+                                                    <img src="images/icon3.png" alt="">
+                                                    <p>不佩戴安全帽</p>
+                                                    <div class="num">00</div>
+                                                </li>
+                                                <li>
+                                                        <img src="images/icon4.png" alt="">
+                                                        <p>不佩戴安全帽</p>
+                                                        <div class="num">00</div>
+                                                    </li>
+                                                    <li>
+                                                            <img src="images/icon5.png" alt="">
+                                                            <p>不佩戴安全帽</p>
+                                                            <div class="num">00</div>
+                                                        </li>
+                                                        <li>
+                                                                <img src="images/icon6.png" alt="">
+                                                                <p>不佩戴安全帽</p>
+                                                                <div class="num">00</div>
+                                                            </li>
+                                    </ul>
+                                </div>
+                                <div class="cycle-item">2</div>
+                                <div class="cycle-item">3</div>
+                            </div>
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="platform-right">
                     <div class="platform-card">
                             <div class="platform-card-header">
-                                <h3><i></i>参数报警</h3>
+                                <h3><i></i>总体存量统计</h3>
+                                <span class="iconfont icon-full full"></span>
+                            </div>
+                            <div class="platform-body">
+                                <div id="chartStatistics" style="width: 14.6vw;height:24.1vh"></div>
+                            </div>
+                        </div>
+                        <div class="platform-card card-style">
+                            <div class="platform-card-header">
+                                <h3><i></i>存放单元统计</h3>
                                 <span></span>
                             </div>
                             <div class="platform-body">
-                                <div class="headBar">
-                                    <span class="parameter1">报警类型</span>
-                                    <span class="parameter2">次数</span>
-                                    <span class="parameter3"></span>
-                                </div>
-                                <div class="headBar-li">
-                                        <span class="parameter1">温度异常</span>
-                                        <span class="parameter2 orange-m">174</span>
-                                        <span class="parameter3 orange-m">12.37%</span>
-                                </div>
-                                <div class="headBar-li">
-                                        <span class="parameter1">液压超标</span>
-                                        <span class="parameter2 orange-m">112</span>
-                                        <span class="parameter3 orange-m">8.45%</span>
-                                </div>
-                                <div class="headBar-li">
-                                        <span class="parameter1">高位报警</span>
-                                        <span class="parameter2 orange-m">131</span>
-                                        <span class="parameter3 orange-m">9.32%</span>
-                                </div>
-                                <div class="headBar-li">
-                                        <span class="parameter1">气体检测</span>
-                                        <span class="parameter2 orange-m">112</span>
-                                        <span class="parameter3 orange-m">8.45%</span>
-                                </div>
-                                <div class="headBar-li">
-                                        <span class="parameter1">存量报警</span>
-                                        <span class="parameter2 orange-m">101</span>
-                                        <span class="parameter3 orange-m">7.37%</span>
+        
+                            </div>
+                        </div>
+                        <div class="platform-card card-style">
+                            <div class="platform-card-header">
+                                <h3><i></i>智能运维管控</h3>
+                                <span></span>
+                            </div>
+                            <div class="platform-body">
+                                <div class="main">
+                                    <div class="operation-and-maintenance">
+                                        <div class="administration">
+                                            <p>已接入温湿度传感器</p>
+                                            <canvas id='myCanvas'></canvas>
+                                        </div> 
+                                        <div class="administration">
+                                                <p>已接入摄像头</p>
+                                                <canvas id='myCanvas2'></canvas>
+                                        </div> 
+                                        <div class="administration">
+                                                <p>已接入摄像头</p>
+                                                <canvas id='myCanvas3'></canvas>
+                                        </div> 
+                                        <div class="administration">
+                                                <p>已接入温湿度传感器</p>
+                                                <canvas id='myCanvas4'></canvas>
+                                        </div> 
+                                        <div class="administration">
+                                                <p>已接入摄像头</p>
+                                                <canvas id='myCanvas5'></canvas>
+                                        </div> 
+                                        <div class="administration">
+                                                <p>已接入摄像头</p>
+                                                <canvas id='myCanvas6'></canvas>
+                                        </div> 
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -186,13 +242,37 @@
         </div>
     </div>
     <script>
+        const leading = document.querySelector('.leading');
+        const all = document.querySelector('.all')
     const previewBox = document.querySelector(".previewBox");
     const storageList = document.querySelector(".storageList");
     const storageLi = document.querySelectorAll(".storageList li");
     const prev = document.querySelector(".prev");
     const next = document.querySelector(".next");
     const imgWidth = storageLi[0].offsetWidth;
-    //console.log( imgWidth)
+  
+    leading.onclick =function(){
+
+    }
+      
+    const cycleLi = document.querySelectorAll('.cycle li');
+    const cycleItem = document.querySelectorAll('.cycle-content .cycle-item');
+    for (let i = 0; i < cycleLi.length; i++) {
+        cycleLi[i].addEventListener("mouseover", function () {
+        for (let i = 0; i < cycleLi.length; i++) {
+          if (cycleLi[i] == this) {
+            cycleLi[i].className = 'active';
+            cycleItem[i].className = 'cycle-item up'
+          } else {
+            cycleLi[i].className = '';
+            cycleItem[i].className = 'cycle-item';
+          }
+
+        }
+      })
+    }
+
+
   var index=0;
   next.onclick = function () {
     if(index<storageLi.length-1){
@@ -212,7 +292,7 @@
         clearInterval(obj.timer)
         obj.timer = setInterval(function(){
             var leader = obj.offsetLeft;
-            var step = 10;
+            var step = 12;
             step = leader<target?step:-step;
             if(Math.abs(leader-target)>=Math.abs(step)){
                 leader = leader + step;
@@ -223,39 +303,123 @@
             }
         },15)
     }
+    const valueChoose =document.querySelector('.tab-select');
+     function choose(){
+         const id = null;       
+         let index = valueChoose.selectedIndex;
+        const thisValue = valueChoose.options[index].value;
+            switch (index) {
+                case 1:alert(2)       
+                break;
+                default:
+        break;
+}
+     }
 
-
-    var fullscreen = false;
-    let btn = document.querySelector('.full');
-    let fullarea = document.querySelector('.platform-card')
-    btn.addEventListener('click',function(){  
-      if (fullscreen) {    // 退出全屏
-        if (document.exitFullscreen) {
-          document.exitFullscreen();
-        } else if (document.webkitCancelFullScreen) {
-          document.webkitCancelFullScreen();
-        } else if (document.mozCancelFullScreen) {
-          document.mozCancelFullScreen();
-        } else if (document.msExitFullscreen) {
-          document.msExitFullscreen();
-        }
-      } else {    // 进入全屏
-        if (fullarea.requestFullscreen) {
-          fullarea.requestFullscreen();
-        } else if (fullarea.webkitRequestFullScreen) {
-          fullarea.webkitRequestFullScreen();
-        } else if (fullarea.mozRequestFullScreen) {
-          fullarea.mozRequestFullScreen();
-        } else if (fullarea.msRequestFullscreen) {
-          // IE11
-          fullarea.msRequestFullscreen();
-        }
-      }
-      fullscreen = !fullscreen;
-    })
+    
     </script>
     <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
     <script>
+     (function (root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    define(factory);// AMD
+  } else if (typeof exports === 'object' && typeof module !== 'undefined') {
+    module.exports = factory(); // CommonJS
+  } else {
+    window.Progressbar = factory(); // Browser globals
+  }
+}(this, function () {
+  function Progressbar(options){
+    this.id = options.id;
+    this.value = options.value || 0;
+    this.width = options.width || 90;
+    this.height = options.height || 90;
+    this.bgColor = options.bgColor || '#3fa1ea';
+    this.barColor = options.barColor || 'red';
+    this.fontColor = options.fontColor || '#fff';
+    if(options.init){
+      this.init();
+    }
+  }
+  Progressbar.prototype.init = function(){
+    var canvas = document.getElementById(this.id);
+
+    if(!canvas.getContext) {
+      throw new Error('your browser does not support canvas')
+    }
+
+    if(!this.id){
+      throw new Error('your need pass id ')
+    }
+
+    var width = parseInt(this.width);
+    var height = parseInt(this.height);
+    canvas.setAttribute('width',width);
+    canvas.setAttribute('height',height);
+
+    var ctx = canvas.getContext("2d");
+
+    var startAngle = 3 / 2 * Math.PI;
+    var percentage = 0;
+    var diffAngle = 0;
+    var cx = width / 2;
+    var cy = height / 2;
+    var timer = setInterval(draw, 50);
+    var value = this.value;
+    var bgColor = this.bgColor;
+    var barColor = this.barColor;
+    var fontColor = this.fontColor;
+
+    function draw(){
+      diffAngle = (percentage / 1000) * Math.PI * 2;
+
+      //清除矩形区域
+      ctx.clearRect(0, 0, width, height);
+
+      ctx.beginPath();
+
+      //设置线段宽度
+      ctx.lineWidth = 15;
+
+      //绘制圆
+      ctx.arc(cx, cy, 35, 0, 2 * Math.PI, false);
+
+      //设置填充色
+      ctx.fillStyle = '#060f30';
+      ctx.fill();
+
+      //绘制图形轮廓
+      ctx.strokeStyle = bgColor; 
+      ctx.stroke();
+
+      //绘制百分比进度
+      ctx.beginPath();
+      ctx.arc(cx, cy, 35, startAngle, diffAngle + startAngle, false);
+      ctx.strokeStyle = barColor;
+      ctx.stroke();
+
+      //绘制百分比文字
+      ctx.fillStyle = fontColor;
+      ctx.textAlign = 'center';
+      ctx.font = '16px serif';
+      ctx.fillText("共"+percentage + '个', cx, cy + 6);
+
+      if (percentage >= value) {
+        clearTimeout(timer);
+      }
+
+      percentage++;
+    }
+  }
+  return Progressbar;
+}));
+
+var progressbar1 = new Progressbar({ id: 'myCanvas',value: 54 ,init: true })
+var progressbar2 = new Progressbar({ id: 'myCanvas2',value: 190 ,init: true })
+var progressbar3 = new Progressbar({ id: 'myCanvas3',value: 190 ,init: true })
+var progressbar4 = new Progressbar({ id: 'myCanvas4',value: 54 ,init: true })
+var progressbar5= new Progressbar({ id: 'myCanvas5',value: 190 ,init: true })
+var progressbar6 = new Progressbar({ id: 'myCanvas6',value: 190 ,init: true })
         const chartStatistics = echarts.init(document.getElementById('chartStatistics'));
         var scale = 1;
         option1 = {
@@ -269,10 +433,8 @@
             }
         }
     },
-    legend: {
-        data: ['访问次数']
-    },
     grid: {
+        top:'7%',
         left: '3%',
         right: '4%',
         bottom: '0',
@@ -294,7 +456,7 @@
     yAxis: [
         {
             type: 'value',
-            name: '访问次数',
+            
             axisLabel: {
                 formatter: '{value}',
             textStyle: {
