@@ -1,77 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>浦东安监实时监控sss</title>
+    <title>浦东安监实时监控</title>
     <link rel="stylesheet" href="css/platform.css">
 </head>
+
 <body class="body-style">
     <div class="topBar">
-        <div class="topBar-time">2019年09月28日  星期五  14:30</div>
+        <div class="topBar-time">2019年09月28日 星期五 14:30</div>
         <h1 class="topBar-title">浦东安监智能实时监管</h1>
     </div>
     <div class="platform-wrap">
         <div class="platform-fluid">
-            <div class="platform-left">         
-        <div class="platform-card">
-            <div class="platform-card-header">
-                <h3><i></i>参数报警</h3>
-                <span class="iconfont icon-full full"></span>
-            </div>
-            <div class="platform-body">
-                <div class="headBar">
-                    <span class="parameter1">报警类型</span>
-                    <span class="parameter2">次数</span>
-                    <span class="parameter3"></span>
+            <div class="platform-left">
+                <div class="platform-card">
+                    <div class="platform-card-header">
+                        <h3><i></i>参数报警</h3>
+                        <span class="iconfont icon-full full"></span>
+                    </div>
+                    <div class="platform-body">
+                        <div class="headBar">
+                            <span class="parameter1">报警类型</span>
+                            <span class="parameter2">次数</span>
+                            <span class="parameter3"></span>
+                        </div>
+                        <div class="headBar-li">
+                            <span class="parameter1">温度异常</span>
+                            <span class="parameter2 orange-m">174</span>
+                            <span class="parameter3 orange-m">12.37%</span>
+                        </div>
+                        <div class="headBar-li">
+                            <span class="parameter1">液压超标</span>
+                            <span class="parameter2 orange-m">112</span>
+                            <span class="parameter3 orange-m">8.45%</span>
+                        </div>
+                        <div class="headBar-li">
+                            <span class="parameter1">高位报警</span>
+                            <span class="parameter2 orange-m">131</span>
+                            <span class="parameter3 orange-m">9.32%</span>
+                        </div>
+                        <div class="headBar-li">
+                            <span class="parameter1">气体检测</span>
+                            <span class="parameter2 orange-m">112</span>
+                            <span class="parameter3 orange-m">8.45%</span>
+                        </div>
+                        <div class="headBar-li">
+                            <span class="parameter1">存量报警</span>
+                            <span class="parameter2 orange-m">101</span>
+                            <span class="parameter3 orange-m">7.37%</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="headBar-li">
-                        <span class="parameter1">温度异常</span>
-                        <span class="parameter2 orange-m">174</span>
-                        <span class="parameter3 orange-m">12.37%</span>
+                <div class="platform-card card-style">
+                    <div class="platform-card-header">
+                        <h3><i></i>流量流向上报统计</h3>
+                        <span></span>
+                    </div>
+                    <div class="platform-body">
+                        <div class="main">
+                            <div id="topChart" style="width: 100%;height:45%"></div>
+                            <div id="bottomChart" style="width: 100%;height:55%"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="headBar-li">
-                        <span class="parameter1">液压超标</span>
-                        <span class="parameter2 orange-m">112</span>
-                        <span class="parameter3 orange-m">8.45%</span>
-                </div>
-                <div class="headBar-li">
-                        <span class="parameter1">高位报警</span>
-                        <span class="parameter2 orange-m">131</span>
-                        <span class="parameter3 orange-m">9.32%</span>
-                </div>
-                <div class="headBar-li">
-                        <span class="parameter1">气体检测</span>
-                        <span class="parameter2 orange-m">112</span>
-                        <span class="parameter3 orange-m">8.45%</span>
-                </div>
-                <div class="headBar-li">
-                        <span class="parameter1">存量报警</span>
-                        <span class="parameter2 orange-m">101</span>
-                        <span class="parameter3 orange-m">7.37%</span>
-                </div>
-            </div>
-        </div>
-        <div class="platform-card card-style">
-                <div class="platform-card-header">
-                    <h3><i></i>流量流向上报统计</h3>
-                    <span></span>
-                </div>
-                <div class="platform-body">
-                   
-                </div>
-            </div>
-            <div class="platform-card card-style">
+                <div class="platform-card card-style">
                     <div class="platform-card-header">
                         <h3><i></i>智能发现趋势分析</h3>
                         <span></span>
                     </div>
                     <div class="platform-body">
-
+                        <div class="main">
+                            <div id="trend" style="width: 100%;
+                                height:100%"></div>
+                        </div>
                     </div>
                 </div>
-            </div>  
+            </div>
             <div class="platform-mid">
                 <div class="all-view">
                     <div class="view-bar">
@@ -80,10 +88,11 @@
                             <span class="leadding-txt">全区</span>
                         </div>
                         <div class="view-tab">
-                            <div class="view-tab-box tab-box-style">
+                            <div class=" tab-box-style">
                                 <select name="" id="tab-select" class="tab-select" onchange="choose()">
-                                    <option value="0" selected>危化品仓储（15）</option>
-                                    <option value="1" >1</option>
+                                    <option value="">危化品仓储（15）</option>
+                                    <option value="1">危化品仓储1</option>
+                                    <option value="2">危化品仓储2</option>
                                 </select>
                             </div>
                             <div class="view-tab-box">危化品生产（2）</div>
@@ -92,7 +101,8 @@
                     </div>
                     <div class="preview-wrapper">
                         <div class="previewBox all current">
-                            <span class="prev iconfont icon-jiantou_zuo"></span><span class="next iconfont icon-jiantou_you"></span>
+                            <span class="prev iconfont icon-jiantou_zuo"></span><span
+                                class="next iconfont icon-jiantou_you"></span>
                             <ul class="storageList">
                                 <li>
                                     <div class="storage">
@@ -114,15 +124,104 @@
                                     <div class="storage">
                                         <h2 class="storage-title">上海振义企业发展有限公司</h2>
                                         <div class="storage-body">
-                                            
+
                                         </div>
                                     </div>
                                 </li>
                             </ul>
                         </div>
-                        <div class="previewBox">
+                        <div class="previewBox previewBox1" id="previewBox1">
                             <h2 class="storage-title storage-lef-ttitle">上海振义企业发展有限公司</h2>
+                            <div class="storage-body">
+                                <div class="storage-inside">
+                                    <div class="storage-inside-left">
+                                        <div class="warehouse-selection">
+                                            <span class="upup"><i class="iconfont icon-up"></i></span>
+                                            <div id="scroll" class="scroll clearfix">
+                                                <ul class="selectList">
+                                                    <li>全部</li>
+                                                    <li onclick="one()">1号仓库</li>
+                                                    <li>2号仓库</li>
+                                                    <li>3号仓库</li>
+                                                    <li>4号仓库</li>
+                                                    <li>5号仓库</li>
+                                                    <li>6号仓库</li>
+                                                </ul>
+                                            </div>
+                                            <span class="downdown"><i class="iconfont icon-down"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="storage-inside-right">
+                                        <div class="warehouse-content">
+                                            <div class="search">
+                                                <div class="search-input">
+                                                    <i class="iconfont icon-search"></i>
+                                                    <input type="text" placeholder="按名称搜索" class="search-s"
+                                                        onfocus="search()" onblur="leave()">
+                                                </div>
+                                            </div>
+                                            <div class="search-box">
+                                                <div class="imgBox"><img src="images/img1.png" alt=""></div>
+                                                <div class="imgBox"><img src="images/img1.png" alt=""></div>
+                                                <div class="imgBox"><img src="images/img1.png" alt=""></div>
+                                                <div class="imgBox"><img src="images/img1.png" alt=""></div>
+                                                <div class="imgBox"><img src="images/img1.png" alt=""></div>
+                                                <div class="imgBox"><img src="images/img1.png" alt=""></div>
+                                                <div class="imgBox"><img src="images/img1.png" alt=""></div>
+                                                <div class="imgBox"><img src="images/img1.png" alt=""></div>
+                                                <div class="imgBox"><img src="images/img1.png" alt=""></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        <div class="previewBox previewBox2" id="previewBox2">
+                            <h2 class="storage-title storage-lef-ttitle">上海振义企业发展有限公司2</h2>
+                            <div class="storage-body">
+                                <div class="storage-inside">
+                                    <div class="storage-inside-left">
+                                        <div class="warehouse-selection">
+                                            <span class="upup"><i class="iconfont icon-up"></i></span>
+                                            <ul class="selectList">
+                                                <li>全部</li>
+                                                <li>1号仓库</li>
+                                                <li>2号仓库</li>
+                                                <li>3号仓库</li>
+                                                <li>4号仓库</li>
+                                                <li>5号仓库</li>
+                                                <li>6号仓库</li>
+                                            </ul>
+                                            <span class="downdown"><i class="iconfont icon-down"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="storage-inside-right">
+                                        <div class="warehouse-content">
+                                            <div class="search">
+                                                <div class="search-input">
+                                                    <i class="iconfont icon-search"></i>
+                                                    <input type="text" placeholder="按名称搜索" class="search-s"
+                                                        onfocus="search()" onblur="leave()">
+                                                </div>
+                                            </div>
+                                            <div class="search-box">
+                                                <div class="imgBox"><img src="images/img1.png" alt=""></div>
+                                                <div class="imgBox"><img src="images/img1.png" alt=""></div>
+                                                <div class="imgBox"><img src="images/img1.png" alt=""></div>
+                                                <div class="imgBox"><img src="images/img1.png" alt=""></div>
+                                                <div class="imgBox"><img src="images/img1.png" alt=""></div>
+                                                <div class="imgBox"><img src="images/img1.png" alt=""></div>
+                                                <div class="imgBox"><img src="images/img1.png" alt=""></div>
+                                                <div class="imgBox"><img src="images/img1.png" alt=""></div>
+                                                <div class="imgBox"><img src="images/img1.png" alt=""></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="previewBox box">2</div>
+                        <div class="previewBox box">3</div>
                     </div>
                 </div>
                 <div class="platform-card platform-mid-card">
@@ -133,349 +232,227 @@
                     <div class="platform-body">
                         <div class="main">
                             <div class="intelligent-discovery">
-                            <div class="cycle">
-                                <ul>
-                                    <li class="active">日</li>
-                                    <li>周</li>
-                                    <li>月</li>
-                                </ul>
-                            </div>
-                            <div class="cycle-content">
-                                <div class="cycle-item up">
-                                    <ul class="cycle-item-list">
-                                        <li>
-                                            <img src="images/icon1.png" alt="">
-                                            <p>不佩戴安全帽</p>
-                                            <div class="num">00</div>
-                                        </li>
-                                        <li>
+                                <div class="cycle">
+                                    <ul>
+                                        <li class="active">日</li>
+                                        <li>周</li>
+                                        <li>月</li>
+                                    </ul>
+                                </div>
+                                <div class="cycle-content">
+                                    <div class="cycle-item up">
+                                        <ul class="cycle-item-list">
+                                            <li>
+                                                <img src="images/icon1.png" alt="">
+                                                <p>不佩戴安全帽</p>
+                                                <div class="num">00</div>
+                                            </li>
+                                            <li>
                                                 <img src="images/icon2.png" alt="">
                                                 <p>不佩戴安全帽</p>
                                                 <div class="num">00</div>
                                             </li>
                                             <li>
-                                                    <img src="images/icon3.png" alt="">
-                                                    <p>不佩戴安全帽</p>
-                                                    <div class="num">00</div>
-                                                </li>
-                                                <li>
-                                                        <img src="images/icon4.png" alt="">
-                                                        <p>不佩戴安全帽</p>
-                                                        <div class="num">00</div>
-                                                    </li>
-                                                    <li>
-                                                            <img src="images/icon5.png" alt="">
-                                                            <p>不佩戴安全帽</p>
-                                                            <div class="num">00</div>
-                                                        </li>
-                                                        <li>
-                                                                <img src="images/icon6.png" alt="">
-                                                                <p>不佩戴安全帽</p>
-                                                                <div class="num">00</div>
-                                                            </li>
-                                    </ul>
+                                                <img src="images/icon3.png" alt="">
+                                                <p>不佩戴安全帽</p>
+                                                <div class="num">00</div>
+                                            </li>
+                                            <li>
+                                                <img src="images/icon4.png" alt="">
+                                                <p>不佩戴安全帽</p>
+                                                <div class="num">00</div>
+                                            </li>
+                                            <li>
+                                                <img src="images/icon5.png" alt="">
+                                                <p>不佩戴安全帽</p>
+                                                <div class="num">00</div>
+                                            </li>
+                                            <li>
+                                                <img src="images/icon6.png" alt="">
+                                                <p>不佩戴安全帽</p>
+                                                <div class="num">00</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="cycle-item">2</div>
+                                    <div class="cycle-item">3</div>
                                 </div>
-                                <div class="cycle-item">2</div>
-                                <div class="cycle-item">3</div>
                             </div>
-                        </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="platform-right">
-                    <div class="platform-card">
-                            <div class="platform-card-header">
-                                <h3><i></i>总体存量统计</h3>
-                                <span class="iconfont icon-full full"></span>
-                            </div>
-                            <div class="platform-body">
-                                <div id="chartStatistics" style="width: 14.6vw;height:24.1vh"></div>
-                            </div>
-                        </div>
-                        <div class="platform-card card-style">
-                            <div class="platform-card-header">
-                                <h3><i></i>存放单元统计</h3>
-                                <span></span>
-                            </div>
-                            <div class="platform-body">
-        
+                <div class="platform-card">
+                    <div class="platform-card-header">
+                        <h3><i></i>总体存量统计</h3>
+                        <span class="iconfont icon-full full"></span>
+                    </div>
+                    <div class="platform-body">
+                        <div class="main">
+                            <div class="stock">
+                                <div class="stock-title">
+                                    危化品总量（吨）<span class="num stock-num">7436.75</span>
+                                </div>
+                                <div id="chartStatistics" style="width: 100%;height:18.9vh"></div>
                             </div>
                         </div>
-                        <div class="platform-card card-style">
-                            <div class="platform-card-header">
-                                <h3><i></i>智能运维管控</h3>
-                                <span></span>
-                            </div>
-                            <div class="platform-body">
-                                <div class="main">
-                                    <div class="operation-and-maintenance">
-                                        <div class="administration">
-                                            <p>已接入温湿度传感器</p>
-                                            <canvas id='myCanvas'></canvas>
-                                        </div> 
-                                        <div class="administration">
-                                                <p>已接入摄像头</p>
-                                                <canvas id='myCanvas2'></canvas>
-                                        </div> 
-                                        <div class="administration">
-                                                <p>已接入摄像头</p>
-                                                <canvas id='myCanvas3'></canvas>
-                                        </div> 
-                                        <div class="administration">
-                                                <p>已接入温湿度传感器</p>
-                                                <canvas id='myCanvas4'></canvas>
-                                        </div> 
-                                        <div class="administration">
-                                                <p>已接入摄像头</p>
-                                                <canvas id='myCanvas5'></canvas>
-                                        </div> 
-                                        <div class="administration">
-                                                <p>已接入摄像头</p>
-                                                <canvas id='myCanvas6'></canvas>
-                                        </div> 
+
+                    </div>
+                </div>
+                <div class="platform-card card-style">
+                    <div class="platform-card-header">
+                        <h3><i></i>存放单元统计</h3>
+                        <span></span>
+                    </div>
+                    <div class="platform-body">
+                        <div class="main">
+                            <div class="unit-statistics">
+                                <div class="statistics-box">
+                                    <div class="statistics-header">
+                                        <div class="statistics-title">储罐数量</div>
+                                        <div class="statistics-num"><span>126</span>个</div>
                                     </div>
+                                    <div id="StatisticsOne" style="width:9.9vw;height:17.1vh;margin: auto;"></div>
+                                    <p class="statistics-bl">已用储罐所占比例</p>
+                                </div>
+                                <div class="statistics-box">
+                                    <div class="statistics-header">
+                                        <div class="statistics-title">仓库面积</div>
+                                        <div class="statistics-num"><span>82223.6</span>平方米</div>
+                                    </div>
+                                    <div id="StatisticsTwo" style="width:9.9vw;height:17.1vh;margin: auto;"></div>
+                                    <p class="statistics-bl">存储面积所占比例</p>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="platform-card card-style">
+                    <div class="platform-card-header">
+                        <h3><i></i>智能运维管控</h3>
+                        <span></span>
+                    </div>
+                    <div class="platform-body">
+                        <div class="main">
+                            <div class="operation-and-maintenance">
+                                <div class="administration">
+                                    <p>已接入温湿度传感器</p>
+                                    <canvas id='myCanvas'></canvas>
+                                </div>
+                                <div class="administration">
+                                    <p>已接入摄像头</p>
+                                    <canvas id='myCanvas2'></canvas>
+                                </div>
+                                <div class="administration">
+                                    <p>已接入摄像头</p>
+                                    <canvas id='myCanvas3'></canvas>
+                                </div>
+                                <div class="administration">
+                                    <p>已接入温湿度传感器</p>
+                                    <canvas id='myCanvas4'></canvas>
+                                </div>
+                                <div class="administration">
+                                    <p>已接入摄像头</p>
+                                    <canvas id='myCanvas5'></canvas>
+                                </div>
+                                <div class="administration">
+                                    <p>已接入摄像头</p>
+                                    <canvas id='myCanvas6'></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <script>
-        const leading = document.querySelector('.leading');
-        const all = document.querySelector('.all')
-    const previewBox = document.querySelector(".previewBox");
-    const storageList = document.querySelector(".storageList");
-    const storageLi = document.querySelectorAll(".storageList li");
-    const prev = document.querySelector(".prev");
-    const next = document.querySelector(".next");
-    const imgWidth = storageLi[0].offsetWidth;
-  
-    leading.onclick =function(){
-
-    }
-      
-    const cycleLi = document.querySelectorAll('.cycle li');
-    const cycleItem = document.querySelectorAll('.cycle-content .cycle-item');
-    for (let i = 0; i < cycleLi.length; i++) {
-        cycleLi[i].addEventListener("mouseover", function () {
-        for (let i = 0; i < cycleLi.length; i++) {
-          if (cycleLi[i] == this) {
-            cycleLi[i].className = 'active';
-            cycleItem[i].className = 'cycle-item up'
-          } else {
-            cycleLi[i].className = '';
-            cycleItem[i].className = 'cycle-item';
-          }
-
-        }
-      })
-    }
-
-
-  var index=0;
-  next.onclick = function () {
-    if(index<storageLi.length-1){
-      index++;
-      animate(storageList,-index*imgWidth);
-    }
-  };
-  prev.onclick = function () {
-    if(index > 0){
-        index--;
-      animate(storageList, -index*imgWidth);
-    }
-  };
-  
-
-    function animate(obj,target){
-        clearInterval(obj.timer)
-        obj.timer = setInterval(function(){
-            var leader = obj.offsetLeft;
-            var step = 12;
-            step = leader<target?step:-step;
-            if(Math.abs(leader-target)>=Math.abs(step)){
-                leader = leader + step;
-                obj.style.left = leader + "px"
-            }else{
-                obj.style.left =target + "px";
-                clearInterval(obj.timer)
-            }
-        },15)
-    }
-    const valueChoose =document.querySelector('.tab-select');
-     function choose(){
-         const id = null;       
-         let index = valueChoose.selectedIndex;
-        const thisValue = valueChoose.options[index].value;
-            switch (index) {
-                case 1:alert(2)       
-                break;
-                default:
-        break;
-}
-     }
-
-    
-    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="layer/layer.js"></script>
+    <script src="javascript/slider.js"></script>
+    <script src="javascript/canvsChart.js"></script>
     <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+    <script src="javascript/echarts.js"></script>
     <script>
-     (function (root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    define(factory);// AMD
-  } else if (typeof exports === 'object' && typeof module !== 'undefined') {
-    module.exports = factory(); // CommonJS
-  } else {
-    window.Progressbar = factory(); // Browser globals
-  }
-}(this, function () {
-  function Progressbar(options){
-    this.id = options.id;
-    this.value = options.value || 0;
-    this.width = options.width || 90;
-    this.height = options.height || 90;
-    this.bgColor = options.bgColor || '#3fa1ea';
-    this.barColor = options.barColor || 'red';
-    this.fontColor = options.fontColor || '#fff';
-    if(options.init){
-      this.init();
-    }
-  }
-  Progressbar.prototype.init = function(){
-    var canvas = document.getElementById(this.id);
+        $(function () {
+            $(".leading").click(function () {
+                $(".previewBox").removeClass("current");
+                $(".view-tab-box").removeClass("tab-box-style");
+                $(this).parents().next().children('.all').addClass("current")
+            })
+            $(".view-tab .view-tab-box").each(function (index) {
+                $(this).click(function () {
+                    $(".view-tab-box").removeClass("tab-box-style");
+                    $(this).addClass("tab-box-style");
+                    $(".box").eq(index).addClass("box current").siblings().removeClass(
+                        "current")
+                })
+            })
+        })
+        const valueChoose = document.querySelector('.tab-select');
 
-    if(!canvas.getContext) {
-      throw new Error('your browser does not support canvas')
-    }
-
-    if(!this.id){
-      throw new Error('your need pass id ')
-    }
-
-    var width = parseInt(this.width);
-    var height = parseInt(this.height);
-    canvas.setAttribute('width',width);
-    canvas.setAttribute('height',height);
-
-    var ctx = canvas.getContext("2d");
-
-    var startAngle = 3 / 2 * Math.PI;
-    var percentage = 0;
-    var diffAngle = 0;
-    var cx = width / 2;
-    var cy = height / 2;
-    var timer = setInterval(draw, 50);
-    var value = this.value;
-    var bgColor = this.bgColor;
-    var barColor = this.barColor;
-    var fontColor = this.fontColor;
-
-    function draw(){
-      diffAngle = (percentage / 1000) * Math.PI * 2;
-
-      //清除矩形区域
-      ctx.clearRect(0, 0, width, height);
-
-      ctx.beginPath();
-
-      //设置线段宽度
-      ctx.lineWidth = 15;
-
-      //绘制圆
-      ctx.arc(cx, cy, 35, 0, 2 * Math.PI, false);
-
-      //设置填充色
-      ctx.fillStyle = '#060f30';
-      ctx.fill();
-
-      //绘制图形轮廓
-      ctx.strokeStyle = bgColor; 
-      ctx.stroke();
-
-      //绘制百分比进度
-      ctx.beginPath();
-      ctx.arc(cx, cy, 35, startAngle, diffAngle + startAngle, false);
-      ctx.strokeStyle = barColor;
-      ctx.stroke();
-
-      //绘制百分比文字
-      ctx.fillStyle = fontColor;
-      ctx.textAlign = 'center';
-      ctx.font = '16px serif';
-      ctx.fillText("共"+percentage + '个', cx, cy + 6);
-
-      if (percentage >= value) {
-        clearTimeout(timer);
-      }
-
-      percentage++;
-    }
-  }
-  return Progressbar;
-}));
-
-var progressbar1 = new Progressbar({ id: 'myCanvas',value: 54 ,init: true })
-var progressbar2 = new Progressbar({ id: 'myCanvas2',value: 190 ,init: true })
-var progressbar3 = new Progressbar({ id: 'myCanvas3',value: 190 ,init: true })
-var progressbar4 = new Progressbar({ id: 'myCanvas4',value: 54 ,init: true })
-var progressbar5= new Progressbar({ id: 'myCanvas5',value: 190 ,init: true })
-var progressbar6 = new Progressbar({ id: 'myCanvas6',value: 190 ,init: true })
-        const chartStatistics = echarts.init(document.getElementById('chartStatistics'));
-        var scale = 1;
-        option1 = {
-    color: ['#16abfe','#ff7070'],
-    tooltip: {
-        trigger: 'axis',
-        axisPointer: {
-            type: 'cross',
-            crossStyle: {
-                color: '#999'
+        function choose() {
+            let index = valueChoose.selectedIndex;
+            const thisValue = valueChoose.options[index].value;
+            if (thisValue == "1") {
+                $(".previewBox").removeClass("box current");
+                $(".previewBox1").addClass("current");
+            } else if (thisValue == "2") {
+                $(".previewBox").removeClass("box current");
+                $(".previewBox2").addClass("current");
             }
         }
-    },
-    grid: {
-        top:'7%',
-        left: '3%',
-        right: '4%',
-        bottom: '0',
-        containLabel: true
-    },
-    xAxis: [{
-        type: 'category',
-        data: ['甲类危化品', '乙类危化品', '丙类危化品'],
-        axisPointer: {
-            type: 'shadow'
-        },
-        axisLabel: {
-            textStyle: {
-                color: "#c0dff2",
-                fontSize: 14 * scale,
-            }
-        },
-    }],
-    yAxis: [
-        {
-            type: 'value',
-            
-            axisLabel: {
-                formatter: '{value}',
-            textStyle: {
-                color: "#c0dff2",
-                fontSize: 14 * scale,
-            }},
-        }],
-    series: [{
-            name: '访问次数',
-            type: 'bar',
-            yAxisIndex: 0,
-            data: [261, 259, 290]
-        },       
-    ]
-};
-        chartStatistics.setOption(option1)
-        window.addEventListener("resize",function(){
-            chartStatistics.resize()
-        })
+        var scrollIndex = 0;
+var Timer = null;
+function scroll_f(){
+	clearInterval(Timer);
+		var ul = $("#scroll ul");
+		var li = ul.children("li");
+		var h = li.height();
+		var index = 0;
+		ul.css("height",h*li.length*2);
+		ul.html(ul.html()+ul.html());  //复制一份当前ul内容 
+			function run(){
+				if(scrollIndex>=li.length){
+				ul.css({top:0});
+				scrollIndex = 1;
+				ul.animate({top:-scrollIndex*h},200);
+			} 
+			else{
+				scrollIndex++; 
+				ul.animate({top:-scrollIndex*h},200);
+			}
+		}
+	Timer= setInterval(run,3000); 
+}
+scroll_f();
+
+
+        function search() {
+            serach.style.width = 15 + "vw";
+        }
+
+        function leave() {
+            serach.style.width = 10 + "vw";
+        }
+        layer.config({
+            extend: 'skin/style.css', //加载新皮肤
+            skin: 'myskin' //一旦设定，所有弹层风格都采用此主题。
+        });
+
+        function one() {
+            layer.open({
+                type: 2,
+                title: '1号仓库',
+                closeBtn: 0, //不显示关闭按钮
+                shade: [0],
+                area: ['53vw', '50vh'],
+                anim: 2,
+                content: 'layerHtml/one.html'
+
+            });
+        }
     </script>
 </body>
+
 </html>
