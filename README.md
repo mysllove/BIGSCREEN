@@ -1,2 +1,0 @@
-# BIGSCREEN 大屏
-
