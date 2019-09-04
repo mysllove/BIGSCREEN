@@ -1,0 +1,22 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'idyllic';
+  src: url("../fonts/idyllic.ttf") format("ttf");
+}
+.idyllic {
+  font-family: "webfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/*********文本颜色*************/
+.default-color {
+  color: #807676;
+}
+
+.t-color-red {
+  color: #ff1100;
+  font-family: 'idyllic';
+}
+/*# sourceMappingURL=text-color.css.map */

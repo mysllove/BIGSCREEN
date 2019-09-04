@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": ";AAAA,UAAU;EACN,WAAW,EAAE,SAAS;EACtB,GAAG,EAAE,2BAA2B,CAAC,aAAa;;;AAGlD,gCAAgC;AAOhC,AAAA,cAAc,CAAA;EAIN,KAAK,EAVC,OAAO;CAYpB;;AAED,AAAA,YAAY,CAAA;EACR,KAAK,EAbC,OAAe;EAcrB,WAAW,EAAE,SAAS;CACzB",
+    "sources": [
+        "text-color.scss"
+    ],
+    "names": [],
+    "file": "text-color.css"
+}

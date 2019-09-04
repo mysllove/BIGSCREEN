@@ -1,0 +1,11 @@
+
+@mixin circular-bead {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.circular-bead-default{
+    @include circular-bead
+}
+
