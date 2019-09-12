@@ -1,0 +1,101 @@
+[
+    {
+        "OPERATEPOINTNAME": "上海稳富实业有限公司",
+        "PARTY": "王润,奚汉章",
+        "FOUNDOPERATEPOINTNAME": "浦东新区安全生产监察大队",
+        "FUNDTIME": "2019-05-16 11:09:00",
+        "ISRECTIFY": "未完成",
+        "EXAMINEARTICLENAME": "甲乙类仓库逃生门未接地",
+        "INPECTIONPANDECTID": 402096
+    },
+    {
+        "OPERATEPOINTNAME": "上海隆澜实业有限公司",
+        "PARTY": "高军,王润",
+        "FOUNDOPERATEPOINTNAME": "浦东新区安全生产监察大队",
+        "FUNDTIME": "2019-05-16 15:00:00",
+        "ISRECTIFY": "未完成",
+        "EXAMINEARTICLENAME": "1-B与2-A仓库之间有集装箱堆放，储存海关送检的危险化学品样品",
+        "INPECTIONPANDECTID": 402165
+    },
+    {
+        "OPERATEPOINTNAME": "上海隆澜实业有限公司",
+        "PARTY": "高军,王润",
+        "FOUNDOPERATEPOINTNAME": "浦东新区安全生产监察大队",
+        "FUNDTIME": "2019-05-16 15:00:00",
+        "ISRECTIFY": "未完成",
+        "EXAMINEARTICLENAME": "单位未及时发现并整改隐患",
+        "INPECTIONPANDECTID": 402164
+    },
+    {
+        "OPERATEPOINTNAME": "奇华顿食用香精香料(上海)有限公司",
+        "PARTY": "高军,王润",
+        "FOUNDOPERATEPOINTNAME": "浦东新区安全生产监察大队",
+        "FUNDTIME": "2019-05-09 11:55:00",
+        "ISRECTIFY": "未完成",
+        "EXAMINEARTICLENAME": "生产区、仓库存放区内SDS配备不全，可燃气体报警仪设置在无人房间内，室外管道无流向标识，乙醇罐区部分法兰无跨接",
+        "INPECTIONPANDECTID": 401260
+    },
+    {
+        "OPERATEPOINTNAME": "上海维港精细化工有限公司",
+        "PARTY": "朱代忠,金继良,朱春华",
+        "FOUNDOPERATEPOINTNAME": "浦东新区安全生产监察大队",
+        "FUNDTIME": "2019-05-16 14:59:00",
+        "ISRECTIFY": "未完成",
+        "EXAMINEARTICLENAME": "企业存在安全隐患未及时发现消除",
+        "INPECTIONPANDECTID": 402099
+    },
+    {
+        "OPERATEPOINTNAME": "上海鸿盛工业气体有限公司",
+        "PARTY": "王鹏飞,潘杰,潘燕云",
+        "FOUNDOPERATEPOINTNAME": "浦东新区安全生产监察大队",
+        "FUNDTIME": "2019-05-09 16:30:00",
+        "ISRECTIFY": "未完成",
+        "EXAMINEARTICLENAME": "未及时发现并消除事故隐患",
+        "INPECTIONPANDECTID": 401436
+    },
+    {
+        "OPERATEPOINTNAME": "比欧西气体(苏州)有限公司上海分公司",
+        "PARTY": "陈道清,高军",
+        "FOUNDOPERATEPOINTNAME": "浦东新区安全生产监察大队",
+        "FUNDTIME": "2019-05-07 14:23:00",
+        "ISRECTIFY": "未完成",
+        "EXAMINEARTICLENAME": "安全阀已过检测有效期，部分接地线腐蚀，部分氢气管道跨接不全",
+        "INPECTIONPANDECTID": 400814
+    },
+    {
+        "OPERATEPOINTNAME": "上海石油天然气有限公司天然气处理厂",
+        "PARTY": "王鹏飞,潘杰,潘燕云",
+        "FOUNDOPERATEPOINTNAME": "浦东新区安全生产监察大队",
+        "FUNDTIME": "2019-05-09 14:30:00",
+        "ISRECTIFY": "未完成",
+        "EXAMINEARTICLENAME": "安全警示标识不规范；2号乙烷（脱）液位现场无高低液位标识；罐区踏步处缺少人体静电导除装置等",
+        "INPECTIONPANDECTID": 401437
+    },
+    {
+        "OPERATEPOINTNAME": "上海上药信谊药厂有限公司制药二厂",
+        "PARTY": "高军,王润",
+        "FOUNDOPERATEPOINTNAME": "浦东新区安全生产监察大队",
+        "FUNDTIME": "2019-05-09 16:15:00",
+        "ISRECTIFY": "未完成",
+        "EXAMINEARTICLENAME": "可燃气体报警仪未能做到24小时值守",
+        "INPECTIONPANDECTID": 401302
+    },
+    {
+        "OPERATEPOINTNAME": "上海高桥大同净水材料有限公司",
+        "PARTY": "金继良,朱代忠,朱春华",
+        "FOUNDOPERATEPOINTNAME": "浦东新区安全生产监察大队",
+        "FUNDTIME": "2019-05-14 15:50:00",
+        "ISRECTIFY": "未完成",
+        "EXAMINEARTICLENAME": "企业作业现场存在安全隐患",
+        "INPECTIONPANDECTID": 401838
+    },
+    {
+        "OPERATEPOINTNAME": "液化空气（上海）国际贸易有限公司",
+        "PARTY": "王鹏飞,潘杰,潘燕云",
+        "FOUNDOPERATEPOINTNAME": "浦东新区安全生产监察大队",
+        "FUNDTIME": "2019-05-09 11:10:00",
+        "ISRECTIFY": "未完成",
+        "EXAMINEARTICLENAME": "应急预案备案未见有效版本；有毒气体探头检定报告未见；3号库氨气泄露应急处理措施缺失",
+        "INPECTIONPANDECTID": 401428
+    }
+]

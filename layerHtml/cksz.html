@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <link rel="stylesheet" href="../css/screen.css">
+    <style type="text/css">
+        .layui-btn-xs,
+        .layui-btn-xs:hover {
+            width: 60px;
+            height: 25px;
+            line-height: 22px;
+            padding: 0 5px;
+            font-size: 12px;
+            background-color: #9E47B8;
+            color: #fff;
+            border: none;
+        }
+
+        .layui-table tr {
+            transition: all .3s;
+            -webkit-transition: all .3s;
+            background-color: #5961A9;
+            color: #fff;
+        }
+
+        .layui-table tbody tr:hover,
+        .layui-table-hover {
+            background-color: #5961A9;
+        }
+
+        .layui-table[lay-even] tr:nth-child(even) {
+            background-color: #474E9E;
+            color: #fff;
+        }
+
+        .layui-table thead tr {
+            background-color: #5C6AC2;
+            color: #fff;
+        }
+
+        .layui-laypage .layui-laypage-curr .layui-laypage-em {
+            background-color: #FF4400;
+        }
+
+        .layui-laypage a,
+        .layui-laypage span {
+            display: inline-block;
+            *display: inline;
+            *zoom: 1;
+            vertical-align: middle;
+            padding: 0 15px;
+            height: 28px;
+            line-height: 28px;
+            margin: 0 -1px 5px 0;
+            color: #fff;
+            font-size: 12px;
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        .layui-laypage .layui-laypage-skip {
+            color: #fff;
+        }
+
+        .btnSee {
+            width: 80px;
+            height: 30px;
+            background-color: #A84AC2;
+            color: #fff;
+            border: none;
+        }
+
+        body {
+            background-color: #454E9D;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="outer-container">
+        <div class="inner-container">
+            <div class="element">
+                <div class="topbar-head">
+                    <!-- <span>共63条</span> -->
+                    <h3>细则详情查看</h3>
+                </div>
+                <table style="width: 100%;">
+                    <tr>
+                        <td>
+                            <table class="layui-table">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col width="40%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>分类</th>
+                                        <th>评价要素</th><!-- 公安 -->
+                                    </tr>
+                                </thead>
+                                <tbody id="returnList">
+                                    <tr>
+                                        <td rowspan="5">安全生产重点工作措施推进与信息报送情况（扣分事项）</td>
+                                        <td>未按规定开展风险辨识评估分级管控及报送信息 每发现一次扣 5分</td>
+                                    </tr>
+                                    <tr>
+                                        <td>未按规定开展隐患排查治理及报送信息，每发现一次 扣5分</td>
+                                    </tr>
+                                    <tr>
+                                        <td>未按规定落实特殊作业管控措施及报送信息，每发现一次扣5 分</td>
+                                    </tr>
+                                    <tr>
+                                        <td>危险化学品企业未按落实每日风险研判承诺告知制度，每发现一次 扣5分</td>
+                                    </tr>
+                                    <tr>
+                                        <td>未严格落实危险化学品“禁、限、控”要求的，每次扣5分。</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="4">监督性检查发现的违法行为受到行政处罚情况（扣分事项）</td>
+                                        <td>受到警告处罚1次，扣5分。</td>
+                                    </tr>
+                                    <tr>
+                                        <td>受到5万元以下处罚的1次，扣10分。（以下不包括本数）</td>
+                                    </tr>
+                                    <tr>
+                                        <td>受到5万元以上处罚的1次，扣15分。（以上包括本数）</td>
+                                    </tr>
+                                    <tr>
+                                        <td>受到责令停产停业整顿以上等级处罚的1次，扣20分。</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="5">政府鼓励事项推进落实情况
+                                            （加分事项）</td>
+                                        <td>1.安全生产标准化达标等级为一级的，加15分；</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2.安全生产标准化达标等级为二级的，加10分；</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3.安全生产标准化达标等级为三级的，加5分。</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4.企业购买安全生产责任险的，加5分。</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5.企业委托购买第三方委托服务监管的,加5分。</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="10">直接纳入黑名单实施联合惩戒的事项</td>
+                                        <td>1.发生较大及以上生产安全责任事故，或1年内累计发生3起及以上造成人员死亡的一般等级生产安全责任事故的。</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2.未按规定取得安全生产许可，擅自开展生产建设活动的。</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3.存在重大生产安全事故隐患，不及时整改，仍组织从业人员冒险作业的。</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4.采取隐蔽、欺骗或阻碍等方式逃避，对抗安全监管监察的。</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5.被责令停产停业整顿，仍然从事生产经营建设活动的。</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6.瞒报、谎报、迟报生产安全事故的。</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7.危险化学品、金属冶炼等高危行业建设项目安全设施未经验收合格即投入生产和使用的。</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8.发生事故后，故意破坏事故现场，伪造有关证据资料，妨碍、对抗事故调查，或主要负责人逃逸的。</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9.伪造提供安全生产虚假证明文件的。</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10.不信守安全生产相关承诺的。</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="pageTag" style="padding-left:10px;">&nbsp;</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="../javascript/jquery.min.js"></script>
+    <script src="../layui/layui.js"></script>
+    <script>
+        var laypage = null;
+        layui.use(["laypage"], function () {
+            laypage = layui.laypage;
+            getData("1");
+        });
+
+        function openInfo(id) {
+            window.showModalDialog(
+                "../../qualification/jurisdictionunit!jurisdictionUnitAchivesForword.action?flag=1&operatePointId=" +
+                id, "", "dialogHeight:670px;dialogWidth:1300px;status:no;help=no,resizable=no;edge:sunken;");
+        }
+    </script>
+</body>
+
+</html>

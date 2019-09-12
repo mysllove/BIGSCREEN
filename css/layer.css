@@ -1,0 +1,112 @@
+@import "./IconReference.css";
+@import "./color.css";
+@font-face {
+    font-family: 'sanyl';
+    src: url('../font/DIGIFAW.TTF');
+}
+
+.modelBox {
+    color: #fff
+}
+
+.modelBox-title {
+    background: url(../images/moduleT.png) no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 6.3vh;
+    line-height: 6.3vh;
+    text-align: center;
+    color: #fff;
+    font-size: 1.1vw;
+    margin: 4.3vh 0;
+}
+
+.modelBox-body {
+    padding: 0 4vw;
+}
+
+.modelBox-introduce {
+    height: 25vh;
+    padding: 0 2vw;
+    background: url(../images/moduleB.png) no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.modelBox-introduce p {
+    font-size: 1vw;
+    line-height: 5vh;
+}
+
+.modelBox-way-title {
+    height: 11.4vh;
+    line-height: 11.4vh;
+    padding: 0 1vw;
+    position: relative;
+    margin: 6vh 0;
+    font-size: 1vw
+}
+
+.modelBox-way-title::before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    content: '';
+    background-color: #143db1;
+    opacity: 0.8;
+}
+
+.modelBox-way-title>span {
+    position: relative;
+}
+
+.modelBox-way-content {
+    display: flex;
+}
+
+.modelBox-way-txt {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.1vw;
+    color: aqua;
+    font-weight: bold;
+    margin: 0 1vw;
+}
+
+.ratio {
+    flex: 1;
+    height: 14vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2vw;
+    position: relative;
+    border-radius: 3px;
+    border: 2px solid #cc0001
+}
+
+.lucency::before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    content: '';
+    opacity: 0.8;
+}
+
+.red-lucency::before {
+    background-color: #5c255c;
+}
+
+.ratio>span {
+    position: relative;
+}

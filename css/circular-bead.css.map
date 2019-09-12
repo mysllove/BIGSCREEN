@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAOA,AAAA,sBAAsB,CAAA;EALlB,kBAAkB,EAAE,GAAG;EACvB,qBAAqB,EAAE,GAAG;EAC1B,aAAa,EAAE,GAAG;CAKrB",
-    "sources": [
-        "circular-bead.scss"
-    ],
-    "names": [],
-    "file": "circular-bead.css"
-}

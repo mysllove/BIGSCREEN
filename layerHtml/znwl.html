@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <link rel="stylesheet" href="../css/platform.css">
+</head>
+<style>
+    .layer-head {
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+        text-align: center
+    }
+
+    .layer-head h1 {
+        color: #fff;
+        background-image: url(../images/toph-2.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        font-weight: 100
+    }
+
+    .ok {
+        background: url(../images/ss.gif) no-repeat;
+        background-position: center center;
+    }
+
+    .aqm {
+        position: absolute;
+        bottom: 5vh;
+        left: 8.2vw;
+        width: 18vw;
+    }
+</style>
+
+<body>
+    <div class="layer-head">
+        <h1>智能发现清单</h1>
+    </div>
+    <div class="main-row">
+        <div class="layui-row layui-col-space30">
+            <div class="layui-col-md3">
+                <div class="box-c">
+                    <div class="box-header">
+                        <img src="../images/guan.png" alt="">
+                        <h3>监管要素+智能发现</h3>
+                    </div>
+                    <div class="box-body">
+                        <div class="layui-row layui-col-space5">
+                            <div class="layui-col-md6">
+                                <div class="wrap-box">
+                                    <h3>企业监管到位</h3>
+                                    <div class="layui-inline" style="color: #ffffff">注安工程师在岗监测</div>
+
+                                </div>
+                            </div>
+                            <div class="layui-col-md6">
+                                <div class="wrap-box">
+                                    <h3>作业规范</h3>
+                                    <div class="layui-inline" style="color: #ffffff">涉危区域禁止手机通讯</div>
+                                    <div class="layui-inline" style="color: #ffffff">涉危区域穿戴防护服装</div>
+                                    <div class="layui-inline" style="color: #ffffff">安全帽佩戴无感识别</div>
+                                    <div class="layui-inline" style="color: #ffffff">危化区域禁烟管控</div>
+                                </div>
+                            </div>
+                            <div class="layui-col-md6">
+                                <div class="wrap-box">
+                                    <h3>参数报警处置</h3>
+                                    <div class="layui-inline" style="color: #ffffff">存储超量</div>
+                                    <div class="layui-inline" style="color: #ffffff">气体泄漏</div>
+                                    <div class="layui-inline" style="color: #ffffff">温度异常</div>
+                                    <div class="layui-inline" style="color: #ffffff">湿度异常</div>
+                                    <div class="layui-inline" style="color: #ffffff">违规存放</div>
+                                    <div class="layui-inline" style="color: #ffffff">存放五距</div>
+                                </div>
+                            </div>
+                            <div class="layui-col-md6">
+                                <div class="wrap-box">
+                                    <h3>监控设施报警</h3>
+                                    <div class="layui-inline" style="color: #ffffff">网络断网</div>
+                                    <div class="layui-inline" style="color: #ffffff">信号异常</div>
+                                    <div class="layui-inline" style="color: #ffffff">设备故障</div>
+                                    <div class="layui-inline" style="color: #ffffff">数据安全</div>
+                                    <div class="layui-inline" style="color: #ffffff">设备失联</div>
+                                    <div class="layui-inline" style="color: #ffffff">感知错误</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-c">
+                    <div class="box-header">
+                        <img src="../images/guan.png" alt="">
+                        <h3>智能模型</h3>
+                    </div>
+                    <div class="box-body">
+                        <img src="../images/aqm1.gif" alt="" width="100%" height="100%">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-md3">
+                <div class="box-c">
+                    <div class="box-header">
+                        <img src="../images/guan.png" alt="">
+                        <h3>监管依据</h3>
+                    </div>
+                    <div class="box-body word-box">
+                        <p>依照中华人民共和国《安全生产法》第54条从业人员在作业过程中，应当严格遵守本单位的安全生产规章制度和操作规程，服从管理，正确佩戴安全帽和劳动防护用品。</p>
+
+                    </div>
+                </div>
+                <div class="box-c">
+                    <div class="box-header">
+                        <img src="../images/guan.png" alt="">
+                        <h3>发现详情</h3>
+                    </div>
+                    <div class="box-body word-box">
+                        <div class="layui-inline" style="margin-left:1vw;color: #fff">
+                            当日发现&nbsp;&nbsp;<span class="red-b demo"
+                                style="padding-right: 10px;">&nbsp;&nbsp;&nbsp;&nbsp;0</span>&nbsp;&nbsp;条
+                        </div>
+                        <div class="layui-inline" style="margin-left:1vw;color: #fff">
+                            历史发现&nbsp;&nbsp;<span class="greens-b  demo" style="padding-right: 10px;cursor: pointer"
+                                onclick="kc()">&nbsp;&nbsp;&nbsp;&nbsp;4</span>&nbsp;&nbsp;条
+                        </div>
+                        <div>
+
+                            <div class="blues">
+                                <span>所属企业：上海振义仓库有限公司</span>
+                                <span>发现时间：2019.06.06 15:23:54</span>
+                                <span>推送时间：2019.06.06 15:23:54</span>
+                                <span>安全生产负责人：殷春铭</span>
+                            </div>
+                        </div>
+                        <div class="line-body">
+                            <div class="line-body-left">
+                                <iframe src="../layerHtml/hikvision.html" style="width: 11.5vw;
+                                height: 17.5vh;border:none;" frameborder="0"></iframe>
+                            </div>
+                            <div class="line-body-right text-center">
+                                <div style="height:10vh" id="layer-photos-demo" class="layer-photos-demo"><img
+                                        src="../images/yu.png" alt="" ayer-src="../images/yu.png">
+                                    <img layer-src="../images/yu.png" layer-pid="" src="../images/yu.png"
+                                        alt="说好的，一起Fly" layer-index="0" style="display: none">
+                                    <img layer-src="../images/yu.png" layer-pid="" src="../images/yu.png"
+                                        alt="说好的，一起Fly" layer-index="0" style="display: none">
+                                    <img layer-src="../images/yu.png" layer-pid="" src="../images/yu.png"
+                                        alt="说好的，一起Fly" layer-index="0" style="display: none">
+                                </div>
+                                <div style="    font-size: 1vw;
+                                color: #fff;">疑似度<br><span class="nums white-m">91%</span></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-md6">
+                <div class="box-c">
+                    <div class="box-header">
+                        <img src="../images/guan.png" alt="" style="display: block;
+                        margin: auto;">
+                        <h3>监管闭环</h3>
+                    </div>
+                    <div class="box-body" style="    height: 76.2vh;
+                    padding: 2vh;box-sizing: border-box  ;     display: flex;
+    justify-content: center;
+    align-items: center;">
+                        <img src="/images/lctsd.gif" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/javascript/jquery.min.js"></script>
+    <script src="/layui/layui.js"></script>
+    <script>
+        layui.use('layer', function () {
+            var layer = layui.layer;
+
+            layer.photos({
+                photos: '#layer-photos-demo',
+                anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+            });
+        });
+
+        function kc() {
+            layer.open({
+                type: 2,
+                title: false,
+                shadeClose: true, //点击遮罩关闭层
+                area: ["65vw", "73%"],
+                offset: "4.63vh",
+                content: "../layerHtml/kc.html"
+            });
+        }
+    </script>
+
+</body>
+
+</html>

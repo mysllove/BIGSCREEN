@@ -1,0 +1,362 @@
+[
+    {
+        "OPERATEPOINTNAME": "上海日陆外联发物流有限公司",
+        "UNDERTAKER": "朱代忠,蒋伟奇",
+        "RECEIVABLEPENALTY": 3,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2018-07-05 15:00:00",
+        "PORID": 110654
+    },
+    {
+        "OPERATEPOINTNAME": "宋瑞忠",
+        "UNDERTAKER": "张卫国,陈宇良",
+        "RECEIVABLEPENALTY": 0.1,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2018-04-11 09:24:00",
+        "PORID": 109772
+    },
+    {
+        "OPERATEPOINTNAME": "杨新龙",
+        "UNDERTAKER": "张卫国,陈宇良",
+        "RECEIVABLEPENALTY": 0.1,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2018-04-11 09:22:00",
+        "PORID": 109772
+    },
+    {
+        "OPERATEPOINTNAME": "宋福长",
+        "UNDERTAKER": "张卫国,陈宇良",
+        "RECEIVABLEPENALTY": 0.2,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2018-04-11 09:20:00",
+        "PORID": 109772
+    },
+    {
+        "OPERATEPOINTNAME": "上海元邦化工制造有限公司",
+        "UNDERTAKER": "张卫国,陈宇良",
+        "RECEIVABLEPENALTY": 2,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2018-04-11 09:18:00",
+        "PORID": 109772
+    },
+    {
+        "OPERATEPOINTNAME": "上海亿升海运仓储有限公司",
+        "UNDERTAKER": "季广军,宋红",
+        "RECEIVABLEPENALTY": 4,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2017-10-23 14:44:00",
+        "PORID": 108531
+    },
+    {
+        "OPERATEPOINTNAME": "德之馨（上海）有限公司",
+        "UNDERTAKER": "朱代忠,张卫国",
+        "RECEIVABLEPENALTY": 3,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2017-07-25 10:23:00",
+        "PORID": 107971
+    },
+    {
+        "OPERATEPOINTNAME": "MATTHEW WILLIAM ROUSE",
+        "UNDERTAKER": "朱代忠,张卫国",
+        "RECEIVABLEPENALTY": 1,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2017-07-25 10:02:00",
+        "PORID": 107971
+    },
+    {
+        "OPERATEPOINTNAME": "德之馨（上海）有限公司",
+        "UNDERTAKER": "朱代忠,张卫国",
+        "RECEIVABLEPENALTY": 5,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2017-07-25 09:47:00",
+        "PORID": 107972
+    },
+    {
+        "OPERATEPOINTNAME": "上海高砂·鉴臣香料有限公司",
+        "UNDERTAKER": "朱军,张富华",
+        "RECEIVABLEPENALTY": 15,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2017-07-21 00:00:00",
+        "PORID": 107854
+    },
+    {
+        "OPERATEPOINTNAME": "普莱克斯（上海）半导体气体有限公司",
+        "UNDERTAKER": "张卫国,朱代忠",
+        "RECEIVABLEPENALTY": 5,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2017-07-20 15:06:00",
+        "PORID": 107954
+    },
+    {
+        "OPERATEPOINTNAME": "上海蒙明仓储有限公司",
+        "UNDERTAKER": "朱军,张富华",
+        "RECEIVABLEPENALTY": 1,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2017-06-12 00:00:00",
+        "PORID": 107604
+    },
+    {
+        "OPERATEPOINTNAME": "丁家黎",
+        "UNDERTAKER": "朱军,张富华",
+        "RECEIVABLEPENALTY": 0.1,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2017-06-12 00:00:00",
+        "PORID": 107604
+    },
+    {
+        "OPERATEPOINTNAME": "上海高桥制氧有限公司",
+        "UNDERTAKER": "季广军,宋红",
+        "RECEIVABLEPENALTY": 0.5,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2017-05-03 11:56:00",
+        "PORID": 107432
+    },
+    {
+        "OPERATEPOINTNAME": "上海双基药业有限公司",
+        "UNDERTAKER": "朱代忠,朱春华",
+        "RECEIVABLEPENALTY": 6,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2017-04-18 10:42:00",
+        "PORID": 107298
+    },
+    {
+        "OPERATEPOINTNAME": "映瑞光电科技（上海）有限公司",
+        "UNDERTAKER": "朱军,张富华",
+        "RECEIVABLEPENALTY": 8,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2017-04-17 00:00:00",
+        "PORID": 107263
+    },
+    {
+        "OPERATEPOINTNAME": "上海蒙明仓储有限公司",
+        "UNDERTAKER": "季广军,宋红",
+        "RECEIVABLEPENALTY": 10,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2017-04-05 09:22:00",
+        "PORID": 107271
+    },
+    {
+        "OPERATEPOINTNAME": "上海创丰特殊树脂有限公司",
+        "UNDERTAKER": "王鹏飞,金继良",
+        "RECEIVABLEPENALTY": 5,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2016-10-26 09:54:00",
+        "PORID": 106242
+    },
+    {
+        "OPERATEPOINTNAME": "上海元邦化工制造有限公司",
+        "UNDERTAKER": "王鹏飞,金继良",
+        "RECEIVABLEPENALTY": 5,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2016-10-20 14:11:00",
+        "PORID": 106244
+    },
+    {
+        "OPERATEPOINTNAME": "上海周浦冷藏有限公司",
+        "UNDERTAKER": "朱军,张富华",
+        "RECEIVABLEPENALTY": 5,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2016-09-29 00:00:00",
+        "PORID": 106059
+    },
+    {
+        "OPERATEPOINTNAME": "上海蒙明仓储有限公司",
+        "UNDERTAKER": "朱代忠,朱春华",
+        "RECEIVABLEPENALTY": 5,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2016-06-13 14:07:00",
+        "PORID": 105561
+    },
+    {
+        "OPERATEPOINTNAME": "盛联精密气体（上海）有限公司",
+        "UNDERTAKER": "张卫国,陈宇良",
+        "RECEIVABLEPENALTY": 10,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2016-06-01 13:05:00",
+        "PORID": 105399
+    },
+    {
+        "OPERATEPOINTNAME": "盛联精密气体（上海）有限公司",
+        "UNDERTAKER": "张卫国,陈宇良",
+        "RECEIVABLEPENALTY": 30,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2016-05-31 09:17:00",
+        "PORID": 105398
+    },
+    {
+        "OPERATEPOINTNAME": "上海蒙明仓储有限公司",
+        "UNDERTAKER": "张卫国,陈宇良",
+        "RECEIVABLEPENALTY": 5,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2015-11-13 11:49:00",
+        "PORID": 104346
+    },
+    {
+        "OPERATEPOINTNAME": "上海庄臣有限公司",
+        "UNDERTAKER": "季广军,宋红",
+        "RECEIVABLEPENALTY": 7,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2015-11-03 09:09:00",
+        "PORID": 104563
+    },
+    {
+        "OPERATEPOINTNAME": "雅博色彩科技（上海）有限公司",
+        "UNDERTAKER": "朱军,张富华",
+        "RECEIVABLEPENALTY": 1,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2015-10-30 10:07:00",
+        "PORID": 104380
+    },
+    {
+        "OPERATEPOINTNAME": "上海浦航石油有限公司",
+        "UNDERTAKER": "高军,王润",
+        "RECEIVABLEPENALTY": 1,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2015-10-29 13:32:00",
+        "PORID": 104246
+    },
+    {
+        "OPERATEPOINTNAME": "上海罗氏制药有限公司",
+        "UNDERTAKER": "季广军,宋红,吴国忠",
+        "RECEIVABLEPENALTY": 1,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2015-10-13 09:08:00",
+        "PORID": 104244
+    },
+    {
+        "OPERATEPOINTNAME": "上海日陆外联发物流有限公司",
+        "UNDERTAKER": "张卫国,陈宇良",
+        "RECEIVABLEPENALTY": 10,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2015-10-10 10:38:00",
+        "PORID": 104143
+    },
+    {
+        "OPERATEPOINTNAME": "上海罗氏制药有限公司",
+        "UNDERTAKER": "季广军,宋红,吴国忠,杨林龙",
+        "RECEIVABLEPENALTY": 10,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2015-10-09 09:10:00",
+        "PORID": 104242
+    },
+    {
+        "OPERATEPOINTNAME": "上海鼎铭集装箱储运有限公司",
+        "UNDERTAKER": "朱代忠,魏巍",
+        "RECEIVABLEPENALTY": 10,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2015-09-07 10:30:00",
+        "PORID": 104041
+    },
+    {
+        "OPERATEPOINTNAME": "上海踏浪精细化工有限公司",
+        "UNDERTAKER": "王美萍,郑  标",
+        "RECEIVABLEPENALTY": 2,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2015-06-04 12:00:00",
+        "PORID": 103221
+    },
+    {
+        "OPERATEPOINTNAME": "上海鼎铭集装箱储运有限公司",
+        "UNDERTAKER": "吴国忠,朱代忠,魏巍,朱春华",
+        "RECEIVABLEPENALTY": 10,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2015-05-19 12:00:00",
+        "PORID": 103081
+    },
+    {
+        "OPERATEPOINTNAME": "上海双基药业有限公司",
+        "UNDERTAKER": "朱军,王萍",
+        "RECEIVABLEPENALTY": 5,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2015-04-24 00:00:00",
+        "PORID": 102180
+    },
+    {
+        "OPERATEPOINTNAME": "上海普莱克斯仪电实用气体有限公司",
+        "UNDERTAKER": "季广军,潘杰",
+        "RECEIVABLEPENALTY": 2.8,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2014-09-28 12:12:00",
+        "PORID": 100973
+    },
+    {
+        "OPERATEPOINTNAME": "杨昌存",
+        "UNDERTAKER": "季广军,潘杰",
+        "RECEIVABLEPENALTY": 0.2,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2014-09-28 12:06:00",
+        "PORID": 100973
+    },
+    {
+        "OPERATEPOINTNAME": "上海创诺制药有限公司",
+        "UNDERTAKER": "朱军,杨德胜",
+        "RECEIVABLEPENALTY": 5,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2014-09-24 00:00:00",
+        "PORID": 100903
+    },
+    {
+        "OPERATEPOINTNAME": "上海归鸿实业有限公司",
+        "UNDERTAKER": "杨胜军,冯国荣,赵文官",
+        "RECEIVABLEPENALTY": 0.2,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2014-09-12 08:39:00",
+        "PORID": 100900
+    },
+    {
+        "OPERATEPOINTNAME": "西格玛奥德里奇（上海）贸易有限公司",
+        "UNDERTAKER": "朱军,杨德胜",
+        "RECEIVABLEPENALTY": 3,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2014-07-14 00:00:00",
+        "PORID": 100724
+    },
+    {
+        "OPERATEPOINTNAME": "上海蒙明仓储有限公司",
+        "UNDERTAKER": "张卫国,金继良",
+        "RECEIVABLEPENALTY": 10,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2014-06-13 09:11:00",
+        "PORID": 100581
+    },
+    {
+        "OPERATEPOINTNAME": "立邦涂料（中国）有限公司",
+        "UNDERTAKER": "季广军,潘杰",
+        "RECEIVABLEPENALTY": 10,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2014-06-10 13:11:00",
+        "PORID": 100600
+    },
+    {
+        "OPERATEPOINTNAME": "上海鼎铭集装箱储运有限公司",
+        "UNDERTAKER": "朱军,杨德胜",
+        "RECEIVABLEPENALTY": 1.5,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2014-05-26 09:29:00",
+        "PORID": 100482
+    },
+    {
+        "OPERATEPOINTNAME": "陈银河",
+        "UNDERTAKER": "朱军,杨德胜",
+        "RECEIVABLEPENALTY": 0.5,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2014-05-26 09:19:00",
+        "PORID": 100482
+    },
+    {
+        "OPERATEPOINTNAME": "上海踏浪精细化工有限公司",
+        "UNDERTAKER": "朱代忠,魏巍",
+        "RECEIVABLEPENALTY": 5,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2014-04-30 09:00:00",
+        "PORID": 100400
+    },
+    {
+        "OPERATEPOINTNAME": "上海高桥制氧有限公司",
+        "UNDERTAKER": "张卫国,金继良",
+        "RECEIVABLEPENALTY": 0.5,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2014-04-14 09:54:00",
+        "PORID": 100381
+    }
+]

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>海康威视</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="../javascript/jquery.min.js"></script>
+	<style>
+		* {
+			margin: 0;
+			padding: 0
+		}
+
+		body,
+		html {
+			height: 100%;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div id="camera" style="width:100%;height:100%;position:relative"></div>
+
+	<script src="../javascript/hikvision/webVideoCtrl.js"></script>
+	<script>
+		$(function () {
+			$.getJSON("../javascript/hikvision/camera.json", function (data) {
+				cameraData = data;
+				initCameraPlugin();
+			});
+		});
+
+		var g_iWndIndex = 0;
+		var ip = "124.74.243.150";
+		var port = "8002";
+		var username = "admin";
+		var password = "zhengyiqiye17";
+		var channelId = "18";
+		var defaultBitStream = 4;
+		var deviceOpptId = 17363;
+		var deviceOpptName = "振义";
+		var cameraData;
+
+		function initCameraPlugin() {
+			// 检查插件是否已经安装过
+			var iRet = WebVideoCtrl.I_CheckPluginInstall();
+			if (-2 == iRet) {
+				alert("您的Chrome浏览器版本过高，不支持NPAPI插件！");
+				return;
+			} else if (-1 == iRet) {
+				alert("您的视频播放插件未进行安装！");
+				//window.parent.hikvisionVersionMsg();
+				return;
+			}
+			var width = $(window).width();
+			var height = $(window).height() - 1;
+			//初始化插件参数及插入插件
+			WebVideoCtrl.I_InitPlugin(width, height, {
+				bWndFull: true, //是否支持单窗口双击全屏，默认支持 true:支持 false:不支持
+				iWndowType: 1, //窗口分割数1：1x1，2：2x2，3：3x3，4：4x4
+				szColorProperty: "sub-border-select:#ffffff",
+				cbSelWnd: function (xmlDoc) {
+					g_iWndIndex = $(xmlDoc).find("SelectWnd").eq(0).text();
+				}
+			});
+			WebVideoCtrl.I_InsertOBJECTPlugin("camera");
+			// 检查插件是否最新
+			if (-1 == WebVideoCtrl.I_CheckPluginVersion()) {
+				//window.parent.hikvisionVersionMsg();
+				alert("您的视频播放插件未进行安装！");
+				return;
+			}
+			//先加载第一次，后随机生成
+			//window.parent.document.getElementById("warehouseName").innerHTML = "（" + deviceOpptName + "）";
+			//window.parent.document.getElementById("deviceOpptId").value = deviceOpptId;
+			cameraLogin();
+			/**
+			setInterval(function () {
+				var cameraIndex = Math.floor(Math.random() * cameraData.length);
+				if (cameraData[cameraIndex] != null) {
+					//先退出上一次的
+					clickLogout();
+					//再随机新的
+					ip = cameraData[cameraIndex].IPADDR;
+					port = cameraData[cameraIndex].IPPORT;
+					username = cameraData[cameraIndex].USERNAME;
+					password = cameraData[cameraIndex].PASSWORD;
+					channelId = cameraData[cameraIndex].VIDEOCHANNELNO;
+					defaultBitStream = cameraData[cameraIndex].DEFAULTBITSTREAM;
+					//window.parent.document.getElementById("warehouseName").innerHTML = "（" + cameraData[cameraIndex].DEVICEOPPTNAME + "）";
+					//window.parent.document.getElementById("deviceOpptId").value =cameraData[cameraIndex].DEVICEOPPTID;
+					cameraLogin();
+				}
+			}, 1000 * 20);
+			*/
+		}
+
+		function cameraLogin() {
+			if ("" == ip) {
+				return;
+			}
+			var iRet = WebVideoCtrl.I_Login(ip, 1, port, username, password, {
+				success: function (xmlDoc) {
+					//开始直接预览
+					setTimeout(function () {
+						clickStartRealPlay();
+					}, 1000);
+				},
+				error: function () {
+					//alert("登录失败！");
+				}
+			});
+			if (-1 == iRet) {
+				//alert("已登录过，不需要重复登录！");
+			}
+		}
+
+		//退出摄像头终端
+		function clickLogout() {
+			if ("" == ip) {
+				return;
+			}
+			var iRet = WebVideoCtrl.I_Logout(ip);
+			if (0 == iRet) {
+				//alert("退出成功！");
+			} else {
+				//alert("退出失败！");
+			}
+		}
+
+		window.onunload = function () {
+			//执行退出操作
+			clickLogout();
+		}
+
+		/**************************************预览***********************************************/
+		//开始预览
+		function clickStartRealPlay() {
+			if ("" == ip) {
+				return;
+			}
+			var oWndInfo = WebVideoCtrl.I_GetWindowStatus(g_iWndIndex);
+			if (oWndInfo != null) { // 已经在播放了，先停止
+				WebVideoCtrl.I_Stop();
+			}
+			var iRet = WebVideoCtrl.I_StartRealPlay(ip, {
+				iWndIndex: g_iWndIndex,
+				iStreamType: parseInt(defaultBitStream),
+				iChannelID: channelId,
+				bZeroChannel: false
+			});
+			if (0 == iRet) {
+				//alert("开始预览成功！");
+			} else {
+				//预览失败5秒后重新预览
+				setTimeout(function () {
+					clickStartRealPlay();
+				}, 5000);
+				//alert("开始预览失败！");
+			}
+		}
+	</script>
+</body>
+
+</html>

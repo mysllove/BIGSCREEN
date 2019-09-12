@@ -1,0 +1,50 @@
+[
+    {
+        "OPERATEPOINTNAME": "上海创丰特殊树脂有限公司",
+        "UNDERTAKER": "张卫国,陈宇良",
+        "RECEIVABLEPENALTY": 0,
+        "PENALTYTYPENAME": "暂扣或者吊销有关许可证，暂停或者撤销有关执业资格、岗位证书 ",
+        "DECISIONDATE": "2018-10-08 09:25:00",
+        "PORID": 110996
+    },
+    {
+        "OPERATEPOINTNAME": "上海日陆外联发物流有限公司",
+        "UNDERTAKER": "朱代忠,蒋伟奇",
+        "RECEIVABLEPENALTY": 3,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2018-07-05 15:00:00",
+        "PORID": 110654
+    },
+    {
+        "OPERATEPOINTNAME": "宋瑞忠",
+        "UNDERTAKER": "张卫国,陈宇良",
+        "RECEIVABLEPENALTY": 0.1,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2018-04-11 09:24:00",
+        "PORID": 109772
+    },
+    {
+        "OPERATEPOINTNAME": "杨新龙",
+        "UNDERTAKER": "张卫国,陈宇良",
+        "RECEIVABLEPENALTY": 0.1,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2018-04-11 09:22:00",
+        "PORID": 109772
+    },
+    {
+        "OPERATEPOINTNAME": "宋福长",
+        "UNDERTAKER": "张卫国,陈宇良",
+        "RECEIVABLEPENALTY": 0.2,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2018-04-11 09:20:00",
+        "PORID": 109772
+    },
+    {
+        "OPERATEPOINTNAME": "上海元邦化工制造有限公司",
+        "UNDERTAKER": "张卫国,陈宇良",
+        "RECEIVABLEPENALTY": 2,
+        "PENALTYTYPENAME": "罚款",
+        "DECISIONDATE": "2018-04-11 09:18:00",
+        "PORID": 109772
+    }
+]

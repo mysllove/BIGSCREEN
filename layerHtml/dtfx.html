@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <link rel="stylesheet" href="../css/layer.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="layer-title">动态风险</h1>
+    </header>
+    <div class="layer-container">
+        <div class="layui-row">
+            <div class="layui-col-md3">
+                <div class="dynamic-risk">
+                    <h2 class="dynamic-risk-title">动态风险评估数据模型</h2>
+                    <div class="information-box">
+                        <div class="dynamic-ifo">
+                            <img src="../images/Thermometer.gif" alt="">
+                            <div class="dynamic-ifo-list">
+                                <h3>各类危险作业加分值</h3>
+                                <ol>
+                                    <li>
+                                        1、恶劣天气 + 40
+                                    </li>
+                                    <li>
+                                        2、特殊动火作业 + 100
+                                    </li>
+                                    <li>
+                                        3、一级动火作业 + 60
+                                    </li>
+                                    <li>
+                                        4、二级动火作业 + 40
+                                    </li>
+                                    <li>
+                                        5、受限空间 + 40
+                                    </li>
+                                    <li>
+                                        6、临时用电 + 10
+                                    </li>
+                                    <li>
+                                        7、盲板抽堵作业 + 10
+                                    </li>
+                                    <li>
+                                        8、动土作业 + 10
+                                    </li>
+                                    <li>
+                                        9、高处作业 + 40
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="explain">
+                            <p>根据《浦东新区安全承诺与风险研判实行方法》进行动态风险评估</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-md1">
+                <div class="mid"> <img src="../images/blue-arrow.png" alt=""></div>
+            </div>
+            <div class="layui-col-md3">
+                <div class="risk-reporting">
+                    <h2 class="risk-reporting-title">风险上报</h2>
+                    <div class="information-box">
+                        <div class="information-container">
+                            <div class="reporting-item">
+                                <div class="reporting-txt">
+                                    <h4>今日安全承诺</h4>
+                                    <span>未上报企业</span>
+                                </div>
+                                <div class="reporting-num">
+                                    <span class="layer-number-big font-style-digfaw" id="credit55_1">07</span>
+                                    <span class="word-aux">家</span>
+                                </div>
+                            </div>
+                            <div class="reporting-item">
+                                <div class="reporting-txt">
+                                    <h4>危险作业上报</h4>
+                                </div>
+                                <div class="reporting-num">
+                                    <span class="layer-number-big font-style-digfaw" id="credit55_1">13</span>
+                                    <span class="word-aux">家</span>
+                                </div>
+                            </div>
+                            <div class="working">
+                                <h3 class="working-title">当日作业情况</h3>
+                                <div class="working-container">
+                                    <div class="working-box">
+                                        <h4>动火作业</h4>
+                                        <p><span>5</span>次</p>
+                                    </div>
+                                    <div class="working-box">
+                                        <h4>临时用电</h4>
+                                        <p><span>1</span>次</p>
+                                    </div>
+                                    <div class="working-box">
+                                        <h4>设备检修</h4>
+                                        <p><span>0</span>次</p>
+                                    </div>
+                                    <div class="working-box">
+                                        <h4>动土作业</h4>
+                                        <p><span>0</span>次</p>
+                                    </div>
+                                    <div class="working-box">
+                                        <h4>受限空间</h4>
+                                        <p><span>3</span>次</p>
+                                    </div>
+                                    <div class="working-box">
+                                        <h4>高处作业</h4>
+                                        <p><span>4</span>次</p>
+                                    </div>
+                                    <div class="working-box">
+                                        <h4>吊装作业</h4>
+                                        <p><span>0</span>次</p>
+                                    </div>
+                                    <div class="working-box">
+                                        <h4>抽堵盲板</h4>
+                                        <p><span>0</span>次</p>
+                                    </div>
+                                    <div class="working-box">
+                                        <h4>承包商作业</h4>
+                                        <p><span>0</span>次</p>
+                                    </div>
+                                    <div class="working-box">
+                                        <h4>试生产</h4>
+                                        <p><span>0</span>次</p>
+                                    </div>
+                                    <div class="working-box">
+                                        <h4>开停车</h4>
+                                        <p><span>0</span>次</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-md1">
+                <div class="mid"> <img src="../images/blue-arrow.png" alt=""></div>
+            </div>
+            <div class="layui-col-md3">
+                <div class="risk-rank">
+                    <h2 class="risk-rank-title">动态风险总览</h2>
+                    <div class="information-box">
+                        <div class="risk-rank-container">
+                            <div class="risk-rank-box border-red bg-red-light">
+                                <h4>高风险</h4>
+                                <span class="font-style-digfaw">2</span>
+                            </div>
+                            <div class="risk-rank-box border-yellow bg-yellow-light">
+                                <h4>中风险</h4>
+                                <span class="font-style-digfaw">55</span>
+                            </div>
+                            <div class="risk-rank-box border-blue bg-blue-light">
+                                <h4>低风险</h4>
+                                <span class="font-style-digfaw">23</span>
+                            </div>
+                        </div>
+                        <div class="risk-all">
+                            <table class="layui-table">
+                                <col>
+                                <thead>
+                                    <tr>
+                                        <th>企业名称</th>
+                                        <th>风险等级</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>巴斯夫特材料有限公司</td>
+                                        <td>高</td>
+                                    </tr>
+                                    <tr>
+                                        <td>巴斯夫特材料有限公司</td>
+                                        <td>高</td>
+                                    </tr>
+                                    <tr>
+                                        <td>巴斯夫特材料有限公司</td>
+                                        <td>高</td>
+                                    </tr>
+                                    <tr>
+                                        <td>巴斯夫特材料有限公司</td>
+                                        <td>高</td>
+                                    </tr>
+                                    <tr>
+                                        <td>巴斯夫特材料有限公司</td>
+                                        <td>高</td>
+                                    </tr>
+                                    <tr>
+                                        <td>巴斯夫特材料有限公司</td>
+                                        <td>高</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

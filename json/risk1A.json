@@ -1,0 +1,18 @@
+[
+    {
+        "OPTNAME": "巴斯夫新材料有限公司",
+        "HIGHESTRISKLEVEL": "A",
+        "BLOCKNAME": "高桥镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 91,
+        "ISRISKPIC": 1
+    },
+    {
+        "OPTNAME": "慧瞻材料科技(上海)有限公司",
+        "HIGHESTRISKLEVEL": "A",
+        "BLOCKNAME": "综合保税区",
+        "INDUSTRYTYPENAME": "经营服务",
+        "OPERATEPOINTID": 3,
+        "ISRISKPIC": 0
+    }
+]

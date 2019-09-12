@@ -1,0 +1,93 @@
+[
+    {
+        "OPTNAME": "上海天汉环境资源有限公司",
+        "OPERATYPEID": "动火作业",
+        "RISK": "B",
+        "RISK1": "高风险",
+        "OPTID": 107395
+    },
+    {
+        "OPTNAME": "比欧西气体(苏州)有限公司上海分公司",
+        "OPERATYPEID": "高处作业",
+        "RISK": "B",
+        "RISK1": "高风险",
+        "OPTID": 10240
+    },
+    {
+        "OPTNAME": "上海牡丹香精香料有限公司",
+        "OPERATYPEID": "动火作业",
+        "RISK": "C",
+        "RISK1": "中风险",
+        "OPTID": 142
+    },
+    {
+        "OPTNAME": "德之馨（上海）有限公司",
+        "OPERATYPEID": "动火作业",
+        "RISK": "B",
+        "RISK1": "高风险",
+        "OPTID": 61
+    },
+    {
+        "OPTNAME": "映瑞光电科技（上海）有限公司",
+        "OPERATYPEID": "高处作业",
+        "RISK": "B",
+        "RISK1": "高风险",
+        "OPTID": 4903
+    },
+    {
+        "OPTNAME": "普莱克斯（上海）半导体气体有限公司",
+        "OPERATYPEID": "受限空间作业",
+        "RISK": "B",
+        "RISK1": "高风险",
+        "OPTID": 107
+    },
+    {
+        "OPTNAME": "上海元邦化工制造有限公司",
+        "OPERATYPEID": "动火作业",
+        "RISK": "B",
+        "RISK1": "高风险",
+        "OPTID": 3602
+    },
+    {
+        "OPTNAME": "上海罗氏制药有限公司",
+        "OPERATYPEID": "高处作业",
+        "RISK": "D",
+        "RISK1": "中风险",
+        "OPTID": 2004
+    },
+    {
+        "OPTNAME": "映瑞光电科技（上海）有限公司",
+        "OPERATYPEID": "临时用电作业",
+        "RISK": "B",
+        "RISK1": "高风险",
+        "OPTID": 4903
+    },
+    {
+        "OPTNAME": "上海上药新亚药业有限公司新先锋制药厂",
+        "OPERATYPEID": "受限空间作业",
+        "RISK": "C",
+        "RISK1": "中风险",
+        "OPTID": 33
+    },
+    {
+        "OPTNAME": "立邦涂料（中国）有限公司",
+        "OPERATYPEID": "高处作业",
+        "RISK": "C",
+        "RISK1": "中风险",
+        "OPTID": 21409
+    },
+    {
+        "OPTNAME": "映瑞光电科技（上海）有限公司",
+        "OPERATYPEID": "动火作业",
+        "RISK": "B",
+        "RISK1": "高风险",
+        "OPTID": 4903
+    },
+    {
+        "OPTNAME": "立邦涂料（中国）有限公司",
+        "OPERATYPEID": "受限空间作业",
+        "RISK": "C",
+        "RISK1": "中风险",
+        "OPTID": 21409
+    }
+]

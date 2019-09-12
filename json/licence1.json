@@ -1,0 +1,66 @@
+﻿[
+    {
+        "OPTNAME": "上海浦航石油有限公司",
+        "CERTIFICATETYPENAME": "危险化学品经营许可证：仓储经营",
+        "REALSTOPDATE": "2019-07-30 00:00:00",
+        "BLOCKNAME": "曹路镇",
+        "INDUSTRYTYPENAME": "经营服务",
+        "OPTID": 62
+    },
+    {
+        "OPTNAME": "上海隆澜实业有限公司",
+        "CERTIFICATETYPENAME": "危险化学品经营许可证：仓储经营",
+        "REALSTOPDATE": "2019-08-15 00:00:00",
+        "BLOCKNAME": "川沙新镇",
+        "INDUSTRYTYPENAME": "经营服务",
+        "OPTID": 12488
+    },
+    {
+        "OPTNAME": "上海日陆外联发物流有限公司",
+        "CERTIFICATETYPENAME": "危险化学品经营许可证：仓储经营",
+        "REALSTOPDATE": "2019-08-07 00:00:00",
+        "BLOCKNAME": "综合保税区",
+        "INDUSTRYTYPENAME": "经营服务",
+        "OPTID": 5
+    },
+    {
+        "OPTNAME": "上海稳富实业有限公司",
+        "CERTIFICATETYPENAME": "危险化学品经营许可证：仓储经营",
+        "REALSTOPDATE": "2019-06-17 00:00:00",
+        "BLOCKNAME": "川沙新镇",
+        "INDUSTRYTYPENAME": "经营服务",
+        "OPTID": 12485
+    },
+    {
+        "OPTNAME": "上海密尔克卫化工储存有限公司",
+        "CERTIFICATETYPENAME": "危险化学品经营许可证：仓储经营",
+        "REALSTOPDATE": "2019-08-15 00:00:00",
+        "BLOCKNAME": "老港镇",
+        "INDUSTRYTYPENAME": "经营服务",
+        "OPTID": 3625
+    },
+    {
+        "OPTNAME": "上海东士石油化工有限公司",
+        "CERTIFICATETYPENAME": "危险化学品经营许可证：仓储经营",
+        "REALSTOPDATE": "2019-07-16 00:00:00",
+        "BLOCKNAME": "曹路镇",
+        "INDUSTRYTYPENAME": "经营服务",
+        "OPTID": 150
+    },
+    {
+        "OPTNAME": "上海鸿盛工业气体有限公司",
+        "CERTIFICATETYPENAME": "危险化学品经营许可证：批发（不带储存设施）",
+        "REALSTOPDATE": "2019-06-21 00:00:00",
+        "BLOCKNAME": "书院镇",
+        "INDUSTRYTYPENAME": "经营服务",
+        "OPTID": 12
+    },
+    {
+        "OPTNAME": "上海踏浪精细化工有限公司",
+        "CERTIFICATETYPENAME": "危险化学品安全生产许可证",
+        "REALSTOPDATE": "2019-05-25 00:00:00",
+        "BLOCKNAME": "老港镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPTID": 3627
+    }
+]

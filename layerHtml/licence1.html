@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <link rel="stylesheet" href="../css/screen.css">
+    <style type="text/css">
+        .layui-btn-xs,
+        .layui-btn-xs:hover {
+            width: 60px;
+            height: 25px;
+            line-height: 22px;
+            padding: 0 5px;
+            font-size: 12px;
+            background-color: #9E47B8;
+            color: #fff;
+            border: none;
+        }
+
+        .layui-table tr {
+            transition: all .3s;
+            -webkit-transition: all .3s;
+            background-color: #5961A9;
+            color: #fff;
+        }
+
+        .layui-table tbody tr:hover,
+        .layui-table-hover {
+            background-color: #5961A9;
+        }
+
+        .layui-table[lay-even] tr:nth-child(even) {
+            background-color: #474E9E;
+            color: #fff;
+        }
+
+        .layui-table thead tr {
+            background-color: #5C6AC2;
+            color: #fff;
+        }
+
+        .layui-laypage .layui-laypage-curr .layui-laypage-em {
+            background-color: #FF4400;
+        }
+
+        .layui-laypage a,
+        .layui-laypage span {
+            display: inline-block;
+            *display: inline;
+            *zoom: 1;
+            vertical-align: middle;
+            padding: 0 15px;
+            height: 28px;
+            line-height: 28px;
+            margin: 0 -1px 5px 0;
+            color: #fff;
+            font-size: 12px;
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        .layui-laypage .layui-laypage-skip {
+            color: #fff;
+        }
+
+        .btnSee {
+            width: 80px;
+            height: 30px;
+            background-color: #A84AC2;
+            color: #fff;
+            border: none;
+        }
+
+        body {
+            background-color: #454E9D;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="outer-container">
+        <div class="inner-container">
+            <div class="element">
+                <div class="topbar-head">
+                    <!-- <span>共63条</span> -->
+                    <h3>证照到期数据</h3>
+                    <!-- <div class="times">
+                        <div class="time-h"><i><img src="../images/time-left.png" alt=""></i><span
+                                class="yeas-t">2019</span><i><img src="../images/time-right.png" alt=""></i></i></div>
+                        <div class="time-h"><i><img src="../images/time-left.png" alt=""></i><span
+                                class="yeas-t">五月</span><i><img src="../images/time-right.png" alt=""></i></i></div>
+                        <span class="reflash"><img src="../images/reflash.png" alt=""></span>
+                    </div> -->
+                </div>
+                <table style="width: 100%;">
+                    <tr>
+                        <td>
+                            <table class="layui-table">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col width="10%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>证照所属企业</th>
+                                        <th>证照类型</th>
+                                        <th>过期时间</th>
+                                        <th>所属区域</th>
+                                        <th>所属行业</th>
+                                        <th>短信推送</th>
+                                        <th>系统推送</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="returnList"></tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="pageTag" style="padding-left:10px;">&nbsp;</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="../javascript/jquery.min.js"></script>
+    <script src="../layui/layui.js"></script>
+    <script>
+        var laypage = null;
+        layui.use(["laypage"], function () {
+            laypage = layui.laypage;
+            getData("1");
+        });
+
+        function initPage(count) {
+            laypage.render({
+                elem: 'pageTag',
+                count: count,
+                curr: "1",
+                limit: 10,
+                skin: "#1E9FFF",
+                layout: ['count', 'prev', 'page', 'next', 'skip'],
+                jump: function (obj, first) {
+                    if (!first) {
+                        getData(obj.curr);
+                    }
+                }
+            });
+        }
+
+        function getData(page) {
+            $.getJSON("../json/licence1.json", function (data) {
+                if (page == "1") {
+                    initPage(data.length);
+                }
+                var firstNum = (parseInt(page) - 1) * 10;
+                var endNum = parseInt(page) * 10 - 1;
+                $("#returnList").empty();
+                for (var i = firstNum; i <= endNum; i++) {
+                    if (data[i] != null) {
+                        var htmlStr = "<tr>" +
+                            "<td>" + data[i].OPTNAME + "</td>" +
+                            "<td>" + data[i].CERTIFICATETYPENAME + "</td>" +
+                            "<td>" + data[i].REALSTOPDATE + "</td>" +
+                            "<td>" + data[i].BLOCKNAME + "</td>" +
+                            "<td>" + data[i].INDUSTRYTYPENAME + "</td>" +
+                            "<td>已完成</td>" +
+                            "<td>已完成</td>" +
+                            "<td><input class=\"btnSee\" type=\"button\" value=\"查看详情\"  onclick=\"openUnitInfo('"+data[i].OPTID+"');\"/></td>" +
+                            "</tr>";
+                        $("#returnList").append(htmlStr);
+                    }
+                }
+            });
+        }
+
+        function openUnitInfo(id){
+            window.showModalDialog("../../qualification/jurisdictionunit!jurisdictionUnitAchivesForword.action?isValid=0&isRedirect=0&flag=1&operatePointId="+id,"","dialogHeight:670px;dialogWidth:1300px;status:no;help=no,resizable=no;edge:sunken;");
+        }
+    </script>
+</body>
+
+</html>

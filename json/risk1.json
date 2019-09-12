@@ -1,0 +1,641 @@
+[
+    {
+        "OPTNAME": "上海舜胜高分子有限公司",
+        "HIGHESTRISKLEVEL": "B",
+        "BLOCKNAME": "老港镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 108035,
+        "ISRISKPIC": 1
+    },
+    {
+        "OPTNAME": "中钞油墨有限公司",
+        "HIGHESTRISKLEVEL": "C",
+        "BLOCKNAME": "康桥镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 20787,
+        "ISRISKPIC": 1
+    },
+    {
+        "OPTNAME": "上海归鸿实业有限公司",
+        "HIGHESTRISKLEVEL": "B",
+        "BLOCKNAME": "老港镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 103939,
+        "ISRISKPIC": 1
+    },
+    {
+        "OPTNAME": "上海上药信谊药厂有限公司制药二厂",
+        "HIGHESTRISKLEVEL": "B",
+        "BLOCKNAME": "川沙新镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 4795,
+        "ISRISKPIC": 1
+    },
+    {
+        "OPTNAME": "上海踏浪精细化工有限公司",
+        "HIGHESTRISKLEVEL": "D",
+        "BLOCKNAME": "老港镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 3627,
+        "ISRISKPIC": 1
+    },
+    {
+        "OPTNAME": "雅博色彩科技（上海）有限公司",
+        "HIGHESTRISKLEVEL": "C",
+        "BLOCKNAME": "金桥出口加工区",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 11521,
+        "ISRISKPIC": 1
+    },
+    {
+        "OPTNAME": "空气化工产品气体（上海）有限公司",
+        "HIGHESTRISKLEVEL": "D",
+        "BLOCKNAME": "合庆镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 218,
+        "ISRISKPIC": 1
+    },
+    {
+        "OPTNAME": "上海元邦化工制造有限公司",
+        "HIGHESTRISKLEVEL": "B",
+        "BLOCKNAME": "老港镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 3602,
+        "ISRISKPIC": 1
+    },
+    {
+        "OPTNAME": "上海高桥大同净水材料有限公司",
+        "HIGHESTRISKLEVEL": "C",
+        "BLOCKNAME": "高桥镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 2916,
+        "ISRISKPIC": 1
+    },
+    {
+        "OPTNAME": "巴斯夫新材料有限公司",
+        "HIGHESTRISKLEVEL": "A",
+        "BLOCKNAME": "高桥镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 91,
+        "ISRISKPIC": 1
+    },
+    {
+        "OPTNAME": "上海上药新亚药业有限公司",
+        "HIGHESTRISKLEVEL": "C",
+        "BLOCKNAME": "曹路镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 32,
+        "ISRISKPIC": 1
+    },
+    {
+        "OPTNAME": "上海亚远化纺有限公司",
+        "HIGHESTRISKLEVEL": "B",
+        "BLOCKNAME": "惠南镇",
+        "INDUSTRYTYPENAME": "经营服务",
+        "OPERATEPOINTID": 22250,
+        "ISRISKPIC": 1
+    },
+    {
+        "OPTNAME": "上海航头工业气体经营部",
+        "HIGHESTRISKLEVEL": "C",
+        "BLOCKNAME": "航头镇",
+        "INDUSTRYTYPENAME": "经营服务",
+        "OPERATEPOINTID": 18718,
+        "ISRISKPIC": 1
+    },
+    {
+        "OPTNAME": "上海蒙明仓储有限公司",
+        "HIGHESTRISKLEVEL": "D",
+        "BLOCKNAME": "高桥镇",
+        "INDUSTRYTYPENAME": "经营服务",
+        "OPERATEPOINTID": 5137,
+        "ISRISKPIC": 1
+    },
+    {
+        "OPTNAME": "西格玛奥德里奇（上海）贸易有限公司",
+        "HIGHESTRISKLEVEL": "C",
+        "BLOCKNAME": "合庆镇",
+        "INDUSTRYTYPENAME": "经营服务",
+        "OPERATEPOINTID": 67,
+        "ISRISKPIC": 1
+    },
+    {
+        "OPTNAME": "世天威化工物流（上海）有限公司",
+        "HIGHESTRISKLEVEL": "D",
+        "BLOCKNAME": "综合保税区",
+        "INDUSTRYTYPENAME": "经营服务",
+        "OPERATEPOINTID": 39,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海运泽实业有限公司",
+        "HIGHESTRISKLEVEL": "B",
+        "BLOCKNAME": "老港镇",
+        "INDUSTRYTYPENAME": "经营服务",
+        "OPERATEPOINTID": 37,
+        "ISRISKPIC": 1
+    },
+    {
+        "OPTNAME": "上海鸿盛工业气体有限公司",
+        "HIGHESTRISKLEVEL": "B",
+        "BLOCKNAME": "书院镇",
+        "INDUSTRYTYPENAME": "经营服务",
+        "OPERATEPOINTID": 12,
+        "ISRISKPIC": 1
+    },
+    {
+        "OPTNAME": "上海高砂·鉴臣香料有限公司",
+        "HIGHESTRISKLEVEL": "C",
+        "BLOCKNAME": "康桥镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 119224,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海铁联化轻仓储有限公司",
+        "HIGHESTRISKLEVEL": "D",
+        "BLOCKNAME": "综合保税区",
+        "INDUSTRYTYPENAME": "经营服务",
+        "OPERATEPOINTID": 38,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海天汉环境资源有限公司",
+        "HIGHESTRISKLEVEL": "B",
+        "BLOCKNAME": "南汇新城镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 107395,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "林德气体（上海）有限公司",
+        "HIGHESTRISKLEVEL": "C",
+        "BLOCKNAME": "金桥镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 109074,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海石油天然气有限公司天然气处理厂",
+        "HIGHESTRISKLEVEL": "B",
+        "BLOCKNAME": "书院镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 83,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海上药新亚药业有限公司新先锋制药厂",
+        "HIGHESTRISKLEVEL": "C",
+        "BLOCKNAME": "张江镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 33,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海庄臣有限公司",
+        "HIGHESTRISKLEVEL": "B",
+        "BLOCKNAME": "金桥镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 27,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "德之馨（上海）有限公司",
+        "HIGHESTRISKLEVEL": "B",
+        "BLOCKNAME": "金桥镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 61,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海沧海工业气体有限公司",
+        "HIGHESTRISKLEVEL": "C",
+        "BLOCKNAME": "宣桥镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 42,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海南汇兴绿精细化工厂",
+        "HIGHESTRISKLEVEL": "C",
+        "BLOCKNAME": "老港镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 51,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "立邦涂料（中国）有限公司",
+        "HIGHESTRISKLEVEL": "C",
+        "BLOCKNAME": "唐镇镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 21409,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海高纯气体有限公司",
+        "HIGHESTRISKLEVEL": "D",
+        "BLOCKNAME": "高桥镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 20262,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海高桥制氧有限公司",
+        "HIGHESTRISKLEVEL": "C",
+        "BLOCKNAME": "高桥镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 16130,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海征宇反光材料有限公司",
+        "HIGHESTRISKLEVEL": "C",
+        "BLOCKNAME": "祝桥镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 28,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海罗氏制药有限公司",
+        "HIGHESTRISKLEVEL": "D",
+        "BLOCKNAME": "张江镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 2004,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海维港精细化工有限公司",
+        "HIGHESTRISKLEVEL": "C",
+        "BLOCKNAME": "老港镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 3532,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海牡丹香精香料有限公司",
+        "HIGHESTRISKLEVEL": "C",
+        "BLOCKNAME": "张江镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 142,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "普莱克斯（上海）半导体气体有限公司",
+        "HIGHESTRISKLEVEL": "B",
+        "BLOCKNAME": "张江镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 107,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海世壮新能源科技有限公司",
+        "HIGHESTRISKLEVEL": "D",
+        "BLOCKNAME": "老港镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 3546
+    },
+    {
+        "OPTNAME": "盛联精密气体（上海）有限公司",
+        "HIGHESTRISKLEVEL": "D",
+        "BLOCKNAME": "张江镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 12043,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海创丰特殊树脂有限公司",
+        "HIGHESTRISKLEVEL": "D",
+        "BLOCKNAME": "老港镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 11157,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "扬子江药业集团上海海尼药业有限公司",
+        "HIGHESTRISKLEVEL": "C",
+        "BLOCKNAME": "周浦镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 11759,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "巴斯夫催化剂(上海)有限公司",
+        "HIGHESTRISKLEVEL": "D",
+        "BLOCKNAME": "金桥镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 12513,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海上药信谊药厂有限公司制药总厂",
+        "HIGHESTRISKLEVEL": "C",
+        "BLOCKNAME": "金桥镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 12495,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "长谷川香料（上海）有限公司",
+        "HIGHESTRISKLEVEL": "D",
+        "BLOCKNAME": "金桥镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 12977,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海凯密特尔化学品有限公司",
+        "HIGHESTRISKLEVEL": "D",
+        "BLOCKNAME": "张江高科技园区",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 13084,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "比欧西气体(苏州)有限公司上海分公司",
+        "HIGHESTRISKLEVEL": "C",
+        "BLOCKNAME": "高东镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 10240,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海旭东海普药业有限公司",
+        "HIGHESTRISKLEVEL": "C",
+        "BLOCKNAME": "金桥镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 12502,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海欧利生东邦涂料有限公司",
+        "HIGHESTRISKLEVEL": "B",
+        "BLOCKNAME": "祝桥镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 11916,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海双基药业有限公司",
+        "HIGHESTRISKLEVEL": "D",
+        "BLOCKNAME": "康桥镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 11675,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海现代制药股份有限公司",
+        "HIGHESTRISKLEVEL": "C",
+        "BLOCKNAME": "高东镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 14080,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "奇华顿食用香精香料(上海)有限公司",
+        "HIGHESTRISKLEVEL": "B",
+        "BLOCKNAME": "川沙新镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 16102,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海天地涂料有限公司",
+        "HIGHESTRISKLEVEL": "C",
+        "BLOCKNAME": "祝桥镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 10663,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海拱极化学有限公司",
+        "HIGHESTRISKLEVEL": "C",
+        "BLOCKNAME": "老港镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 3455,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海普莱克斯仪电实用气体有限公司",
+        "HIGHESTRISKLEVEL": "D",
+        "BLOCKNAME": "金桥镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 118,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "奇华顿日用香精香料（上海）有限公司",
+        "HIGHESTRISKLEVEL": "D",
+        "BLOCKNAME": "张江镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 93,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海百润投资控股集团股份有限公司",
+        "HIGHESTRISKLEVEL": "C",
+        "BLOCKNAME": "康桥镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 81,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海迪赛诺化学制药有限公司",
+        "HIGHESTRISKLEVEL": "B",
+        "BLOCKNAME": "老港镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 77,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "巴斯夫高桥特性化学品（上海）有限公司",
+        "HIGHESTRISKLEVEL": "B",
+        "BLOCKNAME": "高行镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 75,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海国际油漆有限公司",
+        "HIGHESTRISKLEVEL": "C",
+        "BLOCKNAME": "金桥出口加工区",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 52,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "液化空气（上海浦东新区）有限公司",
+        "HIGHESTRISKLEVEL": "D",
+        "BLOCKNAME": "张江镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 48,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "映瑞光电科技（上海）有限公司",
+        "HIGHESTRISKLEVEL": "C",
+        "BLOCKNAME": "泥城镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 4903,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海创诺制药有限公司",
+        "HIGHESTRISKLEVEL": "B",
+        "BLOCKNAME": "宣桥镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 44,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海丽珠制药有限公司",
+        "HIGHESTRISKLEVEL": "D",
+        "BLOCKNAME": "金桥镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 128,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海沪康工业气体有限公司",
+        "HIGHESTRISKLEVEL": "D",
+        "BLOCKNAME": "康桥镇",
+        "INDUSTRYTYPENAME": "生产加工",
+        "OPERATEPOINTID": 13,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海隆澜实业有限公司",
+        "HIGHESTRISKLEVEL": "C",
+        "BLOCKNAME": "川沙新镇",
+        "INDUSTRYTYPENAME": "经营服务",
+        "OPERATEPOINTID": 12488,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "日陆物流（上海）有限公司",
+        "HIGHESTRISKLEVEL": "C",
+        "BLOCKNAME": "泥城镇",
+        "INDUSTRYTYPENAME": "经营服务",
+        "OPERATEPOINTID": 3388,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海浦航石油有限公司",
+        "HIGHESTRISKLEVEL": "C",
+        "BLOCKNAME": "曹路镇",
+        "INDUSTRYTYPENAME": "经营服务",
+        "OPERATEPOINTID": 62,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海周浦冷藏有限公司",
+        "HIGHESTRISKLEVEL": "D",
+        "BLOCKNAME": "周浦镇",
+        "INDUSTRYTYPENAME": "经营服务",
+        "OPERATEPOINTID": 26719,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海亿升海运仓储有限公司",
+        "HIGHESTRISKLEVEL": "B",
+        "BLOCKNAME": "高东镇",
+        "INDUSTRYTYPENAME": "经营服务",
+        "OPERATEPOINTID": 64,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海密尔克卫化工储存有限公司",
+        "HIGHESTRISKLEVEL": "B",
+        "BLOCKNAME": "老港镇",
+        "INDUSTRYTYPENAME": "经营服务",
+        "OPERATEPOINTID": 3625,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "卡特彼勒物流（上海）有限公司",
+        "HIGHESTRISKLEVEL": "D",
+        "BLOCKNAME": "南汇新城镇",
+        "INDUSTRYTYPENAME": "经营服务",
+        "OPERATEPOINTID": 13628,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海稳富实业有限公司",
+        "HIGHESTRISKLEVEL": "C",
+        "BLOCKNAME": "川沙新镇",
+        "INDUSTRYTYPENAME": "经营服务",
+        "OPERATEPOINTID": 12485,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "中国石化销售有限公司上海石油储运配送分公司高桥石油站",
+        "HIGHESTRISKLEVEL": "B",
+        "BLOCKNAME": "高桥镇",
+        "INDUSTRYTYPENAME": "经营服务",
+        "OPERATEPOINTID": 23710,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海振义企业发展有限公司",
+        "HIGHESTRISKLEVEL": "B",
+        "BLOCKNAME": "高东镇",
+        "INDUSTRYTYPENAME": "经营服务",
+        "OPERATEPOINTID": 17363,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "慧瞻材料科技(上海)有限公司",
+        "HIGHESTRISKLEVEL": "A",
+        "BLOCKNAME": "综合保税区",
+        "INDUSTRYTYPENAME": "经营服务",
+        "OPERATEPOINTID": 3,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海浦东伏龙仓储有限公司",
+        "HIGHESTRISKLEVEL": "D",
+        "BLOCKNAME": "高东镇",
+        "INDUSTRYTYPENAME": "经营服务",
+        "OPERATEPOINTID": 131,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海大宛食品有限公司",
+        "HIGHESTRISKLEVEL": "C",
+        "BLOCKNAME": "宣桥镇",
+        "INDUSTRYTYPENAME": "经营服务",
+        "OPERATEPOINTID": 11647,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海光和气体工业气体有限公司大团分公司",
+        "HIGHESTRISKLEVEL": "C",
+        "BLOCKNAME": "大团镇",
+        "INDUSTRYTYPENAME": "经营服务",
+        "OPERATEPOINTID": 9647,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海日陆外联发物流有限公司",
+        "HIGHESTRISKLEVEL": "C",
+        "BLOCKNAME": "综合保税区",
+        "INDUSTRYTYPENAME": "经营服务",
+        "OPERATEPOINTID": 5,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海东士石油化工有限公司",
+        "HIGHESTRISKLEVEL": "D",
+        "BLOCKNAME": "曹路镇",
+        "INDUSTRYTYPENAME": "经营服务",
+        "OPERATEPOINTID": 150,
+        "ISRISKPIC": 0
+    },
+    {
+        "OPTNAME": "上海利旦工业气体有限公司",
+        "HIGHESTRISKLEVEL": "B",
+        "BLOCKNAME": "老港镇",
+        "INDUSTRYTYPENAME": "经营服务",
+        "OPERATEPOINTID": 19,
+        "ISRISKPIC": 1
+    }
+]
