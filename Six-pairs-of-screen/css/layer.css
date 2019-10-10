@@ -107,6 +107,22 @@
     background-color: #5c255c;
 }
 
+.blue-lucency {
+    border: 2px solid #0072e3
+}
+
+.blue-lucency::before {
+    background-color: #0058b8;
+}
+
+.green-lucency {
+    border: 2px solid #22df3d
+}
+
+.green-lucency::before {
+    background-color: #086376;
+}
+
 .ratio>span {
     position: relative;
 }

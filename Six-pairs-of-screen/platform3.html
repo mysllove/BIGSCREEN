@@ -1197,14 +1197,6 @@
                 changeimages();
                 changedotted();
             });
-            $(".icon-left2").click(function() {
-                index--;
-                if (index < 1) {
-                    index = li.length
-                }
-                changeimages();
-                changedotted();
-            });
 
             function changedotted() {
                 $(".total span").eq(index - 1).siblings().removeClass("ok");
