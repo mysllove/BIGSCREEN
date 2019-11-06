@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="//at.alicdn.com/t/font_1463746_4qcylx1qb2.js"></script>
+</head>
+
+<style type="text/css">
+    .icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+    }
+    
+    .nav-nav li .icon {
+        width: 1.4em;
+        height: 1.4em;
+        vertical-align: -0.35em;
+        fill: currentColor;
+        overflow: hidden;
+        margin-right: 0.2em;
+    }
+    
+    .main-warpper {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+    /* .swiper-wrapper {
+        min-height: 350px;
+        padding: 20px;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 1px 2px #ddd;
+    } */
+    
+    body,
+    html {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        background-color: #f5f4f2;
+    }
+    
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        /* -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center; */
+        min-height: 350px;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 1px 2px #ddd;
+    }
+    
+    .lines {
+        /* width: 500px; */
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        margin: auto;
+        position: relative;
+        font-size: 18px;
+        color: #504444;
+    }
+    
+    .lines:before,
+    .lines:after {
+        position: absolute;
+        background: #cccccc;
+        content: "";
+        height: 2px;
+        top: 50%;
+        width: 300px;
+    }
+    
+    .lines:before {
+        left: 50%;
+        margin-left: -27%;
+    }
+    
+    .lines:after {
+        right: 50%;
+        margin-right: -27%;
+    }
+    
+    .styleBox {
+        width: 18%;
+        height: 140px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    
+    .styleBox h2 {
+        color: #fff;
+        letter-spacing: 0.1em;
+        margin-bottom: 8px;
+        font-size: 24px;
+    }
+    
+    .styleBox p {
+        color: #fff;
+        font-size: 15px;
+    }
+    
+    .styleBox1 {
+        background-image: linear-gradient(160deg, #5157d7 20%, #5a93e1 80%);
+    }
+    
+    .styleBox2 {
+        background-image: linear-gradient(160deg, #6256c8 20%, #996be0 80%);
+    }
+    
+    .styleBox3 {
+        background-image: linear-gradient(160deg, #23b288 20%, #2dabab 80%);
+    }
+    
+    .styleBox4 {
+        background-image: linear-gradient(160deg, #f6415d 20%, #f36967 80%);
+    }
+    
+    .styleBox5 {
+        background-image: linear-gradient(160deg, #ff9326 20%, #ffb973 80%);
+    }
+</style>
+
+<body>
+    <div class="warp">
+        <header>
+            <h1 class="header">
+                <img src="images/logo.png" alt="">
+            </h1>
+        </header>
+        <nav class="nav">
+            <ul class="nav-nav">
+                <li class="active"><a href="./index.html"><svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-yingyong-copy"></use>
+            </svg>首页</a></li>
+                <li><a href="./indexspace.html"><svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-xuexi"></use>
+            </svg>学习中心</a></li>
+            </ul>
+            <div class="tip">
+                <span class="dottod">3</span>
+                <span class="layui-icon layui-icon-notice"></span>
+            </div>
+        </nav>
+        <div class="main-warpper">
+            <div>
+                <div class="swiper-container">
+
+
+                    <div class="lines">课程类型</div>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="styleBox styleBox1">
+                                <h2>法律法规</h2>
+                                <p>共计20视频</p>
+                            </div>
+                            <div class="styleBox styleBox2">
+                                <h2>行政执法</h2>
+                                <p>共计20视频</p>
+                            </div>
+                            <div class="styleBox styleBox3">
+                                <h2>行业检查</h2>
+                                <p>共计20视频</p>
+                            </div>
+                            <div class="styleBox styleBox4">
+                                <h2>危化品</h2>
+                                <p>共计20视频</p>
+                            </div>
+                            <div class="styleBox styleBox5">
+                                <h2>职业健康</h2>
+                                <p>共计20视频</p>
+                            </div>
+                            <div class="styleBox styleBox1">
+                                <h2>安全标准化</h2>
+                                <p>共计20视频</p>
+                            </div>
+                            <div class="styleBox styleBox2">
+                                <h2>党员学习</h2>
+                                <p>共计20视频</p>
+                            </div>
+                            <div class="styleBox styleBox3">
+                                <h2>方针政策</h2>
+                                <p>共计20视频</p>
+                            </div>
+                            <div class="styleBox styleBox4">
+                                <h2>矿山安全</h2>
+                                <p>共计20视频</p>
+                            </div>
+                            <div class="styleBox styleBox5">
+                                <h2>生产安全事故</h2>
+                                <p>共计20视频</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">Slide 2</div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+        </div>
+        <script src="./jquery.min.js"></script>
+        <script src="layui/layui.js"></script>
+        <script src="./swiper.min.js"></script>
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                autoplay: {
+                    delay: 3500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    autoplay: true
+                },
+            });
+        </script>
+        <script>
+            //注意：选项卡 依赖 element 模块，否则无法进行功能性操作
+            layui.use('element', function() {
+                var element = layui.element;
+
+                //…
+            });
+        </script>
+</body>
+
+</html
