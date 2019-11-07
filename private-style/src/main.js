@@ -5,9 +5,9 @@ import store from "./store";
 import ViewUI from "view-design";
 import "view-design/dist/styles/iview.css";
 import "@/styles/index.scss"; // global css
-import VCharts from "v-charts";
+import echarts from "echarts";
 
-Vue.use(VCharts);
+Vue.use(echarts);
 Vue.use(ViewUI);
 
 new Vue({

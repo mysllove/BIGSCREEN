@@ -1,58 +1,51 @@
 <template>
-  <div class="statistics-collection">
-    <!-- <div v-for="(chardata, index) in msg" :key="index">
-      <echartscom :chartData="chardata" autoresize />
-    </div> -->
-    <ve-ring
-      :data="chartData"
-      width="350px"
-      height="230px"
-      :legend-visible="false"
-      :settings="chartSettings"
-      :events="chartEvents"
-      :theme="theme"
-    ></ve-ring>
+  <div class="warp">
+    <div class="statistics-collection">
+      <div class="echartGroupItem">
+        <ChartB class="echarts" v-if="model1 === 'select2'" />
+        <ChartA class="echarts" v-else />
+        <Select v-model="model1" style="width:200px">
+          <Option
+            v-for="item in selectData"
+            :value="item.value"
+            :key="item.value"
+            >{{ item.label }}</Option
+          >
+        </Select>
+      </div>
+    </div>
+    <router-view />
   </div>
 </template>
 
 <script>
-// import echartscom from "@/components/echartscom.vue";
+import ChartA from "@/components/chartA.vue";
+import ChartB from "@/components/chartB.vue";
 export default {
+  name: "firm",
+  components: { ChartA, ChartB },
   data() {
-    this.chartSettings = {
-      radius: ["20%", "60%"],
-      offsetY: 110
-    };
-    this.theme = {
-      color: ["#2fc4fc", "#2ea1fc", "#1ddffa", "#74f7f9"]
-    };
-    var self = this;
-    this.chartEvents = {
-      click: function(e) {
-        self.name = e.name;
-        if (e.dataIndex == 1) {
-          alert(1);
-        }
-      }
-    };
     return {
-      chartData: {
-        columns: ["日期", "访问用户"],
-        rows: [
-          { 日期: "大型\n3286", 访问用户: 6119 },
-          { 日期: "中型\n3286", 访问用户: 12642 },
-          { 日期: "小型\n3286", 访问用户: 6283 },
-          { 日期: "微型\n3286", 访问用户: 3286 }
-        ]
-      }
+      selectData: [
+        {
+          value: "select1",
+          label: "企业规模"
+        },
+        {
+          value: "select2",
+          label: "涉危企业"
+        }
+      ],
+      model1: ""
     };
-  },
-  methods: {},
-  mounted() {}
+  }
 };
 </script>
 
 <style>
+.echartGroupItem {
+  text-align: center;
+}
 .echarts {
   width: 350px;
   height: 230px;

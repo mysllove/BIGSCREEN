@@ -4,29 +4,26 @@ import layout from "@/layout";
 Vue.use(VueRouter);
 
 const routes = [{
-    path: "/",
-    name: "layout",
-    component: layout,
-    redirect: "/firm",
-    children: [{
+        path: "/",
+        component: layout,
+        hidden: true,
+        children: [{
+            path: "/layout",
+            component: () =>
+                import ("@/layout/index")
+        }]
+    },
+    {
+        path: "/firm",
+        component: layout,
+        children: [{
             path: "/firm",
-            name: "firm",
-            component: function() {
-                return import (
-                    /* webpackChunkName: "about" */
-                    "../views/firm/index.vue"
-                );
-            }
-        },
-        {
-            path: "/about",
-            name: "about",
-            component: function() {
-                return import ( /* webpackChunkName: "about" */ "../views/About.vue");
-            }
-        }
-    ]
-}];
+            component: () =>
+                import ("@/views/firm/index"),
+            name: "firm"
+        }]
+    }
+];
 
 const router = new VueRouter({
     routes
