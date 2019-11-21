@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="css/platform.css">
+</head>
+
+<body class="bodyUi">
+    <div class="layout-body">
+        <header id="head">
+            <div class="headBar">
+                <h1 class="headBar-title">危险化学品监管</h1>
+            </div>
+        </header>
+        <div class="main">
+            <div class="layui-row layui-col-space10 fill-h">
+                <div class="layui-col-md4 fill-h">
+                    <div class="platform-plate">
+                        <div class="layui-card">
+                            <div class="layui-card-header">
+                                <div class="platform-plate-title">行业总览</div>
+                            </div>
+                            <div class="layui-card-body">
+                                <div class="chart-leader">总数：<span class="num blue-m">2283</span>&nbsp;/&nbsp;<span class="num blue-m">183</span>家</div>
+                                <div class="echarts" id="lineChart"></div>
+                                <div class="submodule">
+                                    <div class="submodule-title">两重点一重大</div>
+                                    <div class="submodule-body">
+                                        <div class="layui-row">
+                                            <div class="layui-col-md5">
+                                                <div class="echarts" id="funnel"></div>
+                                            </div>
+                                            <div class="layui-col-md7">
+                                                <div class="echarts" id="pieChart"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-md4 fill-h">
+                    <div class="platform-plate">2</div>
+                </div>
+                <div class="layui-col-md4 fill-h">
+                    <div class="platform-plate">3</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="javascript/echarts.min.js"></script>
+    <script src="javascript/diagram.js"></script>
+</body>
+
+</html>

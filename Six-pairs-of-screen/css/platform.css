@@ -5,7 +5,7 @@
     }
     
     .platform-style-ui {
-        background-color: #193387;
+        background-color: #def0f1;
     }
     
     .topbar {
@@ -115,63 +115,57 @@
         z-index: 99;
     }
     
-    .the-left-column,
-    .the-right-column,
-    .the-bottom-bar {
-        border: 1px solid #1c58f4;
-        box-shadow: 0 0 4px 1px #1c58f4 inset;
-        z-index: 99;
-    }
-    
     .the-left-column {
         position: absolute;
-        left: 0.3vw;
+        left: 1.25vw;
         top: 0.615vh;
         bottom: 0.615vh;
-        width: 28vw;
+        width: 32.1875vw;
         border: none;
-        box-shadow: none
+        box-shadow: none;
+        height: 61.7593vh;
+    }
+    
+    .the-mid-column {
+        height: 61.7593vh;
+        position: absolute;
+        left: 33.8vw;
+        right: 33.8vw;
+        top: 0.615vh;
+        bottom: 0.615vh;
+    }
+    
+    .the-mid-column .platform-module:first-child {
+        height: 22.2222vh;
+    }
+    
+    .the-mid-column .platform-module {
+        height: 19.1vh;
     }
     
     .the-right-column {
         position: absolute;
-        right: 0.3vw;
+        right: 1.25vw;
         top: 0.615vh;
-        width: 28vw;
-        height: 57vh
+        width: 32.1875vw;
+        height: 61.7593vh;
     }
     
     .the-bottom-bar {
         position: absolute;
-        left: 28.5vw;
-        right: 0.3vw;
-        top: 58.5vh;
+        left: 1.25vw;
+        right: 1.25vw;
+        top: 63.06vh;
         bottom: 0.615vh;
-    }
-    
-    .the-right-column .platform-module,
-    .the-bottom-bar .platform-module {
-        border: none;
-        box-shadow: none
     }
     
     .platform-warpper {
         height: 100%;
-        padding: 0 0.22vw;
+        /* padding: 0 0.22vw; */
         box-sizing: border-box;
         display: flex;
         flex-flow: column wrap;
-        justify-content: space-between
-    }
-    
-    .platform-warpper .platform-module {
-        height: 24%;
-        border: 1px solid #1c58f4;
-        box-shadow: 0 0 4px 1px #1c58f4 inset;
-        display: flex;
-        flex-direction: column;
-        z-index: 9999;
-        position: relative;
+        justify-content: space-between;
     }
     
     .module-header {
@@ -181,16 +175,18 @@
     }
     
     .module-title {
-        background-color: #1c58f4;
+        background-color: #42c3ff;
         display: inline-block;
         padding: 0 1.1vw;
         height: 4.3vh;
         text-align: center;
         line-height: 4.3vh;
-        font-size: 0.9vw;
+        font-size: 1vw;
         color: #fff;
         position: relative;
         cursor: pointer;
+        font-weight: bold;
+        letter-spacing: 0.05em;
     }
     
     .module-title::before {
@@ -199,9 +195,8 @@
         content: '';
         width: 0.38vw;
         height: 2.8vh;
-        background-color: #27f9ee;
+        background-color: #fff;
         transform: translateY(25%);
-        border-radius: 3px;
     }
     
     .module-annotation {
@@ -214,15 +209,16 @@
     
     .module-annotation .txt {
         padding: 0 0.5vw;
-        font-size: 0.9vw;
-        color: #fff
+        font-size: 1.2vw;
+        color: #333333;
+        font-weight: bold;
     }
     
     .statisticsBox-txt {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 0.1vh
+        padding: 0.3vh 0;
     }
     
     .statisticsBox-txt .customFont {
@@ -234,7 +230,7 @@
     .module-annotation .line {
         width: 1.2rem;
         height: 2px;
-        background: #6f85f0
+        background: #eeeeee
     }
     
     .module-annotation .line:first-child {
@@ -245,12 +241,40 @@
         flex-grow: 0.1;
     }
     
+    .txt .smalls {
+        position: relative;
+        top: 0.3704vh;
+        font-style: inherit;
+    }
+    
     .platform-module-body {
         padding: 0 0.7vw;
         box-sizing: border-box;
         flex: 1;
         overflow: auto;
         position: relative;
+    }
+    
+    .chart-leader {
+        font-size: 0.9vw;
+        text-align: center;
+        font-weight: bold;
+        color: #3e3d3d;
+        height: 3.7037vh;
+        line-height: 3.7037vh;
+    }
+    
+    .chart-leader span {
+        font-size: 1vw;
+        letter-spacing: 0.2em;
+    }
+    
+    .module-annotation .fill-line {
+        width: 100%;
+    }
+    
+    .blue-m {
+        color: #018cf3;
     }
     
     .discoverBox {
@@ -266,17 +290,28 @@
     .layui-tab-title {
         border-bottom-width: 0;
         border-bottom-style: hidden;
-        display: flex;
-        justify-content: space-between;
         height: auto;
     }
     
     .layui-tab-title li {
-        background-color: #142e73;
-        height: 10vh;
         padding: 0;
-        min-width: 8.6vw;
         border: 1px solid #04206a;
+        width: 32.77%;
+        height: 3.7037vh;
+        line-height: 3.7037vh;
+        border: 1px solid #028cf3;
+        border-left: 9px solid #028cf3;
+        box-sizing: border-box;
+        text-align: center;
+        font-size: 0.7813vw;
+        color: #333;
+        font-weight: bold;
+        position: relative;
+        margin-right: 5px;
+    }
+    
+    .layui-tab-title li:last-child {
+        margin-right: 0;
     }
     
     .layui-tab-title .layui-this:after {
@@ -297,13 +332,14 @@
     }
     
     .layui-tab-title .layui-this {
-        border: 1px solid #fff000;
+        border: 1px solid #ff7f00;
+        border-left: 9px solid #ff7f00;
     }
     
     .overview {
-        color: #fff000;
-        margin: 2.4vh 0;
-        font-size: 0.8vw;
+        color: #008cf2;
+        margin: 1.8519vh 0;
+        font-size: 0.9vw;
         position: relative;
     }
     
@@ -321,7 +357,7 @@
     
     .gaine {
         width: 100%;
-        height: 8.7vh;
+        height: 6.4815vh;
         display: flex;
         flex-flow: column;
         align-items: center;
@@ -351,11 +387,11 @@
     }
     
     .blue-box {
-        background-image: url(../images/big-blue.gif)
+        background-image: url(../images/blue.png)
     }
     
     .green-box {
-        background-image: url(../images/big-green.png)
+        background-image: url(../images/green.png)
     }
     
     .black-box {
@@ -363,11 +399,29 @@
     }
     
     .yellow-box {
-        background-image: url(../images/yellow.png)
+        background-image: url(../images/yellow.png);
+    }
+    
+    .orange-box {
+        background-image: url(../images/orange.png);
+    }
+    
+    .yellow-box .gaine-data,
+    .yellow-box .customFont,
+    .yellow-box p {
+        color: #000 !important;
     }
     
     .pink-box {
+        background-image: url(../images/red.png)
+    }
+    
+    .pink {
         background-image: url(../images/pink.png)
+    }
+    
+    .lightBlue {
+        background-image: url(../images/lightBlue.png)
     }
     
     .org-box {
@@ -375,7 +429,7 @@
     }
     
     .fill-h {
-        margin: 4.3vh 0
+        height: 100%;
     }
     
     .gaine-data {
@@ -397,42 +451,47 @@
     }
     
     .regulation-switch .tabs-content {
-        padding: 2.5vh 0;
+        padding: 1.5741vh 0;
     }
     
     .tab-list {
         width: 6.2vw;
-        height: 3.3vh;
-        padding: 0.3vh 0.1vw;
+        height: 3.5vh;
+        padding: 0.3vh 0.2vw;
         border: 1px solid #437acf;
         border-radius: 100vw;
         box-sizing: border-box;
         display: flex;
         align-items: center;
-        background-color: #091967;
+        background-color: #fff;
         z-index: 999;
         position: relative;
     }
     
     .tab-list li {
-        color: #fff;
+        color: #000;
         font-size: 0.8vw;
         width: 50%;
         height: 100%;
         text-align: center;
         cursor: pointer;
         border-radius: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     
     .tab-list .active {
-        background-color: #1c58f4
+        background-color: #018cf3;
+        color: #fff;
     }
     
     .statistics {
-        margin: 2vh 0 0 0;
-        color: #fff;
+        margin: 0.6vh 0 0.5vh 0;
+        color: #000;
         font-size: 0.85vw;
         position: relative;
+        font-weight: bold;
     }
     
     .layui-carousel {
@@ -454,20 +513,15 @@
     }
     
     .statisticsBox {
-        color: #fff;
+        color: #018cf3;
         font-size: 0.9vw;
         position: relative;
-    }
-    
-    .statisticsBox::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 0.2vw;
-        height: 2.4vh;
-        background-color: #b6f6ff;
-        transform: translateY(50%);
+        width: 100%;
+        height: 6.3vh;
+        border: 1px solid #03A9F4;
+        border-radius: 3px;
+        text-align: center;
+        box-sizing: border-box;
     }
     
     .statisticsBoxFirst::before {
@@ -479,19 +533,19 @@
         display: inline-block;
         vertical-align: middle;
         font-size: 0.8vw;
-        line-height: 1.9vh;
+        line-height: 1.5vh;
+        color: #000;
     }
-    
-    .platform-module::before {
+    /* .platform-module::before {
         position: absolute;
         left: 0;
         right: 0;
         bottom: 0;
         top: 0;
         content: '';
-        background-color: #0d2a89;
+        background-color: #fff;
         opacity: 0.5;
-    }
+    } */
     
     .face {
         position: absolute;
@@ -726,8 +780,9 @@
     }
     
     .platform-module {
-        border: 1px solid #1c58f4;
-        box-shadow: 0 0 4px 1px #1c58f4 inset;
+        border: 3px solid #42c3ff;
+        background-color: #fff;
+        box-sizing: border-box;
         display: flex;
         flex-direction: column;
         z-index: 9999;
@@ -1007,10 +1062,324 @@
     }
     
     .analyze .tabs li.active {
-        background-color: #fff000;
-        color: #000
+        background-color: #42c3ff;
+        color: #fff
     }
     
     .analyze .tabs-content {
         flex: 1
+    }
+    
+    .pandect {
+        overflow: hidden;
+        margin-left: -0.2604vw;
+    }
+    
+    .pandect-overview {
+        height: 3.7037vh;
+        line-height: 3.7037vh;
+        border: 1px solid #028cf3;
+        border-left: 9px solid #028cf3;
+        box-sizing: border-box;
+        text-align: center;
+        font-size: 0.7813vw;
+        color: #333;
+        font-weight: bold;
+        float: left;
+        margin-left: 0.3125vw;
+        padding: 0 0.7813vw;
+        margin-top: 0.2315vh;
+        margin-bottom: 0.2315vh;
+    }
+    
+    .overviewNum {
+        margin-left: 0.2604vw;
+    }
+    
+    .tips {
+        display: inline-block;
+        width: 1.0417vw;
+        height: 1.8519vh;
+        border-radius: 5px;
+        color: #fff;
+        text-align: center;
+        line-height: 1.8519vh;
+        background-color: #ff1a1a;
+        font-size: 0.6771vw;
+        vertical-align: middle;
+        margin-left: 0.2604vw;
+        cursor: pointer;
+    }
+    
+    .analyze .tab-item {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .echarts {
+        width: 100%;
+        height: 100%;
+    }
+    
+    #pieChart1 {
+        width: 25.4688vw;
+        height: 14.6852vh;
+    }
+    
+    .layui-disabled,
+    .layui-disabled:hover {
+        color: #666666!important;
+        cursor: not-allowed!important;
+    }
+    
+    .submodule-title {
+        color: #186cc1;
+        font-size: 1.0417vw;
+        height: 4.2vh;
+        line-height: 4.2vh;
+        margin-bottom: 0.2778vh;
+    }
+    
+    .submodule-overview {
+        width: 100%;
+        height: 3.7037vh;
+        line-height: 3.7037vh;
+        border: 1px solid #028cf3;
+        border-left: 9px solid #028cf3;
+        box-sizing: border-box;
+        text-align: center;
+        font-size: 0.7813vw;
+        color: #333;
+        font-weight: bold;
+    }
+    
+    content-wrap {
+        display: flex;
+        align-items: center;
+        margin: 100px;
+        background: #020a17;
+        opacity: 0.7;
+        width: 500px;
+        overflow: hidden;
+        border: 1px solid #003399;
+        border-radius: 35px;
+        padding: 0 10px;
+        line-height: 50px;
+    }
+    
+    .tab-wrap {
+        height: 4.6vh;
+        width: 287px;
+        position: relative;
+        overflow: hidden;
+        flex: 1;
+        margin: 0 10px;
+        line-height: 4.6vh;
+    }
+    
+    .tab-lists {
+        white-space: nowrap;
+        position: absolute;
+        font-size: 0;
+    }
+    
+    .content-wrap {
+        display: flex;
+        align-items: center;
+        margin-top: 1.5vh;
+    }
+    
+    .tab-lists span {
+        background: #554CCD;
+        font-size: 14px;
+        margin: 0 7px;
+        transition: all 1s;
+        border-radius: 5px;
+        padding: 0 0.5vw;
+        cursor: pointer;
+    }
+    
+    .tab-list span.active {
+        background-color: #1488a7;
+        color: #fff;
+    }
+    
+    .to-left,
+    .to-right {
+        display: inline-block;
+        height: 20px;
+        line-height: 20px;
+        cursor: pointer;
+        background-color: #1c58f4;
+        color: #fff;
+    }
+    
+    .module-content .waterQuality-item {
+        display: none;
+    }
+    
+    .module-content .waterQuality-item.up {
+        display: block;
+    }
+    
+    .small-module {
+        border-right: 1px solid #e0e0e0;
+        padding-right: 0.9896vw;
+        padding-left: 0.9896vw;
+        box-sizing: border-box;
+    }
+    
+    .small-module-title {
+        display: flex;
+        height: 4.4444vh;
+        line-height: 4.4444vh;
+        position: relative;
+        justify-content: space-between;
+        color: #018cf3;
+        font-size: 0.8854vw;
+    }
+    
+    .small-module-title .tab-list {
+        transform: translateY(-50%);
+        top: 50%;
+        width: 4.7917vw;
+        height: 3.7037vh;
+    }
+    
+    .situation {
+        width: 100%;
+        height: 3.7037vh;
+        line-height: 3.7037vh;
+        justify-content: space-between;
+        font-size: 0.7292vw;
+        color: #fff;
+        background: url(../images/blueB.png) no-repeat;
+        background-size: 100% 100%;
+        display: flex;
+        padding: 0 1.0417vw;
+        box-sizing: border-box;
+        margin-bottom: 0.6vh;
+    }
+    
+    .situation:last-child {
+        margin-bottom: 0;
+    }
+    
+    .statisticsWrap {
+        display: flex;
+        margin-bottom: 0.7vh;
+    }
+    
+    .statisticsWrap:last-child {
+        margin-bottom: 0;
+    }
+    
+    .statisticsBox p {
+        color: #000;
+    }
+    
+    .statisticsWrap>.statisticsBox {
+        margin-right: 8px;
+        width: 24%;
+    }
+    
+    .header-overview {
+        position: relative;
+        width: 100%;
+    }
+    
+    .footer-overview {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1.0417vw;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .overview-all .submodule-overview {
+        height: 5.5556vh;
+        line-height: inherit;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-bottom: 2.7778vh;
+    }
+    
+    .imgIcon {
+        position: absolute;
+        left: 0.2vw;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .findTab {
+        margin: 1.8519vh 0 0 0;
+    }
+    
+    .findTab .layui-tab-bar {
+        display: none;
+    }
+    
+    .findImg img {
+        width: 1.0417vw;
+        height: 2vh;
+    }
+    
+    .botomBar .find {
+        padding: 0;
+        padding-right: 0.5729vw;
+    }
+    
+    .botomBar .find .small-module-body .situation {
+        background: none;
+        border: 1px solid #038cf3;
+        border-radius: 5px;
+        box-shadow: 0 0 2px 1px #038cf3 inset;
+        color: #038cf3;
+        font-size: 0.9896vw;
+        padding: 0 0.7292vw;
+        margin-bottom: 0.9vh;
+    }
+    
+    .botomBar .find .small-module-title {
+        height: auto;
+        line-height: inherit;
+        margin-bottom: 1.4815vh;
+    }
+    
+    .findImg {
+        margin-right: 0.625vw;
+    }
+    
+    .botomBar .layui-col-md6:last-child .find {
+        border: 0;
+        padding-left: 0.5729vw;
+        padding-right: 0;
+    }
+    
+    .overview {
+        color: #008cf2;
+        margin: 8.5vh 0 1.2vh 0;
+        font-size: 0.9vw;
+        position: relative;
+    }
+    
+    .layui-tab-title li {
+        width: 9.9479vw;
+    }
+    
+    .layui-tab-title {
+        position: absolute;
+        bottom: 1.5625vw;
+        top: 1.0417vw;
+        padding: 0 0.7vw;
+    }
+    
+    .layui-tab[overflow]>.layui-tab-title {
+        overflow: auto;
+    }
+    
+    .intelligentDiscovery-module .platform-module-body {
+        overflow: hidden;
     }

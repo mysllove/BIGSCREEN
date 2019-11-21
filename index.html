@@ -1,0 +1,1996 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link href="https://cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="layui/css/layui.css" />
+    <link rel="stylesheet" href="css/platform.css" />
+</head>
+
+<body class="platform-style-ui">
+    <div id="map" style="width:100%;height:100%"></div>
+    <div class="topbar">
+        <div class="platform-display">
+            <span id="platformTime"></span>
+        </div>
+        <div class="platform-title">
+            <h1>浦东新区危险化学品智能监管平台</h1>
+        </div>
+    </div>
+    <div class="platform-fluid">
+        <div class="platform-view">
+            <div class="switching-platform switch" data-config='{"triggerType":"click",
+                                                  "effect":"fade",
+                                                  "invoke":2,
+                                                   "auto":false}'>
+                <ul class="tab-control">
+                    <li>行业概况</li>
+                    <li class="active">综合监管</li>
+                    <li>协同监管</li>
+                </ul>
+                <div class="option-group">
+                    <div class="group-item current">
+                        <div class="the-left-column custom-left">
+                            <div class="platform-module">
+                                <div class="module-header">
+                                    <span class="module-title">行业总览</span>
+                                    <div class="module-annotation">
+                                        <span class="line alone-line"></span>
+                                    </div>
+                                </div>
+                                <div class="platform-module-body">
+                                    <div class="all-data">
+                                        <div class="amount">
+                                            <div class="amount-all">
+                                                总数：<span class="customFont num">2283</span>
+                                            </div>&nbsp;/&nbsp;
+                                            <div><span class="customFont num">183</span>家</div>
+                                        </div>
+                                        <div class="data-data">
+                                            <div class="layui-row layui-col-space5">
+                                                <div class="layui-col-md6">
+                                                    <div class="box">
+                                                        <div>生产<span class="customFont num">32</span>家</div>
+                                                        <span><img src="images/wu.png" alt=""></span>
+                                                    </div>
+                                                </div>
+                                                <div class="layui-col-md6">
+                                                    <div class="box">
+                                                        <div>经营（自带）<span class="customFont num">11</span>家</div>
+                                                    </div>
+                                                </div>
+                                                <div class="layui-col-md4">
+                                                    <div class="box">
+                                                        <div>仓储<span class="customFont num">16</span>家</div>
+                                                        <span><img src="images/wu.png" alt=""></span>
+                                                    </div>
+                                                </div>
+                                                <div class="layui-col-md4">
+                                                    <div class="box">
+                                                        <div>医药化工<span class="customFont num">23</span>家</div>
+                                                    </div>
+                                                </div>
+                                                <div class="layui-col-md4">
+                                                    <div class="box">
+                                                        <div>加油站<span class="customFont num">1533</span>家</div>
+                                                    </div>
+                                                </div>
+                                                <div class="layui-col-md4">
+                                                    <div class="box">
+                                                        <div>危化处置<span class="customFont num">42</span>家</div>
+                                                    </div>
+                                                </div>
+                                                <div class="layui-col-md4">
+                                                    <div class="box">
+                                                        <div>使用<span class="customFont num">38</span>家</div>
+                                                    </div>
+                                                </div>
+                                                <div class="layui-col-md4">
+                                                    <div class="box">
+                                                        <div>批发(经营)<span class="customFont num">2000</span>家</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dataItem">
+                                        <div class="dataItem-title">两重点一重大</div>
+                                        <div class="layui-row layui-col-space5">
+                                            <div class="layui-col-md6">
+                                                <div class="box">
+                                                    <div>重大危险源一级<span class="customFont num">2</span>个</div>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-md6">
+                                                <div class="box">
+                                                    <div>重大危险源二级<span class="customFont num">1</span>个</div>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-md6">
+                                                <div class="box">
+                                                    <div>重大危险源三级<span class="customFont num">9</span>个</div>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-md6">
+                                                <div class="box">
+                                                    <div>重大危险源四级<span class="customFont num">7</span>个</div>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-md6">
+                                                <div class="box">
+                                                    <div>重点工艺<span class="customFont num">0</span>个</div>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-md6">
+                                                <div class="box">
+                                                    <div>重点监管危化品<span class="customFont num">0</span>个</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dataItem">
+                                        <div class="dataItem-title">危化许可情况</div>
+                                        <div class="layui-row layui-col-space5">
+                                            <div class="layui-col-md6">
+                                                <div class="box">
+                                                    <div>生产许可<span class="customFont num">32</span>本</div>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-md6">
+                                                <div class="box">
+                                                    <div>经营带存储<span class="customFont num">11</span>本</div>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-md6">
+                                                <div class="box">
+                                                    <div>经营仓储<span class="customFont num">16</span>本</div>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-md6">
+                                                <div class="box">
+                                                    <div>经营加油站<span class="customFont num">153</span>本</div>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-md6">
+                                                <div class="box">
+                                                    <div>批发(经营)<span class="customFont num">36</span>本</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dataItem">
+                                        <div class="dataItem-title">类别分析</div>
+                                        <div class="analyze">
+                                            <ul class="tabs">
+                                                <li>所在区域</li>
+                                                <li>企业规模</li>
+                                                <li>管理分级</li>
+                                                <li>经济成分</li>
+                                            </ul>
+                                            <div class="tabs-content">
+                                                <div class="tab-item">1</div>
+                                                <div class="tab-item">2</div>
+                                                <div class="tab-item">3</div>
+                                                <div class="tab-item">4</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="the-right-column custom-right">
+                            <div class="platform-module">
+                                <div class="module-header">
+                                    <span class="module-title">当日运行体征</span>
+                                    <div class="module-annotation">
+                                        <span class="line alone-line"></span>
+                                    </div>
+                                </div>
+                                <div class="platform-module-body">
+                                    <div class="dataItem">
+                                        <div class="dataItem-title"><span>危险化学品情况</span>
+                                            <ul class="tabs tab-list run">
+                                                <li>品种</li>
+                                                <li>类别</li>
+                                            </ul>
+                                        </div>
+                                        <div class="tabs-content">
+                                            <div class="tab-item">
+                                                <div class="box customBox">
+                                                    <div class="box-condition">
+                                                        <span>麻黄素</span>
+                                                        <span>20吨</span>
+                                                    </div>
+                                                </div>
+                                                <div class="box customBox">
+                                                    <div class="box-condition">
+                                                        <span>N-乙酰邻氨基苯酸</span>
+                                                        <span>16吨</span>
+                                                    </div>
+                                                </div>
+                                                <div class="box customBox">
+                                                    <div class="box-condition">
+                                                        <span>麦角新碱</span>
+                                                        <span>8吨</span>
+                                                    </div>
+                                                </div>
+                                                <div class="box customBox">
+                                                    <div class="box-condition">
+                                                        <span>异黄障素</span>
+                                                        <span>11吨</span>
+                                                    </div>
+                                                </div>
+                                                <div class="box customBox">
+                                                    <div class="box-condition">
+                                                        <span>黄樟油</span>
+                                                        <span>15吨</span>
+                                                    </div>
+                                                </div>
+                                                <div class="box customBox">
+                                                    <div class="box-condition">
+                                                        <span>甲烷</span>
+                                                        <span>2吨</span>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="tab-item">2</div>
+                                        </div>
+                                    </div>
+                                    <div class="dataItem">
+                                        <div class="dataItem-title"><span>设施情况</span>
+                                        </div>
+                                        <div class="box customBox">
+                                            <div class="box-condition">
+                                                <div style="margin-right: 2.1vw;">生产设施<span class="customFont num">27</span>套</div>
+                                                <div>在用<span class="customFont num">27</span>套</div>
+                                                <div>停用<span class="customFont num">0</span>套</div>
+                                            </div>
+                                        </div>
+                                        <div class="box customBox">
+                                            <div class="box-condition">
+                                                <div>储存设施(储罐)<span class="customFont num">126</span>个</div>
+                                                <div>在用<span class="customFont num">126</span>个</div>
+                                                <div>停用<span class="customFont num">0</span>个</div>
+                                            </div>
+                                        </div>
+                                        <div class="box customBox">
+                                            <div class="box-condition">
+                                                <div>储存设施(仓库)<span class="customFont num">165</span>个</div>
+                                                <div>在用<span class="customFont num">165</span>个</div>
+                                                <div>停用<span class="customFont num">0</span>个</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dataItem">
+                                        <div class="dataItem-title"><span>当日工作情况</span>
+                                        </div>
+                                        <div class="layui-row layui-col-space5">
+                                            <div class="layui-col-md3">
+                                                <div class="box customBoxT">
+                                                    <span>动火作业</span>
+                                                    <p><span class="customFont num">0</span>次</p>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-md3">
+                                                <div class="box customBoxT">
+                                                    <span>临时用电</span>
+                                                    <p><span class="customFont num">1</span>次</p>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-md3">
+                                                <div class="box customBoxT">
+                                                    <span>设备检修</span>
+                                                    <p><span class="customFont num">0</span>次</p>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-md3">
+                                                <div class="box customBoxT">
+                                                    <span>动土作业</span>
+                                                    <p><span class="customFont num">0</span>次</p>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-md3">
+                                                <div class="box customBoxT">
+                                                    <span>受限空间</span>
+                                                    <p><span class="customFont num">3</span>次</p>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-md3">
+                                                <div class="box customBoxT">
+                                                    <span>高处作业</span>
+                                                    <p><span class="customFont num">4</span>次</p>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-md3">
+                                                <div class="box customBoxT">
+                                                    <span>吊装作业</span>
+                                                    <p><span class="customFont num">0</span>次</p>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-md3">
+                                                <div class="box customBoxT">
+                                                    <span>抽堵盲板</span>
+                                                    <p><span class="customFont num">0</span>次</p>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-md4">
+                                                <div class="box customBoxT">
+                                                    <span>承包商作业</span>
+                                                    <p><span class="customFont num">0</span></p>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-md4">
+                                                <div class="box customBoxT">
+                                                    <span>试生产</span>
+                                                    <p><span class="customFont num">0</span>次</p>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-md4">
+                                                <div class="box customBoxT">
+                                                    <span>开停车</span>
+                                                    <p><span class="customFont num">0</span>次</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dataItem">
+                                        <div class="dataItem-title"><span>当日风险类别</span>
+                                        </div>
+                                        <div class="box customBox">
+                                            <div class="box-condition">
+                                                <div>当日高风险</div>
+                                                <div><span class="customFont num">2</span>家</div>
+                                                <div><span class="customFont num">2.5</span>%</div>
+                                            </div>
+                                        </div>
+                                        <div class="box customBox">
+                                            <div class="box-condition">
+                                                <div>当日中风险</div>
+                                                <div><span class="customFont num">55</span>家</div>
+                                                <div><span class="customFont num">68.75</span>%</div>
+                                            </div>
+                                        </div>
+                                        <div class="box customBox">
+                                            <div class="box-condition">
+                                                <div>当日低风险</div>
+                                                <div><span class="customFont num">23</span>家</div>
+                                                <div><span class="customFont num">28.75</span>%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <iframe src="./platform1.html" frameborder="0" class="platform-iframe"></iframe> -->
+                    </div>
+                    <div class="group-item">
+                        <div class="the-left-column">
+                            <div class="platform-warpper">
+                                <div class="platform-module">
+                                    <div class="module-header">
+                                        <span class="module-title">动态监管</span>
+                                        <div class="module-annotation">
+                                            <span class="line"></span>
+                                            <span class="txt">模型</span>
+                                            <span class="line"></span>
+                                        </div>
+                                    </div>
+                                    <div class="platform-module-body">
+                                        <div class="statistics">2019年累计至今</div>
+                                        <div class="layui-carousel" id="test1">
+                                            <div carousel-item>
+                                                <div>
+                                                    <div class="statistics-warpper">
+                                                        <div class="layui-row">
+                                                            <div class="layui-col-md4">
+
+                                                            </div>
+                                                            <div class="layui-col-md4">
+                                                                <div class="statisticsBox">
+                                                                    <div class="statisticsBox-txt">
+                                                                        <span class="customFont num">0</span><span class="unit">家次</span>
+                                                                    </div>
+                                                                    <p>派单检查</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="layui-col-md4">
+                                                                <div class="statisticsBox">
+                                                                    <div class="statisticsBox-txt">
+                                                                        <span class="customFont num">563</span><span class="unit">家次</span>
+                                                                    </div>
+                                                                    <p>信访查处</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>条目2</div>
+                                                <div>条目3</div>
+                                                <div>条目4</div>
+                                                <div>条目5</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="platform-module">
+                                    <div class="module-header">
+                                        <span class="module-title">风险监管</span>
+                                        <div class="module-annotation">
+                                            <span class="line"></span>
+                                            <span class="txt">模型</span>
+                                            <span class="line"></span>
+                                        </div>
+                                    </div>
+                                    <div class="platform-module-body">
+                                        <div class="regulation-switch">
+                                            <div class="tabs-content">
+                                                <div class="tab-item">
+                                                    <div class="layui-row layui-col-space15">
+                                                        <div class="layui-col-md3">
+                                                            <div class="gaine pink-box">
+                                                                <div class="gaine-data">
+                                                                    <span class="customFont red-m num">9</span>家
+                                                                </div>
+                                                                <p>高风险</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="layui-col-md3">
+                                                            <div class="gaine org-box">
+                                                                <div class="gaine-data">
+                                                                    <span class="customFont org-m num">10</span>家
+                                                                </div>
+                                                                <p>较大风险</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="layui-col-md3">
+                                                            <div class="gaine yellow-box">
+                                                                <div class="gaine-data">
+                                                                    <span class="customFont yellow-m num">10</span>家
+                                                                </div>
+                                                                <p>一般风险</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="layui-col-md3">
+                                                            <div class="gaine blue-box">
+                                                                <div class="gaine-data">
+                                                                    <span class="customFont blue-m num">57</span>家
+                                                                </div>
+                                                                <p>低风险</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-item">
+                                                    <div class="layui-row layui-col-space15">
+                                                        <div class="layui-col-md3">
+                                                            <div class="gaine green-box">
+                                                                <div class="gaine-data">
+                                                                    <span class="customFont green-m num">68</span>家
+                                                                </div>
+                                                                <p>高风险</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="layui-col-md3">
+                                                            <div class="gaine yellow-box">
+                                                                <div class="gaine-data">
+                                                                    <span class="customFont yellow-m num">19</span>家
+                                                                </div>
+                                                                <p>较大风险</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="layui-col-md3">
+                                                            <div class="gaine pink-box">
+                                                                <div class="gaine-data">
+                                                                    <span class="customFont red-m num">10</span>家
+                                                                </div>
+                                                                <p>一般风险</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="layui-col-md3">
+                                                            <div class="gaine black-box">
+                                                                <div class="gaine-data">
+                                                                    <span class="customFont white-m num">10</span>家
+                                                                </div>
+                                                                <p>低风险</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="tabs tab-list">
+                                                <li class="tab">固有</li>
+                                                <li class="tab">动态</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="platform-module">
+                                    <div class="module-header">
+                                        <span class="module-title">信用监管</span>
+                                        <div class="module-annotation">
+                                            <span class="line"></span>
+                                            <span class="txt">模型</span>
+                                            <span class="line"></span>
+                                        </div>
+                                    </div>
+                                    <div class="platform-module-body">
+                                        <div class="regulation-switch">
+                                            <div class="tabs-content">
+                                                <div class="tab-item">
+                                                    <div class="layui-row layui-col-space15">
+                                                        <div class="layui-col-md3">
+                                                            <div class="gaine green-box">
+                                                                <div class="gaine-data">
+                                                                    <span class="customFont green-m num">69</span>家
+                                                                </div>
+                                                                <p>好</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="layui-col-md3">
+                                                            <div class="gaine yellow-box">
+                                                                <div class="gaine-data">
+                                                                    <span class="customFont yellow-m num">9</span>家
+                                                                </div>
+                                                                <p>中</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="layui-col-md3">
+                                                            <div class="gaine pink-box">
+                                                                <div class="gaine-data">
+                                                                    <span class="customFont red-m num">0</span>家
+                                                                </div>
+                                                                <p>差</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="layui-col-md3">
+                                                            <div class="gaine black-box">
+                                                                <div class="gaine-data">
+                                                                    <span class="customFont white-m num">0</span>家
+                                                                </div>
+                                                                <p>黑名单</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-item">
+                                                    <div class="layui-row layui-col-space15">
+                                                        <div class="layui-col-md3">
+                                                            <div class="gaine green-box">
+                                                                <div class="gaine-data">
+                                                                    <span class="customFont green-m num">68</span>家
+                                                                </div>
+                                                                <p>好</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="layui-col-md3">
+                                                            <div class="gaine yellow-box">
+                                                                <div class="gaine-data">
+                                                                    <span class="customFont yellow-m num">19</span>家
+                                                                </div>
+                                                                <p>中</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="layui-col-md3">
+                                                            <div class="gaine pink-box">
+                                                                <div class="gaine-data">
+                                                                    <span class="customFont red-m num">10</span>家
+                                                                </div>
+                                                                <p>差</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="layui-col-md3">
+                                                            <div class="gaine black-box">
+                                                                <div class="gaine-data">
+                                                                    <span class="customFont white-m num">10</span>家
+                                                                </div>
+                                                                <p>黑名单</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="tabs tab-list">
+                                                <li class="tab">区级</li>
+                                                <li class="tab">镇级</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="platform-module">
+                                    <div class="module-header">
+                                        <span class="module-title" onclick="classifySupervise()">分类监管</span>
+                                        <div class="module-annotation">
+                                            <span class="line"></span>
+                                            <span class="txt">模型</span>
+                                            <span class="line"></span>
+                                        </div>
+                                    </div>
+                                    <div class="platform-module-body">
+                                        <div class="fill-h">
+                                            <div class="layui-row layui-col-space15">
+                                                <div class="layui-col-md4">
+                                                    <div class="gaine reb-box">
+                                                        <div class="gaine-data">
+                                                            <span class="customFont red-m num">69</span>家
+                                                        </div>
+                                                        <p>重点监管</p>
+                                                    </div>
+                                                </div>
+                                                <div class="layui-col-md4">
+                                                    <div class="gaine blue-box">
+                                                        <div class="gaine-data">
+                                                            <span class="customFont blue-m num">9</span>家
+                                                        </div>
+                                                        <p>关注监管</p>
+                                                    </div>
+                                                </div>
+                                                <div class="layui-col-md4">
+                                                    <div class="gaine green-box">
+                                                        <div class="gaine-data">
+                                                            <span class="customFont green-m num">0</span>家
+                                                        </div>
+                                                        <p>一般监管</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="the-right-column">
+                            <div class="platform-module intelligentDiscovery-module">
+                                <div class="module-header">
+                                    <span class="module-title">智能发现</span>
+                                    <div class="module-annotation">
+                                        <span class="line"></span>
+                                        <span class="txt">模型</span>
+                                        <span class="line"></span>
+                                    </div>
+                                </div>
+                                <div class="platform-module-body">
+                                    <div class="layui-tab" lay-filter="test1">
+                                        <ul class="layui-tab-title">
+                                            <li>
+                                                <div class="discoverBox">
+                                                    <span class="discoverBox-title"><i
+                                                            class="iconfont icon-inductionPerception animated hover_"
+                                                            data-in="tada"></i>感应感知</span>
+                                                    <div><span class="customFont num">4</span>个</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="discoverBox">
+                                                    <span class="discoverBox-title"><i
+                                                            class="iconfont icon-videoFound animated hover_"
+                                                            data-in="tada"></i>视频发现</span>
+                                                    <div><span class="customFont num">9</span>个</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="discoverBox">
+                                                    <span class="discoverBox-title"><i
+                                                            class="iconfont icon-dataAnalyst animated hover_"
+                                                            data-in="tada"></i>数据分析</span>
+                                                    <div><span class="customFont num">3</span>个</div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="overview">监管要素</div>
+                                        <div class="overview-all test">
+                                            <div class="layui-row layui-col-space5">
+                                                <div class="layui-col-md6">
+                                                    <div class="discoverBox">
+                                                        <span class="discoverBox-title"><i
+                                                                class="iconfont icon-parameter animated hover_"
+                                                                data-in="bounce"></i>参数正常</span>
+                                                        <div><span class="customFont num">4</span>个</div>
+                                                    </div>
+                                                </div>
+                                                <div class="layui-col-md6">
+                                                    <div class="discoverBox">
+                                                        <span class="discoverBox-title"><i
+                                                                class="iconfont icon-work animated hover_"
+                                                                data-in="pulse"></i>作业规范</span>
+                                                        <div><span class="customFont num">6</span>个</div>
+                                                    </div>
+                                                </div>
+                                                <div class="layui-col-md6">
+                                                    <div class="discoverBox">
+                                                        <span class="discoverBox-title"><i
+                                                                class="iconfont icon-abnormal animated hover_"
+                                                                data-in="jello"></i>异常情形</span>
+                                                        <div><span class="customFont num">3</span>个</div>
+                                                    </div>
+                                                </div>
+                                                <div class="layui-col-md6">
+                                                    <div class="discoverBox">
+                                                        <span class="discoverBox-title"><i
+                                                                class="iconfont icon-duty animated hover_"
+                                                                data-in="jello"></i>责任落实</span>
+                                                        <div><span class="customFont num">3</span>个</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-tab-content">
+                                            <div class="layui-tab-item">
+                                                <div class="overview-all">
+                                                    <div class="layui-row layui-col-space5">
+                                                        <div class="layui-col-md6">
+                                                            <div class="discoverBox">
+                                                                <span class="discoverBox-title"><i
+                                                                        class="iconfont icon-gas"></i>可燃气体（有毒气体）</span>
+                                                                <div>
+                                                                    <span class="customFont num">2</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="layui-col-md6">
+                                                            <div class="discoverBox">
+                                                                <span class="discoverBox-title"><i
+                                                                        class="iconfont icon-level"></i>高低液位</span>
+                                                                <div>
+                                                                    <span class="customFont num">2</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="layui-col-md6">
+                                                            <div class="discoverBox">
+                                                                <span class="discoverBox-title"><i
+                                                                        class="iconfont icon-humiture"></i>温湿度</span>
+                                                                <div>
+                                                                    <span class="customFont num">2</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="layui-col-md6">
+                                                            <div class="discoverBox">
+                                                                <span class="discoverBox-title"><i
+                                                                        class="iconfont icon-wj"></i>五距</span>
+                                                                <div>
+                                                                    <span class="customFont num">2</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="layui-tab-item">
+                                                <div class="overview-all">
+                                                    <div class="layui-row layui-col-space5">
+                                                        <div class="layui-col-md4">
+                                                            <div class="discoverBox">
+                                                                <span class="discoverBox-title">
+                                                                    <i><img src="images/noaqm.png"
+                                                                            class="animated hover_" data-in="swing"
+                                                                            alt="" /></i>不佩戴<br />安全帽
+                                                                </span>
+                                                                <div>
+                                                                    <span class="customFont num">2</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="layui-col-md4">
+                                                            <div class="discoverBox">
+                                                                <span class="discoverBox-title"><i><img
+                                                                            src="images/cy.png"
+                                                                            alt="" /></i>防火区<br />域抽烟</span>
+                                                                <div>
+                                                                    <span class="customFont num">2</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="layui-col-md4">
+                                                            <div class="discoverBox">
+                                                                <span class="discoverBox-title"><i><img
+                                                                            src="images/jj.png"
+                                                                            alt="" /></i>人员<br />无故聚集</span>
+                                                                <div>
+                                                                    <span class="customFont num">2</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="layui-col-md4">
+                                                            <div class="discoverBox">
+                                                                <span class="discoverBox-title"><i><img
+                                                                            src="images/bp.png"
+                                                                            alt="" /></i>人员<br />快速奔跑</span>
+                                                                <div>
+                                                                    <span class="customFont num">2</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="layui-col-md4">
+                                                            <div class="discoverBox">
+                                                                <span class="discoverBox-title"><i><img
+                                                                            src="images/dd.png"
+                                                                            alt="" /></i>人员<br />倒地20秒</span>
+                                                                <div>
+                                                                    <span class="customFont num">2</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="layui-col-md4">
+                                                            <div class="discoverBox">
+                                                                <span class="discoverBox-title"><i><img
+                                                                            src="images/xh.png"
+                                                                            alt="" /></i>非限定<br />时间卸货</span>
+                                                                <div>
+                                                                    <span class="customFont num">2</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="layui-col-md4">
+                                                            <div class="discoverBox">
+                                                                <span class="discoverBox-title"><i><img
+                                                                            src="images/sj.png"
+                                                                            alt="" /></i>防爆区<br />打手机</span>
+                                                                <div>
+                                                                    <span class="customFont num">2</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="layui-col-md4">
+                                                            <div class="discoverBox">
+                                                                <span class="discoverBox-title"><i><img
+                                                                            src="images/cs.png"
+                                                                            alt="" /></i>车辆超<br />速行驶</span>
+                                                                <div>
+                                                                    <span class="customFont num">2</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="layui-col-md4">
+                                                            <div class="discoverBox">
+                                                                <span class="discoverBox-title"><i><img
+                                                                            src="images/bc.png"
+                                                                            alt="" /></i>不穿<br />工作服</span>
+                                                                <div>
+                                                                    <span class="customFont num">2</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="layui-tab-item">
+                                                <div class="overview-all">
+                                                    <div class="layui-row layui-col-space5">
+                                                        <div class="layui-col-md4">
+                                                            <div class="discoverBox">
+                                                                <span class="discoverBox-title"><i
+                                                                        class="iconfont icon-limited"></i>超限量</span>
+                                                                <div>
+                                                                    <span class="customFont num">2</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="layui-col-md4">
+                                                            <div class="discoverBox">
+                                                                <span class="discoverBox-title"><i
+                                                                        class="iconfont icon-risk"></i>风险研判</span>
+                                                                <div>
+                                                                    <span class="customFont num">2</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="layui-col-md4">
+                                                            <div class="discoverBox">
+                                                                <span class="discoverBox-title"><i
+                                                                        class="iconfont icon-hidden"></i>隐患排查</span>
+                                                                <div>
+                                                                    <span class="customFont num">2</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="the-bottom-bar">
+                            <div class="platform-module">
+                                <div class="module-header">
+                                    <span class="module-title">处置事项</span>
+                                    <div class="module-annotation">
+                                        <span class="line"></span>
+                                        <span class="txt">已入库<b style="font-size: 1vw;">43</b>项</span>
+                                        <span class="line"></span>
+                                    </div>
+                                </div>
+                                <div class="platform-module-body noPading">
+                                    <div class="table-head">
+                                        <span style="width: 5%;text-align: center">序号</span>
+                                        <span style="width: 16%;">监管要素</span>
+                                        <span style="width: 10%;">推送时间</span>
+                                        <span style="width: 15%;">推送单位</span>
+                                        <span style="width: 11%;">预警</span>
+                                        <span style="width: 11%;">信息推送</span>
+                                        <span style="width: 10%;">接收</span>
+                                        <span style="width: 10%;">处置</span>
+                                        <span style="width: 7.5%;">完成</span>
+                                        <span>操作</span>
+                                    </div>
+                                    <div>
+                                        <div class="card-table">
+                                            <div class="face front">
+                                                <div class="face-div">1</div>
+                                                <div class="face-div">可燃气体(有毒有害气体)</div>
+                                                <div class="face-div">2019-07-17</div>
+                                                <div class="face-div">上海振义仓储有限公司</div>
+                                                <div class="face-div">
+                                                    <div class="el-steps el-steps--horizontal">
+
+                                                        <div class="el-step is-horizontal" style="flex-basis: 50%; margin-right: 0px;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"> 2019-08-11</div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-finish">
+                                                                <div class="el-step__line" style="margin-right: 0px;"><i class="el-step__line-inner" style="transition-delay: -150ms; border-width: 0px; width: 0%;"></i>
+                                                                </div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait">12:21:36</div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="el-step is-horizontal" style="flex-basis: 50%; margin-right: 0px;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-process ">
+                                                                    2019-08-11
+                                                                </div>
+                                                                <div class="el-step__description is-process"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-process ">
+                                                                <div class="el-step__line" style="margin-right: 0px;">
+                                                                    <i class="el-step__line-inner" style="transition-delay: 0ms; border-width: 0px; width: 0%;">
+                                                                    </i>
+                                                                </div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-process">
+                                                                    12:21:36
+                                                                </div>
+                                                                <div class="el-step__description is-process"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="el-step is-horizontal" style="flex-basis: 50%; margin-right: 0px;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-wait">
+                                                                <div class="el-step__line" style="margin-right: 0px;"><i class="el-step__line-inner" style="transition-delay: -150ms; border-width: 0px; width: 0%;"></i>
+                                                                </div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="el-step is-horizontal" style="flex-basis: 50%; margin-right: 0px;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-wait">
+                                                                <div class="el-step__line" style="margin-right: 0px;"><i class="el-step__line-inner" style="transition-delay: -150ms; border-width: 0px; width: 0%;"></i>
+                                                                </div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="el-step is-horizontal is-flex" style="flex-basis: 50%; max-width: 33.3333%;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-wait">
+                                                                <div class="el-step__line"><i class="el-step__line-inner"></i></div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="face-div">
+                                                    <button class="layui-btn layui-btn-primary" type="button" onclick="xqa();">
+                                                        详情
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="face back">
+                                                <div class="face-div">5</div>
+                                                <div class="face-div">可燃气体(有毒有害气体)</div>
+                                                <div class="face-div">2019-07-17</div>
+                                                <div class="face-div">上海振义仓储有限公司</div>
+                                                <div class="face-div">
+                                                    <div class="el-steps el-steps--horizontal">
+
+                                                        <div class="el-step is-horizontal" style="flex-basis: 50%; margin-right: 0px;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"> 2019-08-11</div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-finish">
+                                                                <div class="el-step__line" style="margin-right: 0px;"><i class="el-step__line-inner" style="transition-delay: -150ms; border-width: 0px; width: 0%;"></i>
+                                                                </div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait">12:21:36</div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="el-step is-horizontal" style="flex-basis: 50%; margin-right: 0px;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-process ">
+                                                                    2019-08-11
+                                                                </div>
+                                                                <div class="el-step__description is-process"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-process ">
+                                                                <div class="el-step__line" style="margin-right: 0px;">
+                                                                    <i class="el-step__line-inner" style="transition-delay: 0ms; border-width: 0px; width: 0%;">
+                                                                    </i>
+                                                                </div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-process">
+                                                                    12:21:36
+                                                                </div>
+                                                                <div class="el-step__description is-process"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="el-step is-horizontal" style="flex-basis: 50%; margin-right: 0px;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-wait">
+                                                                <div class="el-step__line" style="margin-right: 0px;"><i class="el-step__line-inner" style="transition-delay: -150ms; border-width: 0px; width: 0%;"></i>
+                                                                </div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="el-step is-horizontal" style="flex-basis: 50%; margin-right: 0px;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-wait">
+                                                                <div class="el-step__line" style="margin-right: 0px;"><i class="el-step__line-inner" style="transition-delay: -150ms; border-width: 0px; width: 0%;"></i>
+                                                                </div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="el-step is-horizontal is-flex" style="flex-basis: 50%; max-width: 33.3333%;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-wait">
+                                                                <div class="el-step__line"><i class="el-step__line-inner"></i></div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="face-div">
+                                                    <button class="layui-btn layui-btn-primary" type="button" onclick="xqa();">
+                                                        详情
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-table">
+                                            <div class="face front">
+                                                <div class="face-div">2</div>
+                                                <div class="face-div">可燃气体(有毒有害气体)</div>
+                                                <div class="face-div">2019-07-17</div>
+                                                <div class="face-div">上海振义仓储有限公司</div>
+                                                <div class="face-div">
+                                                    <div class="el-steps el-steps--horizontal">
+
+                                                        <div class="el-step is-horizontal" style="flex-basis: 50%; margin-right: 0px;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"> 2019-08-11</div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-finish">
+                                                                <div class="el-step__line" style="margin-right: 0px;"><i class="el-step__line-inner" style="transition-delay: -150ms; border-width: 0px; width: 0%;"></i>
+                                                                </div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait">12:21:36</div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="el-step is-horizontal" style="flex-basis: 50%; margin-right: 0px;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-process ">
+                                                                    2019-08-11
+                                                                </div>
+                                                                <div class="el-step__description is-process"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-process ">
+                                                                <div class="el-step__line" style="margin-right: 0px;">
+                                                                    <i class="el-step__line-inner" style="transition-delay: 0ms; border-width: 0px; width: 0%;">
+                                                                    </i>
+                                                                </div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-process">
+                                                                    12:21:36
+                                                                </div>
+                                                                <div class="el-step__description is-process"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="el-step is-horizontal" style="flex-basis: 50%; margin-right: 0px;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-wait">
+                                                                <div class="el-step__line" style="margin-right: 0px;"><i class="el-step__line-inner" style="transition-delay: -150ms; border-width: 0px; width: 0%;"></i>
+                                                                </div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="el-step is-horizontal" style="flex-basis: 50%; margin-right: 0px;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-wait">
+                                                                <div class="el-step__line" style="margin-right: 0px;"><i class="el-step__line-inner" style="transition-delay: -150ms; border-width: 0px; width: 0%;"></i>
+                                                                </div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="el-step is-horizontal is-flex" style="flex-basis: 50%; max-width: 33.3333%;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-wait">
+                                                                <div class="el-step__line"><i class="el-step__line-inner"></i></div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="face-div">
+                                                    <button class="layui-btn layui-btn-primary" type="button" onclick="xqa();">
+                                                        详情
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="face back">
+                                                <div class="face-div">6</div>
+                                                <div class="face-div">可燃气体(有毒有害气体)</div>
+                                                <div class="face-div">2019-07-17</div>
+                                                <div class="face-div">上海振义仓储有限公司</div>
+                                                <div class="face-div">
+                                                    <div class="el-steps el-steps--horizontal">
+
+                                                        <div class="el-step is-horizontal" style="flex-basis: 50%; margin-right: 0px;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"> 2019-08-11</div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-finish">
+                                                                <div class="el-step__line" style="margin-right: 0px;"><i class="el-step__line-inner" style="transition-delay: -150ms; border-width: 0px; width: 0%;"></i>
+                                                                </div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait">12:21:36</div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="el-step is-horizontal" style="flex-basis: 50%; margin-right: 0px;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-process ">
+                                                                    2019-08-11
+                                                                </div>
+                                                                <div class="el-step__description is-process"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-process ">
+                                                                <div class="el-step__line" style="margin-right: 0px;">
+                                                                    <i class="el-step__line-inner" style="transition-delay: 0ms; border-width: 0px; width: 0%;">
+                                                                    </i>
+                                                                </div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-process">
+                                                                    12:21:36
+                                                                </div>
+                                                                <div class="el-step__description is-process"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="el-step is-horizontal" style="flex-basis: 50%; margin-right: 0px;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-wait">
+                                                                <div class="el-step__line" style="margin-right: 0px;"><i class="el-step__line-inner" style="transition-delay: -150ms; border-width: 0px; width: 0%;"></i>
+                                                                </div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="el-step is-horizontal" style="flex-basis: 50%; margin-right: 0px;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-wait">
+                                                                <div class="el-step__line" style="margin-right: 0px;"><i class="el-step__line-inner" style="transition-delay: -150ms; border-width: 0px; width: 0%;"></i>
+                                                                </div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="el-step is-horizontal is-flex" style="flex-basis: 50%; max-width: 33.3333%;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-wait">
+                                                                <div class="el-step__line"><i class="el-step__line-inner"></i></div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="face-div">
+                                                    <button class="layui-btn layui-btn-primary" type="button" onclick="xqa();">
+                                                        详情
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-table">
+                                            <div class="face front">
+                                                <div class="face-div">3</div>
+                                                <div class="face-div">可燃气体(有毒有害气体)</div>
+                                                <div class="face-div">2019-07-17</div>
+                                                <div class="face-div">上海振义仓储有限公司</div>
+                                                <div class="face-div">
+                                                    <div class="el-steps el-steps--horizontal">
+
+                                                        <div class="el-step is-horizontal" style="flex-basis: 50%; margin-right: 0px;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"> 2019-08-11</div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-finish">
+                                                                <div class="el-step__line" style="margin-right: 0px;"><i class="el-step__line-inner" style="transition-delay: -150ms; border-width: 0px; width: 0%;"></i>
+                                                                </div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait">12:21:36</div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="el-step is-horizontal" style="flex-basis: 50%; margin-right: 0px;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-process ">
+                                                                    2019-08-11
+                                                                </div>
+                                                                <div class="el-step__description is-process"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-process ">
+                                                                <div class="el-step__line" style="margin-right: 0px;">
+                                                                    <i class="el-step__line-inner" style="transition-delay: 0ms; border-width: 0px; width: 0%;">
+                                                                    </i>
+                                                                </div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-process">
+                                                                    12:21:36
+                                                                </div>
+                                                                <div class="el-step__description is-process"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="el-step is-horizontal" style="flex-basis: 50%; margin-right: 0px;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-wait">
+                                                                <div class="el-step__line" style="margin-right: 0px;"><i class="el-step__line-inner" style="transition-delay: -150ms; border-width: 0px; width: 0%;"></i>
+                                                                </div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="el-step is-horizontal" style="flex-basis: 50%; margin-right: 0px;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-wait">
+                                                                <div class="el-step__line" style="margin-right: 0px;"><i class="el-step__line-inner" style="transition-delay: -150ms; border-width: 0px; width: 0%;"></i>
+                                                                </div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="el-step is-horizontal is-flex" style="flex-basis: 50%; max-width: 33.3333%;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-wait">
+                                                                <div class="el-step__line"><i class="el-step__line-inner"></i></div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="face-div">
+                                                    <button class="layui-btn layui-btn-primary" type="button" onclick="xqa();">
+                                                        详情
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="face back">
+                                                <div class="face-div">7</div>
+                                                <div class="face-div">可燃气体(有毒有害气体)</div>
+                                                <div class="face-div">2019-07-17</div>
+                                                <div class="face-div">上海振义仓储有限公司</div>
+                                                <div class="face-div">
+                                                    <div class="el-steps el-steps--horizontal">
+
+                                                        <div class="el-step is-horizontal" style="flex-basis: 50%; margin-right: 0px;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"> 2019-08-11</div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-finish">
+                                                                <div class="el-step__line" style="margin-right: 0px;"><i class="el-step__line-inner" style="transition-delay: -150ms; border-width: 0px; width: 0%;"></i>
+                                                                </div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait">12:21:36</div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="el-step is-horizontal" style="flex-basis: 50%; margin-right: 0px;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-process ">
+                                                                    2019-08-11
+                                                                </div>
+                                                                <div class="el-step__description is-process"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-process ">
+                                                                <div class="el-step__line" style="margin-right: 0px;">
+                                                                    <i class="el-step__line-inner" style="transition-delay: 0ms; border-width: 0px; width: 0%;">
+                                                                    </i>
+                                                                </div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-process">
+                                                                    12:21:36
+                                                                </div>
+                                                                <div class="el-step__description is-process"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="el-step is-horizontal" style="flex-basis: 50%; margin-right: 0px;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-wait">
+                                                                <div class="el-step__line" style="margin-right: 0px;"><i class="el-step__line-inner" style="transition-delay: -150ms; border-width: 0px; width: 0%;"></i>
+                                                                </div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="el-step is-horizontal" style="flex-basis: 50%; margin-right: 0px;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-wait">
+                                                                <div class="el-step__line" style="margin-right: 0px;"><i class="el-step__line-inner" style="transition-delay: -150ms; border-width: 0px; width: 0%;"></i>
+                                                                </div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="el-step is-horizontal is-flex" style="flex-basis: 50%; max-width: 33.3333%;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-wait">
+                                                                <div class="el-step__line"><i class="el-step__line-inner"></i></div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="face-div">
+                                                    <button class="layui-btn layui-btn-primary" type="button" onclick="xqa();">
+                                                        详情
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-table">
+                                            <div class="face front">
+                                                <div class="face-div">4</div>
+                                                <div class="face-div">可燃气体(有毒有害气体)</div>
+                                                <div class="face-div">2019-07-17</div>
+                                                <div class="face-div">上海振义仓储有限公司</div>
+                                                <div class="face-div">
+                                                    <div class="el-steps el-steps--horizontal">
+
+                                                        <div class="el-step is-horizontal" style="flex-basis: 50%; margin-right: 0px;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"> 2019-08-11</div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-finish">
+                                                                <div class="el-step__line" style="margin-right: 0px;"><i class="el-step__line-inner" style="transition-delay: -150ms; border-width: 0px; width: 0%;"></i>
+                                                                </div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait">12:21:36</div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="el-step is-horizontal" style="flex-basis: 50%; margin-right: 0px;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-process ">
+                                                                    2019-08-11
+                                                                </div>
+                                                                <div class="el-step__description is-process"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-process ">
+                                                                <div class="el-step__line" style="margin-right: 0px;">
+                                                                    <i class="el-step__line-inner" style="transition-delay: 0ms; border-width: 0px; width: 0%;">
+                                                                    </i>
+                                                                </div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-process">
+                                                                    12:21:36
+                                                                </div>
+                                                                <div class="el-step__description is-process"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="el-step is-horizontal" style="flex-basis: 50%; margin-right: 0px;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-wait">
+                                                                <div class="el-step__line" style="margin-right: 0px;"><i class="el-step__line-inner" style="transition-delay: -150ms; border-width: 0px; width: 0%;"></i>
+                                                                </div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="el-step is-horizontal" style="flex-basis: 50%; margin-right: 0px;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-wait">
+                                                                <div class="el-step__line" style="margin-right: 0px;"><i class="el-step__line-inner" style="transition-delay: -150ms; border-width: 0px; width: 0%;"></i>
+                                                                </div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="el-step is-horizontal is-flex" style="flex-basis: 50%; max-width: 33.3333%;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-wait">
+                                                                <div class="el-step__line"><i class="el-step__line-inner"></i></div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="face-div">
+                                                    <button class="layui-btn layui-btn-primary" type="button" onclick="xqa();">
+                                                        详情
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="face back">
+                                                <div class="face-div">8</div>
+                                                <div class="face-div">可燃气体(有毒有害气体)</div>
+                                                <div class="face-div">2019-07-17</div>
+                                                <div class="face-div">上海振义仓储有限公司</div>
+                                                <div class="face-div">
+                                                    <div class="el-steps el-steps--horizontal">
+
+                                                        <div class="el-step is-horizontal" style="flex-basis: 50%; margin-right: 0px;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"> 2019-08-11</div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-finish">
+                                                                <div class="el-step__line" style="margin-right: 0px;"><i class="el-step__line-inner" style="transition-delay: -150ms; border-width: 0px; width: 0%;"></i>
+                                                                </div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait">12:21:36</div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="el-step is-horizontal" style="flex-basis: 50%; margin-right: 0px;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-process ">
+                                                                    2019-08-11
+                                                                </div>
+                                                                <div class="el-step__description is-process"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-process ">
+                                                                <div class="el-step__line" style="margin-right: 0px;">
+                                                                    <i class="el-step__line-inner" style="transition-delay: 0ms; border-width: 0px; width: 0%;">
+                                                                    </i>
+                                                                </div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-process">
+                                                                    12:21:36
+                                                                </div>
+                                                                <div class="el-step__description is-process"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="el-step is-horizontal" style="flex-basis: 50%; margin-right: 0px;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-wait">
+                                                                <div class="el-step__line" style="margin-right: 0px;"><i class="el-step__line-inner" style="transition-delay: -150ms; border-width: 0px; width: 0%;"></i>
+                                                                </div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="el-step is-horizontal" style="flex-basis: 50%; margin-right: 0px;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-wait">
+                                                                <div class="el-step__line" style="margin-right: 0px;"><i class="el-step__line-inner" style="transition-delay: -150ms; border-width: 0px; width: 0%;"></i>
+                                                                </div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="el-step is-horizontal is-flex" style="flex-basis: 50%; max-width: 33.3333%;">
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+                                                            <div class="el-step__head is-wait">
+                                                                <div class="el-step__line"><i class="el-step__line-inner"></i></div>
+                                                                <div class="el-step__icon is-text">
+                                                                    <!---->
+                                                                    <div class="el-step__icon-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="el-step__main">
+                                                                <div class="el-step__title is-wait"></div>
+                                                                <div class="el-step__description is-wait"></div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="face-div">
+                                                    <button class="layui-btn layui-btn-primary" type="button" onclick="xqa();">
+                                                        详情
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group-item">
+                        <iframe src="./platform3.html" frameborder="0" class="platform-iframe"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="javascript/jquery.min.js"></script>
+    <script src="layui/layui.js"></script>
+    <script src="javascript/tab.js"></script>
+    <script src="https://webapi.amap.com/maps?v=1.4.12&key=5ce477d042448f343be419a3e95fec8d"></script>
+    <script src="//webapi.amap.com/ui/1.0/main.js?v=1.0.11"></script>
+    <script src="javascript/pd.js"></script>
+    <script src="javascript/tabs.js"></script>
+    <script src="javascript/layerModule.js"></script>
+    <script src="javascript/lem_counter.js"></script>
+    <script src="javascript/TweenLite.min.js"></script>
+    <script>
+        //注意：选项卡 依赖 element 模块，否则无法进行功能性操作
+        layui.use(["element", "carousel", 'layer'], function() {
+            var element = layui.element;
+            var carousel = layui.carousel;
+            var layer = layui.layer;
+            layer.config({
+                extend: 'customSkin/style.css', //加载新皮肤
+                skin: 'customSkin' //一旦设定，所有弹层风格都采用此主题。
+            });
+            element.on("tab(test1)", function() {
+                $(".test").hide();
+            });
+            carousel.render({
+                elem: "#test1",
+                width: "100%", //设置容器宽度
+                autoplay: false,
+                height: "12vh",
+                indicator: "none",
+                arrow: "hover" //始终显示箭头
+            });
+        });
+    </script>
+    <script>
+        $(function() {
+            $(".switch").tab();
+            flip()
+            numberAnimate();
+            setInterval(numberAnimate, 1000 * 30);
+            $(".hover_").on("mouseenter", function(e) {
+                var This = $(this);
+                var hin = This.attr("data-in");
+                This.addClass(hin);
+                This.one(
+                    'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend ',
+                    function() {
+                        $(this).removeClass(hin);
+                    });
+            });
+        });
+
+        function numberAnimate() {
+            $(".num").lemCounter({
+                value_to_from_content: true
+            });
+        }
+
+        function flip() {
+            var timer = null;
+            var i = 0;
+            var j = 0;
+            var aFlip = $(".card-table");
+
+            function flipFn(arg1, arg2) {
+                aFlip.eq(i).toggleClass("card-flipped");
+                i++;
+                if (i == 4) {
+                    i = 0;
+                }
+            }
+            timer = setInterval(flipFn, 1000);
+            clearInterval(flipFn);
+        }
+
+        var map = new AMap.Map("map", {
+            resizeEnable: true, //鐩戞帶鍦板浘瀹瑰櫒灏哄鍙樺寲
+            rotateEnable: false, //鍦板浘鏄惁鍙棆杞�
+            pitchEnable: false, //鏄惁鍏佽璁剧疆淇话瑙掑害
+            zoom: 11.8, //鍒濆鍖栧湴鍥惧眰绾�
+            pitch: 47, //淇话瑙掑害锛岄粯璁�0锛孾0,83
+            rotation: 5, //鍦板浘椤烘椂閽堟棆杞搴︼紝鍙栧€艰寖鍥� [0-360]锛岄粯璁ゅ€硷細0
+            viewMode: "3D", //寮€鍚�3D瑙嗗浘,榛樿涓哄叧闂�
+            // expandZoomRange:true,//鏄惁鏀寔鍙互鎵╁睍鏈€澶х缉鏀剧骇鍒�,鍜寊ooms灞炴€ч厤鍚堜娇鐢�
+            // zooms:[3,10],//鍦板浘鏄剧ず鐨勭缉鏀剧骇鍒寖鍥�
+            center: [121.705381, 31.016378], //鍒濆鍖栧湴鍥句腑蹇冪偣
+            mapStyle: "amap://styles/9f27821a314a60a1dabdb0fd5f390c4a"
+        });
+
+        //娣诲姞杈圭晫鍧愭爣
+        for (var i = 0, l = pudong.length; i < l; i++) {
+            var polygon = new AMap.Polygon({
+                map: map,
+                strokeWeight: 1,
+                strokeOpacity: 0.9,
+                path: pudong[i].lnglat,
+                fillOpacity: 0.2,
+                fillColor: "rgba(3, 129, 241, 0.9)",
+                strokeColor: "#5FF2FA"
+            });
+        }
+
+        // var position = new AMap.LngLat(121.942822, 30.902418);
+
+        var i = 0;
+
+        function ok(e) {
+            i++;
+            if (i % 2 == 0) {
+                e.previousElementSibling.style.display = "block";
+            } else {
+                e.previousElementSibling.style.display = "none";
+            }
+        }
+
+        var markers = [{
+            position: [121.912351, 30.920946],
+            icon: "images/saodian-red.png" // 自定义点标记
+        }, {
+            position: [121.766897, 31.082214],
+            icon: "images/saodian-blue.png" // 自定义点标记
+        }, {
+            position: [121.711131, 31.056442],
+            icon: "images/saodian-red.png" // 自定义点标记
+        }, {
+            position: [121.542105, 31.090626],
+            icon: "images/saodian-yellow.png" // 自定义点标记
+        }, {
+            position: [121.842786, 31.071822],
+            icon: "images/saodian-red.png" // 自定义点标记
+        }, {
+            position: [121.820939, 30.986662],
+            icon: "images/saodian-blue.png" // 自定义点标记
+        }, {
+            position: [121.820939, 30.986662],
+            icon: "images/saodian-org.png" // 自定义点标记
+        }, {
+            position: [121.78242, 30.890022],
+            icon: "images/saodian-yellow.png" // 自定义点标记
+        }, {
+            position: [121.705283, 31.180588],
+            icon: "images/saodian-org.png" // 自定义点标记
+        }, {
+            position: [121.527059, 31.18169],
+            icon: "images/saodian-red.png" // 自定义点标记
+        }];
+        markers.forEach(function(marker) {
+            new AMap.Marker({
+                map: map,
+                icon: marker.icon,
+                position: [marker.position[0], marker.position[1]],
+                offset: new AMap.Pixel(-13, -30)
+            });
+        });
+    </script>
+</body>
+
+</html>

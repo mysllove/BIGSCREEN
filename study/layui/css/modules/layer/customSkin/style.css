@@ -1,46 +1,5 @@
-.layui-layer {
-    box-shadow: 0 0 10px 10px rgba(20, 61, 180) inset;
-    background-color: transparent;
-}
-
-.layui-layer::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    z-index: 99;
-    background: url(../../../../../images/layerBox.png) no-repeat;
-    background-size: 100% 100%
-}
-
-.layui-layer-title {
-    position: relative;
-    background-color: #1134a0;
-    box-shadow: 0 0 50px 10px rgba(20, 61, 180, .9) inset;
-    opacity: 0.9;
-    font-size: 0.9vw;
+body .layui-layer-title {
+    background-color: #186cc1;
+    border-radius: 2px 2px 0 0;
     color: #fff;
-    border-bottom: 0
-}
-
-.layui-layer-content::before {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    content: '';
-    background-color: #0d2a89;
-    opacity: 0.5;
-}
-
-.layui-layer-setwin a {
-    z-index: 9999;
-}
-
-.layui-layer iframe {
-    position: relative;
-    z-index: 9999;
 }

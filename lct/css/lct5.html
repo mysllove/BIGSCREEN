@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .circle {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: #dddddd;
+        cursor: pointer;
+        position: relative;
+        z-index: 99;
+    }
+    
+    .circleYellow {
+        background-color: #ffff00;
+        position: relative;
+    }
+    
+    .circleYellow1::after {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 4px;
+        background: url(images/lcx.gif) no-repeat;
+        top: 50%;
+        left: 25px;
+        transform: translateY(-50%);
+    }
+    
+    .circleYellow2::after {
+        content: '';
+        position: absolute;
+        width: 115px;
+        height: 92px;
+        background: url(images/2.gif) no-repeat;
+        top: 65px;
+        left: 10px;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+    
+    .circleYellow2-1::after {
+        content: '';
+        position: absolute;
+        width: 251px;
+        height: 92px;
+        background: url(images/2-1-3.gif) no-repeat;
+        top: 57px;
+        left: 25px;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+    
+    .step2 {
+        margin-left: 100px;
+        flex: 1;
+    }
+    
+    .step2-group {
+        margin-left: 126px;
+        margin-top: -17px;
+    }
+    
+    .step2-2 {
+        margin-top: 71px;
+    }
+    
+    .rectangle {
+        width: 85px;
+        height: 18px;
+        background-color: #dddddd;
+        position: relative;
+        z-index: 9999;
+        line-height: 18px;
+        text-align: center;
+        font-size: 14px;
+    }
+    
+    .rectangYellow {
+        background-color: #FFEB3B;
+        color: #ff0000;
+    }
+    
+    .step4 {
+        margin-left: 32px;
+        padding-top: 81px;
+        display: flex;
+    }
+    
+    .step4-1 {
+        margin-left: 44px;
+    }
+    
+    .step4-2 {
+        margin-left: 58px;
+    }
+    
+    .step {
+        position: relative;
+    }
+    
+    .position {
+        position: absolute;
+        color: #26ffff;
+        min-width: 136px;
+    }
+    
+    .spot1-word {
+        top: -30px;
+        left: -28px;
+    }
+    
+    .spot2-word {
+        top: -30px;
+        left: -28px;
+    }
+    
+    .warp {
+        display: flex;
+        width: 898px;
+        height: 462px;
+        background: url(images/waikuang.png) no-repeat;
+        padding-top: 23px;
+        padding-left: 9px;
+        box-sizing: border-box;
+        margin: 50px auto;
+        position: relative;
+    }
+    
+    .step2-1-word {
+        top: 32px;
+        left: -45px;
+    }
+    
+    .step2-2-word {
+        top: -30px;
+        left: -45px;
+    }
+    
+    .step4-word {
+        left: -31px;
+        top: 27px;
+    }
+    
+    html,
+    body {
+        width: 100%;
+    }
+    
+    body {
+        background: url(images/backgroud.png) no-repeat;
+        background-size: 100% 100%;
+    }
+    
+    .step4-1-word {
+        left: -2px;
+        top: -29px;
+    }
+    
+    .step4-2-word {
+        left: -50px;
+        top: -18px;
+    }
+    
+    .step4-2-group {
+        margin-left: 54px;
+        margin-top: -61px;
+    }
+    
+    .step4-2-1-word {
+        top: -30px;
+        left: -53px;
+    }
+    
+    .step4-2-2 {
+        margin-top: 42px;
+    }
+    
+    .step4-2-2-word {
+        top: 30px;
+        left: -53px;
+    }
+    
+    .lc4 {
+        position: absolute;
+        top: 142px;
+        right: 371px;
+    }
+    
+    .lc3 {
+        position: absolute;
+        top: 183px;
+        right: 278px;
+    }
+    
+    .lc2 {
+        position: absolute;
+        bottom: 59px;
+        right: 259px;
+    }
+    
+    .lc1 {
+        position: absolute;
+        bottom: 6px;
+        right: 362px;
+    }
+    
+    .step5 {
+        margin-top: 179px;
+        margin-left: 98px;
+    }
+    
+    .col {
+        display: inline-block;
+        position: absolute;
+        width: 4px;
+        background: url(images/col.gif) repeat;
+    }
+    
+    .col-down {
+        display: inline-block;
+        position: absolute;
+        width: 4px;
+        background: url(images/col-down.gif) repeat;
+    }
+    
+    .row {
+        display: inline-block;
+        position: absolute;
+        height: 4px;
+        background: url(images/row.gif) repeat;
+    }
+    
+    .spot1-spot2 .lineStep1 {
+        width: 100px;
+        top: 11px;
+    }
+    
+    .spot2 {
+        margin-left: 100px;
+    }
+    
+    .spot2-spot14 .lineStep1 {
+        height: 401px;
+        left: -15px;
+        top: 25px;
+    }
+    
+    .spot2-spot14 .lineStep2 {
+        width: 730px;
+        bottom: 13px;
+        left: -10px;
+    }
+    
+    .spot2-spot14 .lineStep3 {
+        height: 219px;
+        bottom: 17px;
+        left: 716px;
+    }
+    
+    .spot2-spot14 .rectangle {
+        position: absolute;
+        bottom: 6px;
+        left: 292px;
+    }
+    
+    .spot2-spot3 .lineStep1 {
+        height: 76px;
+        left: -14px;
+        top: 25px;
+    }
+    
+    .spot2-spot3 .lineStep2 {
+        width: 54px;
+        top: 97px;
+        left: -10px;
+    }
+    
+    .spot2-spot3 .lineStep3 {
+        height: 82px;
+        top: 19px;
+        left: 44px;
+    }
+    
+    .spot2-spot3 .lineStep4 {
+        width: 54px;
+        top: 19px;
+        left: 48px;
+    }
+    
+    .spot2-spot4 .lineStep1 {
+        height: 76px;
+        left: -14px;
+        top: 25px;
+    }
+    
+    .spot2-spot4 .lineStep2 {
+        width: 54px;
+        top: 97px;
+        left: -10px;
+    }
+    
+    .spot2-spot4 .lineStep3 {
+        height: 22px;
+        top: 96px;
+        left: 44px;
+    }
+    
+    .spot2-spot4 .lineStep4 {
+        width: 54px;
+        top: 114px;
+        left: 48px;
+    }
+    
+    .spot4-spot14 .lineStep1 {
+        height: 245px;
+        left: 111px;
+        top: 128px;
+    }
+    
+    .spot4-spot14 .lineStep2 {
+        width: 605px;
+        top: 369px;
+        left: 111px;
+    }
+    
+    .spot4-spot14 .lineStep3 {
+        height: 169px;
+        top: 204px;
+        left: 716px;
+    }
+    
+    .spot3_4 {
+        margin-left: 100px;
+        margin-top: 8px;
+    }
+    
+    .spot3-spot5 .lineStep1 {
+        width: 72px;
+        top: 19px;
+        left: 0px;
+    }
+    
+    .spot3-spot5 .lineStep2 {
+        height: 72px;
+        top: 24px;
+        left: 68px;
+    }
+    
+    .spot3-spot5 .lineStep3 {
+        width: 190px;
+        top: 92px;
+        left: 73px;
+    }
+    
+    .spot4 {
+        margin-top: 70px;
+        position: relative;
+    }
+    
+    .spot3-word {
+        top: 32px;
+        left: -43px;
+    }
+    
+    .spot4-word {
+        top: -29px;
+        left: -43px;
+    }
+    
+    .spot4-spot5 .lineStep1 {
+        width: 72px;
+        top: 114px;
+        left: 0px;
+    }
+    
+    .spot4-spot5 .lineStep2 {
+        height: 26px;
+        top: 92px;
+        left: 68px;
+    }
+    
+    .spot4-spot5 .lineStep3 {
+        width: 190px;
+        top: 92px;
+        left: 73px;
+    }
+    
+    .spot4-spot6 .lineStep1 {
+        width: 72px;
+        top: 114px;
+        left: 0px;
+    }
+    
+    .spot4-spot6 .lineStep2 {
+        height: 26px;
+        top: 92px;
+        left: 68px;
+    }
+    
+    .spot4-spot6 .lineStep3 {
+        width: 26px;
+        top: 92px;
+        left: 73px;
+    }
+    
+    .spot4-spot6 .lineStep4 {
+        height: 57px;
+        left: 94px;
+        top: 96px;
+    }
+    
+    .spot4-spot6 .lineStep5 {
+        width: 241px;
+        left: 94px;
+        top: 149px;
+    }
+    
+    .spot4-spot6 .lineStep6 {
+        height: 54px;
+        left: 331px;
+        top: 95px;
+    }
+    
+    .spot4-spot6 .rectangle {
+        position: absolute;
+        top: 142px;
+        left: 158px;
+    }
+    
+    .spot4-spot10 .lineStep1 {
+        width: 72px;
+        top: 114px;
+        left: 0px;
+    }
+    
+    .spot4-spot10 .lineStep2 {
+        height: 26px;
+        top: 92px;
+        left: 68px;
+    }
+    
+    .spot4-spot10 .lineStep3 {
+        width: 26px;
+        top: 92px;
+        left: 73px;
+    }
+    
+    .spot4-spot10 .lineStep4 {
+        height: 126px;
+        left: 94px;
+        top: 96px;
+    }
+    
+    .spot4-spot10 .lineStep5 {
+        width: 123px;
+        top: 218px;
+        left: 98px;
+    }
+    
+    .spot4-spot10 .lineStep6 {
+        height: 32px;
+        left: 222px;
+        top: 190px;
+    }
+    
+    .spot4-spot10 .lineStep7 {
+        width: 153px;
+        left: 226px;
+        top: 190px;
+    }
+    
+    .spot4-spot11 .lineStep1 {
+        width: 72px;
+        top: 114px;
+        left: 0px;
+    }
+    
+    .spot4-spot11 .lineStep2 {
+        height: 26px;
+        top: 92px;
+        left: 68px;
+    }
+    
+    .spot4-spot11 .lineStep3 {
+        width: 26px;
+        top: 92px;
+        left: 73px;
+    }
+    
+    .spot4-spot11 .lineStep4 {
+        height: 126px;
+        left: 94px;
+        top: 96px;
+    }
+    
+    .spot4-spot11 .lineStep5 {
+        width: 123px;
+        top: 218px;
+        left: 98px;
+    }
+    
+    .spot4-spot11 .lineStep6 {
+        height: 62px;
+        left: 222px;
+        top: 218px;
+    }
+    
+    .spot4-spot11 .lineStep7 {
+        width: 179px;
+        left: 226px;
+        top: 276px;
+    }
+    
+    .spot5 {
+        margin-top: 81px;
+        padding-left: 250px;
+        position: relative;
+    }
+    
+    .spot5 .rectangle {
+        position: absolute;
+        left: 134px;
+        top: 4px;
+    }
+    
+    .spot5 .spot5-word {
+        right: -72px;
+        top: 31px;
+    }
+    
+    .spot5-spot6 .lineStep1 {
+        width: 59px;
+        top: 92px;
+        left: 0;
+    }
+    
+    .spot5-spot14 .lineStep1 {
+        height: 100px;
+        top: -18px;
+        left: -14px;
+    }
+    
+    .spot5-spot14 .lineStep2 {
+        width: 334px;
+        top: -18px;
+        left: -14px;
+    }
+    
+    .spot5-spot14 .lineStep3 {
+        height: 198px;
+        top: -18px;
+        left: 316px;
+    }
+    
+    .spot6 {
+        margin-top: 82px;
+        margin-left: 46px;
+        position: relative;
+    }
+    
+    .spot6-word {
+        top: -29px;
+        left: -5px;
+    }
+    
+    .spot6-spot7 .lineStep1 {
+        width: 59px;
+        top: 92px;
+        left: 0;
+    }
+    
+    .spot7 {
+        position: relative;
+        margin-left: 57px;
+        margin-top: 80px;
+    }
+    
+    .spot7-word {
+        top: -19px;
+        left: -46px;
+    }
+    
+    .spot7-spot8 .lineStep1 {
+        height: 30px;
+        left: -68px;
+        top: 55px;
+    }
+    
+    .spot7-spot8 .lineStep2 {
+        width: 47px;
+        left: -68px;
+        top: 55px;
+    }
+    
+    .spot7-spot9 .lineStep1 {
+        height: 30px;
+        left: -68px;
+        top: 97px;
+    }
+    
+    .spot7-spot9 .lineStep2 {
+        width: 47px;
+        left: -68px;
+        top: 123px;
+    }
+    
+    .spot7-spot14 .lineStep1 {
+        width: 163px;
+        left: -54px;
+        top: 92px;
+    }
+    
+    .spot7-spot14 .lineStep2 {
+        height: 86px;
+        top: 92px;
+        left: 109px;
+    }
+    
+    .spot8-spot14 .lineStep1 {
+        width: 47px;
+        top: 55px;
+    }
+    
+    .spot8-spot14 .lineStep2 {
+        height: 41px;
+        top: 55px;
+        left: 43px;
+    }
+    
+    .spot8-spot14 .lineStep3 {
+        width: 66px;
+        top: 92px;
+        left: 43px;
+    }
+    
+    .spot8-spot14 .lineStep4 {
+        height: 86px;
+        top: 92px;
+        left: 109px;
+    }
+    
+    .spot9-spot14 .lineStep1 {
+        width: 47px;
+        top: 123px;
+    }
+    
+    .spot9-spot14 .lineStep2 {
+        height: 36px;
+        top: 92px;
+        left: 43px;
+    }
+    
+    .spot9-spot14 .lineStep3 {
+        width: 66px;
+        top: 92px;
+        left: 43px;
+    }
+    
+    .spot9-spot14 .lineStep4 {
+        height: 86px;
+        top: 92px;
+        left: 109px;
+    }
+    
+    .spot8_9 {
+        margin-left: 29px;
+        margin-top: 44px;
+    }
+    
+    .spot8-word {
+        top: -28px;
+        left: -48px;
+    }
+    
+    .spot9 {
+        margin-top: 43px;
+    }
+    
+    .spot9-word {
+        top: 98px;
+        left: -48px;
+    }
+    
+    .spot14 {
+        margin-top: 179px;
+        padding-left: 99px;
+        position: relative;
+    }
+    
+    .spot14-word {
+        right: -147px;
+    }
+    
+    .spot4-spot14 .rectangle {
+        position: absolute;
+        bottom: 59px;
+        left: 396px;
+    }
+    
+    .spot10 {
+        position: absolute;
+        left: 657px;
+        top: 202px;
+    }
+    
+    .spot10-word {
+        top: -29px;
+        left: -8px;
+    }
+    
+    .spot10 .rectangle {
+        position: absolute;
+        left: -122px;
+        top: 4px;
+    }
+    
+    .spot10-spot14 .lineStep1 {
+        top: 190px;
+        left: -83px;
+        width: 190px;
+    }
+    
+    .spot11 {
+        position: absolute;
+        left: 681px;
+        bottom: 150px;
+    }
+    
+    .spot11-word {
+        top: -21px;
+        left: -32px;
+    }
+    
+    .spot12_13 {
+        position: absolute;
+        bottom: 110px;
+        right: 130px;
+    }
+    
+    .spot12-word {
+        top: -28px;
+        right: -58px;
+    }
+    
+    .spot13-word {
+        top: 104px;
+        right: -59px;
+    }
+    
+    .spot13 {
+        margin-top: 50px;
+    }
+    
+    .spot11-spot12 .lineStep1 {
+        height: 50px;
+        bottom: 150px;
+        left: -74px;
+    }
+    
+    .spot11-spot12 .lineStep2 {
+        width: 50px;
+        top: 239px;
+        left: -71px;
+    }
+    
+    .spot11-spot13 .lineStep1 {
+        height: 50px;
+        bottom: 121px;
+        left: -74px;
+    }
+    
+    .spot11-spot13 .lineStep2 {
+        width: 50px;
+        top: 314px;
+        left: -71px;
+    }
+    
+    .spot11-spot14 .lineStep1 {
+        width: 172px;
+        bottom: 159px;
+        left: -62px;
+    }
+    
+    .spot11-spot14 .lineStep2 {
+        height: 75px;
+        left: 109px;
+        bottom: 159px;
+    }
+    
+    .spot12-spot14 .lineStep1 {
+        width: 50px;
+        bottom: 196px;
+        left: 2px;
+    }
+    
+    .spot12-spot14 .lineStep2 {
+        height: 40px;
+        bottom: 158px;
+        left: 48px;
+    }
+    
+    .spot12-spot14 .lineStep3 {
+        width: 57px;
+        bottom: 159px;
+        left: 51px;
+    }
+    
+    .spot12-spot14 .lineStep4 {
+        height: 73px;
+        left: 109px;
+        top: 208px;
+    }
+    
+    .spot13-spot14 .lineStep1 {
+        width: 50px;
+        bottom: 121px;
+        left: 2px;
+    }
+    
+    .spot13-spot14 .lineStep2 {
+        height: 41px;
+        bottom: 123px;
+        left: 48px;
+    }
+    
+    .spot13-spot14 .lineStep3 {
+        width: 57px;
+        bottom: 159px;
+        left: 51px;
+    }
+    
+    .spot13-spot14 .lineStep4 {
+        height: 73px;
+        left: 109px;
+        top: 208px;
+    }
+</style>
+
+<body>
+    <div class="warp">
+        <div class="step spot1">
+            <p class="position spot1-word">现场检查方案</p>
+            <div class="circle circleYellow"></div>
+        </div>
+        <div class="step spot1-spot2">
+            <span class="row lineStep1"></span>
+        </div>
+        <div class="step spot2">
+            <p class="position spot2-word">现场检查方案</p>
+            <div class="circle circleYellow"></div>
+        </div>
+        <div class="step spot2-spot14">
+            <span class="col-down lineStep1"></span>
+            <span class="row lineStep2"></span>
+            <div class="rectangle">1.检查合格</div>
+            <span class="col lineStep3"></span>
+        </div>
+        <div class="step spot2-spot3">
+            <span class="col-down lineStep1"></span>
+            <span class="row lineStep2"></span>
+            <span class="col lineStep3"></span>
+            <span class="row lineStep4"></span>
+        </div>
+        <div class="step spot2-spot4">
+            <span class="col-down lineStep1"></span>
+            <span class="row lineStep2"></span>
+            <span class="col-down lineStep3"></span>
+            <span class="row lineStep4"></span>
+        </div>
+        <div class="step spot4-spot14">
+            <span class="col-down lineStep1"></span>
+            <div class="rectangle">2.现场整改</div>
+            <span class="row lineStep2"></span>
+            <span class="col lineStep3"></span>
+        </div>
+        <div class="step spot3_4">
+            <div class="spot3">
+                <div class="circle circleYellow"></div>
+                <p class="position spot3-word">责令限期整改指令</p>
+            </div>
+            <div class="spot4">
+                <p class="position spot4-word">现场处理措施决定</p>
+                <div class="circle circleYellow"></div>
+            </div>
+        </div>
+        <div class="step spot3-spot5">
+            <span class="row lineStep1"></span>
+            <span class="col-down lineStep2"></span>
+            <span class="row lineStep3"></span>
+        </div>
+        <div class="step spot4-spot5">
+            <span class="row lineStep1"></span>
+            <span class="col lineStep2"></span>
+            <span class="row lineStep3"></span>
+        </div>
+        <div class="step spot4-spot6">
+            <span class="row lineStep1"></span>
+            <span class="col lineStep2"></span>
+            <span class="row lineStep3"></span>
+            <span class="col-down lineStep4"></span>
+            <div class="rectangle">4.直接立案</div>
+            <span class="row lineStep5"></span>
+            <span class="col lineStep6"></span>
+        </div>
+        <div class="step spot4-spot10">
+            <span class="row lineStep1"></span>
+            <span class="col lineStep2"></span>
+            <span class="row lineStep3"></span>
+            <span class="col-down lineStep4"></span>
+            <span class="row lineStep5"></span>
+            <span class="col lineStep6"></span>
+            <span class="row lineStep7"></span>
+        </div>
+        <div class="step spot4-spot11">
+            <span class="row lineStep1"></span>
+            <span class="col lineStep2"></span>
+            <span class="row lineStep3"></span>
+            <span class="col-down lineStep4"></span>
+            <span class="row lineStep5"></span>
+            <span class="col lineStep6"></span>
+            <span class="row lineStep7"></span>
+        </div>
+        <div class="spot5">
+            <div class="rectangle rectangYellow red-m">5.直接复查</div>
+            <div class="circle circleYellow"></div>
+            <p class="position spot5-word">整改复查意见</p>
+        </div>
+        <div class="step spot5-spot6">
+            <span class="row lineStep1"></span>
+        </div>
+        <div class="step spot5-spot14">
+            <span class="col lineStep1"></span>
+            <span class="row lineStep2"></span>
+            <span class="col-down lineStep3"></span>
+        </div>
+        <div class="spot6">
+            <p class="position spot6-word">立案</p>
+            <div class="circle circleYellow"></div>
+        </div>
+        <div class="step spot6-spot7">
+            <span class="row lineStep1"></span>
+        </div>
+        <div class="spot7">
+            <p class="position spot7-word">再复查</p>
+            <div class="circle circleYellow"></div>
+        </div>
+
+        <div class="step spot8_9">
+            <div class="spot8">
+                <div class="circle circleYellow"></div>
+                <p class="position spot8-word">现场处理措施决定</p>
+            </div>
+            <div class="spot9">
+                <p class="position spot9-word">责令限期整改指令</p>
+                <div class="circle circleYellow"></div>
+            </div>
+        </div>
+        <div class="step spot7-spot8">
+            <span class="col lineStep1"></span>
+            <span class="row lineStep2"></span>
+        </div>
+        <div class="step spot7-spot9">
+            <span class="col-down lineStep1"></span>
+            <span class="row lineStep2"></span>
+        </div>
+        <div class="step spot7-spot14">
+            <span class="row lineStep1"></span>
+            <span class="col-down lineStep2"></span>
+        </div>
+        <div class="step spot8-spot14">
+            <span class="row lineStep1"></span>
+            <span class="col-down lineStep2"></span>
+            <span class="row lineStep3"></span>
+            <span class="col-down lineStep4"></span>
+        </div>
+        <div class="step spot9-spot14">
+            <span class="row lineStep1"></span>
+            <span class="col-down lineStep2"></span>
+            <span class="row lineStep3"></span>
+            <span class="col-down lineStep4"></span>
+        </div>
+        <div class="spot10" style="position: absolute;">
+            <div class="rectangle">3.复查并立案</div>
+            <p class="position spot10-word">立案</p>
+            <div class="circle circleYellow"></div>
+        </div>
+        <div class="step spot10-spot14">
+            <span class="row lineStep1"></span>
+        </div>
+        <div class="spot11" style="position: absolute;">
+            <p class="position spot11-word">复查</p>
+            <div class="circle circleYellow"></div>
+        </div>
+        <div class="step spot12_13">
+            <div class="spot12">
+                <div class="circle circleYellow"></div>
+                <p class="position spot12-word">现场处理措施决定</p>
+            </div>
+            <div class="spot13">
+                <p class="position spot13-word">责令限期整改指令</p>
+                <div class="circle circleYellow"></div>
+            </div>
+        </div>
+        <div class="step spot11-spot12">
+            <span class="col lineStep1"></span>
+            <span class="row lineStep2"></span>
+        </div>
+        <div class="step spot11-spot14">
+            <span class="row lineStep1"></span>
+            <span class="col lineStep2"></span>
+        </div>
+        <div class="step spot12-spot14">
+            <span class="row lineStep1"></span>
+            <span class="col-down lineStep2"></span>
+            <span class="row lineStep3"></span>
+            <span class="col lineStep4"></span>
+        </div>
+        <div class="step spot11-spot13">
+            <span class="col lineStep1"></span>
+            <span class="row lineStep2"></span>
+        </div>
+        <div class="step spot13-spot14">
+            <span class="row lineStep1"></span>
+            <span class="col lineStep2"></span>
+            <span class="row lineStep3"></span>
+            <span class="col lineStep4"></span>
+        </div>
+        <div class="spot14">
+            <p class="position spot14-word">合格</p>
+            <div class="circle circleYellow"></div>
+        </div>
+    </div>
+</body>
+
+</html>
