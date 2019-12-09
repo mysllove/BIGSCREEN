@@ -57,7 +57,8 @@
       </el-pagination>
       <div style="width: 100%;" class="learning-list">
         <div v-for="list in userdata" :key="list.id" class="listItem">
-          <el-row :gutter="20">
+          {{ list }}
+          <!-- <el-row :gutter="20">
             <el-col :span="4"
               ><div class="grid-content bg-purple">
                 <div class="dataShow-img">
@@ -99,7 +100,7 @@
                 <el-button type="primary" plain>考试</el-button>
               </div></el-col
             >
-          </el-row>
+          </el-row> -->
         </div>
       </div>
     </div>
@@ -107,7 +108,7 @@
 </template>
 
 <script>
-import axios from "axios";
+import { getList } from "@/api/article";
 export default {
   props: ["info"],
   computed: {
@@ -163,14 +164,11 @@ export default {
       console.log(this.currentPage); //点击第几页
     },
     handleUserList() {
-      axios
-        .get("https://www.runoob.com/try/ajax/json_demo.json")
-        .then(response => (this.userList = response))
-        .catch(function(error) {
-          // 请求失败处理
-          console.log(error);
-        });
-      console.log(this.userList);
+      this.listLoading = true;
+      getList().then(response => {
+        this.userList = response.data;
+        this.listLoading = false;
+      });
     }
   }
 };
