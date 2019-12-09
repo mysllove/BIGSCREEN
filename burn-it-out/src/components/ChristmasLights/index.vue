@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="christmasLight">
     <div v-for="(skill,key) in process"
          :key="key"
          class="SkillBar">
