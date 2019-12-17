@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'iconfont';
+    /* project id 1558318 */
+    src: url('//at.alicdn.com/t/font_1558318_6r2vatxvfjv.eot');
+    src: url('//at.alicdn.com/t/font_1558318_6r2vatxvfjv.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_1558318_6r2vatxvfjv.woff2') format('woff2'), url('//at.alicdn.com/t/font_1558318_6r2vatxvfjv.woff') format('woff'), url('//at.alicdn.com/t/font_1558318_6r2vatxvfjv.ttf') format('truetype'), url('//at.alicdn.com/t/font_1558318_6r2vatxvfjv.svg#iconfont') format('svg');
+}
+
+.customFont {
+    font-family: "sanyl"
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mail:before {
+    content: "\e64d";
+}
+
+.icon-stop:before {
+    content: "\e600";
+}
+
+.icon-switch:before {
+    content: "\e7ea";
+}
+
+.icon-cookA:before {
+    content: "\e609";
+}
+
+.icon-cookB:before {
+    content: "\e601";
+}
+
+.icon-cookC:before {
+    content: "\e619";
+}

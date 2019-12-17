@@ -1,6 +1,7 @@
 <template>
   <div class="app-container">
-    <zdy @my-event="doSomething" />
+    <zdy :items="items"
+         @my-event="doSomething" />
   </div>
 </template>
 
@@ -11,7 +12,9 @@ export default {
   components: { zdy },
   data() {
     return {
-
+      items: [
+        { name: 456 }
+      ]
     }
   },
   methods: {

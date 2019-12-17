@@ -53,19 +53,20 @@
       <div
         style="width: 100%;"
         class="learning-list">
-        <div v-for="(list,index) in userdata"
+        <div v-for="list in userdata"
              :key="list.name"
              v-loading="listLoading"
              class="listItem">
           <el-row :gutter="20">
-            <el-col :span="4"><div class="grid-content bg-purple">
-              <div class="dataShow-img">
-                <img
-                  :src="list.src"
-                  alt=""
-                  style="width: 180px;height:130px"
-                  class="studyImg">
-              </div></div></el-col>
+            <el-col :span="4">
+              <div class="grid-content bg-purple">
+                <div class="dataShow-img">
+                  <img
+                    :src="list.src"
+                    alt=""
+                    style="width: 180px;height:130px"
+                    class="studyImg">
+                </div></div></el-col>
             <el-col :span="14"><div class="grid-content bg-purple">
               <div class="dataShow-infor">
                 <h2>{{list.title}}</h2>
@@ -85,16 +86,47 @@
               <img :src="list.src"
                    alt=""
                    class="passOrno"></div></el-col>
-            <el-col :span="2"><div class="ButtonSet">
-              <el-button type="primary">进入班级</el-button>
-              <el-button
-                type="primary"
-                plain>{{list.pass}}</el-button>
-            </div></el-col>
+            <el-col :span="2">
+              <div class="ButtonSet">
+                <el-button type="primary"
+                           @click="show(list)">进入班级</el-button>
+                <el-button
+                  :disabled="list.pass=='考试'?true:false"
+                  type="primary"
+                  v-html="list.pass=='考试'?'考试':'已考'"></el-button>
+              </div>
+            </el-col>
           </el-row>
         </div>
       </div>
     </div>
+    <el-dialog
+      :title="userList.title"
+      :visible.sync="dialogFormVisible">
+      <el-form ref="dataForm"
+               :rules="rules"
+               :model="temp"
+               label-position="left"
+               label-width="70px"
+               style="width: 400px; margin-left:50px;">
+        <el-form-item label="Title"
+                      prop="title">
+          <el-input v-model="temp.title" />
+        </el-form-item>
+        <el-form-item label="Date"
+                      prop="timestamp">
+          <el-date-picker v-model="temp.display_StartTime"
+                          type="datetime"
+                          placeholder="Please pick a date" />
+        </el-form-item>
+      </el-form>
+      <span slot="footer"
+            class="dialog-footer">
+        <el-button @click="dialogVisible = false">取 消</el-button>
+        <el-button type="primary"
+                   @click="dialogVisible = false">确 定</el-button>
+      </span>
+    </el-dialog>
   </div>
 </template>
 
@@ -111,10 +143,21 @@ export default {
   },
   data() {
     return {
+      dialogFormVisible: false,
+      temp: {
+        id: undefined,
+        importance: 1,
+        display_StartTime: '',
+        timestamp: new Date(),
+        title: '',
+        type: '',
+        status: 'published'
+      },
       currentPage: 1, // 初始页
       pagesize: 5, //    每页的数据
       total: 400,
       ss: '',
+      disabled: false,
       listLoading: true,
       userList: [],
       content: [
@@ -161,6 +204,11 @@ export default {
     this.handleUserList()
   },
   methods: {
+    show(list) {
+      this.dialogFormVisible = true
+      this.temp = Object.assign({}, list)
+      console.log(this.temp)
+    },
     // 初始页currentPage、初始每页数据数pagesize和数据data
     handleSizeChange: function(size) {
       this.pagesize = size
@@ -194,8 +242,12 @@ export default {
     align-items: center;
     justify-content: center;
 }
+.ButtonSet .el-button{
+  width: 98px;
+}
 .ButtonSet .el-button+.el-button{
-  margin-top: 15px
+  margin-top: 15px;
+  margin-left: 0
 }
 .listItem{
     height: 160px;

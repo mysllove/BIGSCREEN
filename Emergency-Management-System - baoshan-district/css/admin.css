@@ -1,0 +1,558 @@
+@import './IconReference.css';
+.layui-layout-admin .layui-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 126px;
+    box-sizing: border-box;
+    background: linear-gradient(to right, rgb(29, 220, 215), rgb(32, 192, 217), rgb(55, 168, 223), rgb(86, 134, 233));
+}
+
+.layui-layout-container {
+    width: 1280px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.userBar {
+    height: 83px;
+    position: relative;
+}
+
+.navBar {
+    height: 43px;
+    position: relative;
+}
+
+.navBar .layui-nav .layui-nav-item {
+    line-height: 43px;
+}
+
+.navBar .layui-nav {
+    background-color: #00d9d9 !important;
+    padding: 0;
+}
+
+.navBar .layui-nav-bar {
+    display: none;
+}
+
+.navBar .layui-nav .layui-this a {
+    background-color: #3ea1e1
+}
+
+.userBar .layui-layout-right {
+    padding: 0;
+}
+
+.layui-layout-admin .userBar {
+    padding: 0;
+}
+
+.layui-layout-admin .layui-header .layui-nav-bar {
+    height: 2px;
+    background-color: #20222A;
+    top: 0!important;
+    bottom: auto;
+}
+
+.layui-nav-child {
+    text-align: center;
+}
+
+.layui-nav-child dd {
+    cursor: pointer;
+}
+
+.layui-nav .layui-nav-child a:hover {
+    background-color: #ecf5ff;
+    color: #66b1ff;
+}
+
+.layui-nav .layui-nav-child dd.layui-this a,
+.layui-nav-child dd.layui-this {
+    background-color: #ecf5ff;
+    color: #66b1ff;
+}
+
+.layui-nav .layui-this:after {
+    background-color: transparent;
+}
+
+.icon-mail {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    font-size: 25px;
+    vertical-align: top;
+}
+
+.userBar .layui-badge {
+    top: 16px;
+    border-radius: 50%;
+    background: #e82265;
+}
+
+.icon-stop {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    vertical-align: top;
+}
+
+.layui-layout-admin .layui-logo {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: auto;
+    height: 48px;
+    line-height: inherit;
+    text-align: center;
+    color: #fff;
+    font-size: 22px;
+    transform: translateY(-50%);
+    display: flex;
+    z-index: 9999;
+    background: url(../images/logo.png) no-repeat;
+    background-position-y: center;
+    align-items: center;
+    padding-left: 35px;
+}
+
+.management-bureau {
+    margin-left: 10px;
+}
+
+.switchDrop {
+    border-radius: 3px;
+    border: 1px solid #fff;
+    padding: 2px 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+    cursor: pointer;
+    z-index: 9999;
+    transition: 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.switchDrop>i {
+    padding: 0 2px;
+}
+
+#dropMenu {
+    display: none;
+    position: absolute;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+    box-sizing: border-box;
+    min-width: 470px;
+    padding: 20px 0;
+    top: 40px;
+    color: #606266;
+}
+
+.dropMenu-item {
+    margin-bottom: 15px;
+}
+
+.dropMenu-item:after {
+    content: '\20';
+    clear: both;
+    *zoom: 1;
+    display: block;
+    height: 0;
+}
+
+.dropMenu-item__label {
+    text-align: right;
+    vertical-align: middle;
+    float: left;
+    font-size: 14px;
+    color: #606266;
+    line-height: 40px;
+    padding: 0 12px 0 0;
+    box-sizing: border-box;
+    color: #FF5722;
+}
+
+.dropMenu-item__content {
+    float: left;
+    display: block;
+    line-height: 20px;
+}
+
+.dropMenu-item__content .layui-btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 284px;
+}
+
+.switchDrop:hover #dropMenu {
+    display: block;
+    animation: rotate .5s ease-in-out;
+}
+
+@keyframes layui-downbit {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(0, 30, 0);
+    }
+}
+
+.layui-anim-downbit {
+    -webkit-animation-name: layui-downbit;
+    animation-name: layui-downbit
+}
+
+.rotate {
+    animation: rotate .5s ease-in-out
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(-90deg);
+    }
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(0.2);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.mark {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.mark i {
+    color: cadetblue;
+    font-size: 24px;
+    padding-right: 5px;
+}
+
+.mark span {
+    font-size: 14px;
+}
+
+.main {
+    position: fixed;
+    top: 126px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 998;
+    width: auto;
+    overflow: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.layadmin-iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.home-page {
+    padding: 30px 0;
+}
+
+.the-whole-situation {
+    height: 590px;
+    background-color: #4c97fd;
+    border-radius: 8px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.message .message-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    color: #fff;
+    width: 255px;
+    height: 290px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.message-item img {
+    cursor: pointer;
+}
+
+.message {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.message .message-item:first-child {
+    background-color: #a585ef;
+}
+
+.message .message-item:nth-child(2) {
+    background-color: #60e7ab;
+}
+
+.message .message-item:nth-last-child(1) {
+    background-color: #ff999b;
+    margin-bottom: 0;
+}
+
+.message .message-item:nth-last-child(2) {
+    background-color: #ffc16a;
+    margin-bottom: 0;
+}
+
+.layui-card-header {
+    font-size: 15px;
+}
+
+.layui-card-header i {
+    cursor: pointer;
+}
+
+.base-general {
+    margin-bottom: 30px;
+}
+
+.base-item {
+    font-size: 16px;
+}
+
+.base i {
+    color: #4c97fd;
+    padding-right: 5px;
+    font-size: 16px;
+}
+
+.information-base .layui-card {
+    background-color: #2eb9e5;
+    border-radius: 8px;
+}
+
+.information-base .layui-card .layui-card-header {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: -10px;
+    border-bottom: none
+}
+
+.base {
+    background-color: #fff;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    align-items: center;
+}
+
+.headBar {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+    background: url(../images/mena.png) no-repeat;
+    background-position-y: center;
+    background-position-x: 20px;
+    color: #fff;
+    position: relative;
+}
+
+.time-breadcrumb {
+    position: absolute;
+    right: 20px;
+    bottom: 3px;
+}
+
+.time-breadcrumb .layui-breadcrumb {
+    display: flex;
+}
+
+.time-breadcrumb .layui-breadcrumb a,
+.time-breadcrumb .layui-breadcrumb span {
+    color: #fff !important;
+}
+
+.time-breadcrumb .layui-breadcrumb>* {
+    font-size: 16px;
+}
+
+.Select .layui-input {
+    background-color: transparent;
+    width: 94px;
+    height: 17px;
+    border: 0;
+    font-size: 16px;
+    padding-left: 0;
+    color: #fff;
+}
+
+.company-choose .Select .layui-input {
+    color: #333;
+    min-width: 150px;
+}
+
+.company-choose .Select .layui-input::placeholder {
+    color: #333;
+}
+
+.Select .layui-form-select .layui-edge {
+    border-top-color: #fff;
+}
+
+.company-choose .Select .layui-form-select .layui-edge {
+    border-top-color: #c2c2c2;
+}
+
+.Select .layui-input::placeholder {
+    color: #fff;
+}
+
+.Select .layui-form-select dl dd.layui-this {
+    background-color: #03A9F4;
+    color: #fff;
+    background-color: #ecf5ff;
+    color: #66b1ff;
+}
+
+.Select .layui-form-select dl dd {
+    color: #948c8c;
+}
+
+.swiper-container {
+    width: 100%;
+    height: calc(100% - 70px);
+}
+
+.swiper-wrapper {
+    height: 460px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    bottom: 0;
+    top: auto;
+}
+
+.swiper-button-next {
+    right: 44%;
+    bottom: 0px;
+}
+
+.swiper-button-prev {
+    left: 44%;
+    bottom: 0px;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 16px;
+    color: #fff;
+}
+
+.headBar-situation h1 {
+    font-size: 24px;
+}
+
+.headBar-situation h2 {
+    font-size: 18px;
+}
+
+.layadmin-carousel .layui-carousel-ind {
+    position: absolute;
+    top: -41px;
+    text-align: right;
+    width: auto;
+    right: 5px;
+}
+
+.layadmin-carousel .layui-carousel-ind ul {
+    background: 0 0;
+}
+
+.layadmin-carousel .layui-carousel-ind li {
+    background-color: #e2e2e2;
+}
+
+.layadmin-carousel .layui-carousel-ind li.layui-this {
+    background-color: #999;
+}
+
+.layadmin-shortcut li {
+    text-align: center;
+}
+
+.layui-carousel>[carousel-item]:before {
+    opacity: 0;
+}
+
+.layui-carousel,
+.layui-carousel>[carousel-item]>* {
+    background-color: transparent;
+}
+
+.list-container {
+    height: 163px;
+    overflow: hidden;
+}
+
+.list-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.list-list li+li {
+    border-top: 1px solid #ddd;
+}
+
+.company {
+    display: none;
+}
+
+.company-choose {
+    display: flex;
+    align-items: center;
+}
+
+.layui-side {
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    width: 220px;
+    top: 0;
+    z-index: 1001;
+    background: linear-gradient(to bottom, rgb(67, 137, 162), rgb(92, 37, 141));
+}
+
+.layui-side-menu .layui-nav {
+    width: 220px;
+    background: 0 0;
+}
+
+.layui-body {
+    left: 220px;
+}

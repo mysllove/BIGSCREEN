@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>宝山区应急管理局</title>
+    <link rel="stylesheet" href="layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="css/admin.css" media="all">
+</head>
+
+<body class="layui-layout-body">
+    <div id="app">
+        <div class="layui-layout layui-layout-admin">
+            <div class="layui-header">
+                <div class="layui-layout-container">
+                    <div class="layui-logo" lay-href="">
+                        <span>宝山区应急管理局</span>
+                        <div class="management-bureau">
+                            <div class="switchDrop" id="switch"><i class="iconfont icon-switch"></i>切换其他机构</div>
+                            <div id="dropMenu" class="layui-anim">
+                                <div class="dropMenu-container">
+                                    <div class="dropMenu-item">
+                                        <label class="dropMenu-item__label" style="width:150px;">区安监局/大队：</label>
+                                        <div class="dropMenu-item__content">
+                                            <div class="layui-btn layui-btn-primary">金山安监局</div>
+                                        </div>
+                                    </div>
+                                    <div class="dropMenu-item">
+                                        <label class="dropMenu-item__label" style="width:150px;">工业园区安监队：</label>
+                                        <div class="dropMenu-item__content">
+                                            <div class="layui-btn layui-btn-primary">金山工业区</div>
+                                            <div class="layui-btn layui-btn-primary">金山第二工业区</div>
+                                        </div>
+                                    </div>
+                                    <div class="dropMenu-item">
+                                        <label class="dropMenu-item__label" style="width:150px;">街道安监队：</label>
+                                        <div class="dropMenu-item__content">
+                                            <div class="layui-btn layui-btn-primary">石化街道</div>
+                                        </div>
+                                    </div>
+                                    <div class="dropMenu-item">
+                                        <label class="dropMenu-item__label" style="width:150px;">镇安监队：</label>
+                                        <div class="dropMenu-item__content">
+                                            <div class="layui-btn-container">
+                                                <div class="layui-btn layui-btn-primary">枫泾镇</div>
+                                                <div class="layui-btn layui-btn-primary">朱泾镇</div>
+                                                <div class="layui-btn layui-btn-primary">亭林镇</div>
+                                                <div class="layui-btn layui-btn-primary">山阳镇</div>
+                                                <div class="layui-btn layui-btn-primary">漕泾镇</div>
+                                                <div class="layui-btn layui-btn-primary">吕巷镇</div>
+                                                <div class="layui-btn layui-btn-primary">张堰镇</div>
+                                                <div class="layui-btn layui-btn-primary">廊下镇</div>
+                                                <div class="layui-btn layui-btn-primary">金山卫镇</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="layui-bg-gray">
+                                <div class="mark">
+                                    <i class="layui-icon layui-icon-speaker"></i>
+                                    <span>提示：标注为红底的安监队表示已建立个性安全生产监管平台</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="userBar">
+                        <ul class="layui-nav layui-layout-right">
+                            <li class="layui-nav-item" lay-unselect="">
+                                <a href="javascript:;"><img src="//t.cn/RCzsdCq" class="layui-nav-img">王江平</a>
+                                <dl class="layui-nav-child layui-anim layui-anim-upbit">
+                                    <dd><a lay-href="set/user/info.html">基本资料</a></dd>
+                                    <dd><a lay-href="set/user/password.html">修改密码</a></dd>
+                                    <hr>
+                                    <dd layadmin-event="logout" style="text-align: center;"><a>退出</a></dd>
+                                </dl>
+                            </li>
+                            <li class="layui-nav-item">
+                                <a href="javascript:;"><i class="iconfont icon-mail"></i><span class="layui-badge">9</span></a>
+                            </li>
+                            <li class="layui-nav-item">
+                                <a href="javascript:;"><i class="iconfont icon-stop"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navBar">
+                        <ul class="layui-nav layui-layout-right" lay-filter="navBar">
+                            <li class="layui-nav-item layui-this">
+                                <a href="javascript:;" data-href="views/home-page.html">首页</a>
+                            </li>
+                            <li class="layui-nav-item">
+                                <a href="javascript:;">统计</a>
+                            </li>
+                            <li class="layui-nav-item">
+                                <a href="javascript:;" data-href="views/operation-service/index.html">业务工作</a>
+                            </li>
+                            <li class="layui-nav-item">
+                                <a href="javascript:;">专题查询</a>
+                            </li>
+                            <li class="layui-nav-item">
+                                <a href="javascript:;">GIS</a>
+                            </li>
+                            <li class="layui-nav-item">
+                                <a href="javascript:;">数据统计</a>
+                            </li>
+                            <li class="layui-nav-item">
+                                <a href="javascript:;">系统管理</a>
+                            </li>
+                            <li class="layui-nav-item">
+                                <a href="javascript:;">规范管理</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <iframe src="views/home-page.html" frameborder="0" class="layadmin-iframe"></iframe>
+            </div>
+        </div>
+    </div>
+    <script src="javascript/jquery.min.js"></script>
+    <script src="layui/layui.js"></script>
+    <script src="javascript/index.js"></script>
+    <script>
+        layui.use('element', function() {
+            var element = layui.element;
+            const iframe = document.querySelector(".layadmin-iframe")
+            element.on('nav(navBar)', function(elem) {
+                let href = this.dataset.href
+                iframe.setAttribute("src", href)
+            });
+        });
+    </script>
+
+</body>
+
+</html>
