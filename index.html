@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        background-color: blueviolet;
+    }
+</style>
+
+<body>
+    <div style="background-color: burlywood;height: 500px;" id="sss">
+        <div id="ss" style="height: 200px;">56</div>
+    </div>
+    <script>
+        var isFullscreen = false;
+        var sss = document.getElementById('sss');
+        var ss = document.getElementById('ss');
+        ss.addEventListener("click", function(e) {
+            if (isFullscreen == false) {
+                sss.requestFullscreen();
+            }
+        })
+    </script>
+</body>
+
+</html>
