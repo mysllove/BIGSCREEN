@@ -37,8 +37,9 @@
                   >
                     <img
                       src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/sns/github.png"
-                    /> </Tooltip
-                ></a>
+                    />
+                  </Tooltip>
+                </a>
               </li>
               <li>
                 <a
@@ -196,7 +197,9 @@
         </div>
       </header>
       <div>
-        <router-view />
+        <div id="content" class="site-content">
+          <router-view />
+        </div>
       </div>
       <a
         @click="backTop"
@@ -862,6 +865,26 @@ img {
   100% {
     -webkit-transform: translate(0, 0) rotate(0);
     transform: translate(0, 0) rotate(0);
+  }
+}
+#content {
+  animation: main 1s;
+}
+.site-content {
+  max-width: 800px;
+  padding: 0 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+@keyframes main {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 </style>
