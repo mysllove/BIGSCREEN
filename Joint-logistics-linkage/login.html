@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body class="bodyStyle">
+    <div class="wrapper">
+        <header class="header">
+            <h1>浦兴街道智慧社区联勤联动系统</h1>
+        </header>
+        <div class="site-content">
+            <div class="layui-row fill">
+                <div class="layui-col-md6 fill ">
+                    <div class="site-left">
+                        <div class="site-pictures"></div>
+                    </div>
+                </div>
+                <div class="layui-col-md6 fill">
+                    <div class="site-right">
+                        <fieldset class="layui-elem-field layui-field-title" style="margin-top: 0;margin-bottom: 0;">
+                            <legend>登录</legend>
+                        </fieldset>
+                        <form action="" class="layui-form" name="loginForm">
+                            <div class="layui-form-item">
+                                <label class="login-icon layui-icon layui-icon-username" for=""></label>
+                                <input type="text" name="" lay-verify="required" placeholder="请输入账号" class="layui-input">
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="login-icon layui-icon layui-icon-password" for=""></label>
+                                <div class="icon-yan"></div>
+                                <input type="password" name="" lay-verify="required" placeholder="请输入密码" class="layui-input yzm">
+                            </div>
+                            <div class="layui-form-item">
+                                <div class="layui-row">
+                                    <div class="layui-col-xs8">
+                                        <label class="login-icon layui-icon layui-icon-cellphone" for=""></label>
+                                        <input type="text" name="" lay-verify="required" placeholder="验证码" class="layui-input">
+                                    </div>
+                                    <div class="layui-col-xs4">
+                                        <div class="layui-right-align">
+                                            <input class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" name="yzm" type="button" value="获取验证码" onClick="showtime(30)">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="layui-btn layui-btn-normal layui-btn-radius layui-btn-fluid loginBtn" lay-submit lay-filter="go">登录</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="javascript/jquery.min.js"></script>
+    <script src="layui/layui.js"></script>
+    <script>
+        layui.use(['element', 'form'], function() {
+            var element = layui.element;
+            var form = layui.form;
+            form.on('submit(go)', function(data) {
+                console.log(data.elem) //被执行事件的元素DOM对象，一般为button对象
+                console.log(data.form) //被执行提交的form对象，一般在存在form标签时才会返回
+                console.log(data.field) //当前容器的全部表单字段，名值对形式：{name: value}
+                window.location.href = "./index.html"
+            });
+        });
+
+        function showtime(t) {
+            document.loginForm.yzm.disabled = true;
+            for (i = 1; i <= t; i++) {
+                window.setTimeout("update_p(" + i + "," + t + ")", i * 1000);
+            }
+        }
+
+        function update_p(num, t) {
+            if (num == t) {
+                document.loginForm.yzm.value = " 重新发送 ";
+                document.loginForm.yzm.disabled = false;
+            } else {
+                printnr = t - num;
+                document.loginForm.yzm.value = " (" + printnr + ")秒后重新发送";
+            }
+        }
+        $('.icon-yan').click(function() {
+            if ($('.yzm').attr('type') == 'password') {
+                $('.yzm').attr('type', 'text');
+                $('.icon-yan').css('background-image', 'url("/images/yanjing-kai.png")')
+            } else {
+                $('.yzm').attr('type', 'password');
+                $('.icon-yan').css('background-image', 'url("/images/yanjing-bi.png")')
+            }
+        })
+    </script>
+</body>
+
+</html>

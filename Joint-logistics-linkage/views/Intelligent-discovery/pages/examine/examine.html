@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../../../css/admin.css">
+</head>
+
+<body>
+    <div class="layui-fluid">
+        <div class="breadcrumb">
+            <span class="layui-breadcrumb" lay-separator=">>">
+    <a href="">智能发现</a>
+    <a href="">乱丢垃圾</a>
+    <a><cite>详情</cite></a>
+  </span>
+        </div>
+        <div class="layui-card">
+            <div class="layui-card-header custom-header">乱丢垃圾处置
+                <button class="layui-btn layui-btn-normal returnBtn" onclick="javascript:history.go(-1)">返回</button>
+            </div>
+            <div class="layui-card-body">
+                <ul class="layui-timeline myTimeLine">
+                    <li class="layui-timeline-item">
+                        <span class="layui-icon layui-timeline-axis"><i class="layui-icon layui-icon-triangle-r"></i>Top1</span>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title  bg-red"><span class="triangle"></span>预警</h3>
+                            <ul>
+                                <li>预警时间：<span>2019-06-12 10:11:21</span></li>
+                                <li>预警内容：<span>乱丢垃圾报警</span></li>
+                                <li>报警照片：<span class="img-container"><img src="../../../../images/lj.png" alt=""></span></li>
+                            </ul>
+                            <hr class="layui-bg-gray">
+                        </div>
+                    </li>
+                    <li class="layui-timeline-item">
+                        <span class="layui-icon layui-timeline-axis"><i class="layui-icon layui-icon-triangle-r"></i>Top2</span>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title bg-orange"><span class="triangle"></span>信息推送</h3>
+                            <ul>
+                                <li>
+                                    <div class="layui-inline">推送时间：<span>2019-06-12 10:11:21</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="layui-inline">推送单位：<span>金地物业</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <hr class="layui-bg-gray">
+                        </div>
+                    </li>
+                    <li class="layui-timeline-item">
+                        <span class="layui-icon layui-timeline-axis"><i class="layui-icon layui-icon-triangle-r"></i>Top3</span>
+
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title"><span class="triangle"></span>信息接收</h3>
+                            <ul>
+                                <li>
+                                    <div class="layui-inline">推送时间：<span>2019-06-12 10:11:21</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="layui-inline">推送单位：<span>金地物业</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <hr class="layui-bg-gray">
+                        </div>
+                    </li>
+                    <li class="layui-timeline-item">
+                        <span class="layui-icon layui-timeline-axis bg-gray"><i class="layui-icon layui-icon-triangle-r"></i>Top4</span>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title bg-gray"><span class="triangle"></span>处置信息</h3>
+                            <ul style="margin-bottom: 20px;">
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="layui-timeline-item">
+                        <span class="layui-icon layui-timeline-axis bg-gray"><i class="layui-icon layui-icon-triangle-r"></i>Top5</span>
+
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title bg-gray"><span class="triangle"></span>完成</h3>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../../../../layui/layui.js"></script>
+    <script>
+        layui.use(['element', 'form'], function() {
+            var element = layui.element;
+            var form = layui.form;
+        })
+    </script>
+</body>
+
+</html>

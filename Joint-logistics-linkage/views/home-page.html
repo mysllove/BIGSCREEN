@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <script src="../javascript/jquery.min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=arFeUtYLVLcifzFSbe3z0pbhGQaf7G0S"></script>
+    <script src="../javascript/map.js"></script>
+</head>
+
+<body>
+    <button class=" layui-btn layui-btn-normal switchover" type="button"><i class="layui-icon layui-icon-spread-left"></i><span>切换GIS</span></button>
+    <div class="mapView-container" style="display: none;">
+        <div class="mapView" id="allmap"></div>
+        <div class="views">
+            <div class="entranceA shade">
+                <div class="adorn">
+                    <img src="../images/adornA.png" alt="">
+                    <img src="../images/adornB.png" alt="">
+                    <img src="../images/adornC.png" alt="">
+                    <img src="../images/adornD.png" alt="">
+                </div>
+                <div class="headBar">
+                    <h3><i></i>楼宇信息</h3>
+                    <div class="small">(7号楼共<span>152</span>人)</div>
+                </div>
+                <div class="layui-collapse" lay-accordion>
+                    <div class="layui-colla-item">
+                        <h2 class="layui-colla-title">
+                            <div class="colla-title"><span>一楼</span><span>4户</span></div>
+                        </h2>
+                        <div class="layui-colla-content layui-show ">
+                            <ul class="personnel-list">
+                                <li onclick="show()">
+                                    <div class="personnel-num">101室<span>(4人)</span></div>
+                                    <div class="dotPeople"><i class="iconfont icon-dot dotG"></i>来沪人员</div>
+                                </li>
+                                <li onclick="show()">
+                                    <div class="personnel-num">102室<span>(4人)</span></div>
+                                    <div class="dotPeople"><i class="iconfont icon-dot dotR"></i>党员家庭</div>
+                                </li>
+                                <li onclick="show()">
+                                    <div class="personnel-num">103室<span>(4人)</span></div>
+                                    <div class="dotPeople"><i class="iconfont icon-dot dotB"></i>本市户口</div>
+                                </li>
+                                <li onclick="show()">
+                                    <div class="personnel-num">104室<span>(4人)</span></div>
+                                    <div class="dotPeople"><i class="iconfont icon-dot dotY"></i>群租</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="layui-colla-item">
+                        <h2 class="layui-colla-title">
+                            <div class="colla-title"><span>二楼</span><span>4户</span></div>
+                        </h2>
+                        <div class="layui-colla-content">
+                            <ul class="personnel-list">
+                                <li onclick="show()">
+                                    <div class="personnel-num">201室<span>(4人)</span></div>
+                                    <div class="dotPeople"><i class="iconfont icon-dot dotG"></i>来沪人员</div>
+                                </li>
+                                <li onclick="show()">
+                                    <div class="personnel-num">202室<span>(4人)</span></div>
+                                    <div class="dotPeople"><i class="iconfont icon-dot dotR"></i>党员家庭</div>
+                                </li>
+                                <li onclick="show()">
+                                    <div class="personnel-num">203室<span>(4人)</span></div>
+                                    <div class="dotPeople"><i class="iconfont icon-dot dotB"></i>本市户口</div>
+                                </li>
+                                <li onclick="show()">
+                                    <div class="personnel-num">204室<span>(4人)</span></div>
+                                    <div class="dotPeople"><i class="iconfont icon-dot dotY"></i>群租</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="layui-colla-item">
+                        <h2 class="layui-colla-title">
+                            <div class="colla-title"><span>三楼</span><span>4户</span></div>
+                        </h2>
+                        <div class="layui-colla-content">
+                            <ul class="personnel-list">
+                                <li onclick="show()">
+                                    <div class="personnel-num">301室<span>(4人)</span></div>
+                                    <div class="dotPeople"><i class="iconfont icon-dot dotG"></i>来沪人员</div>
+                                </li>
+                                <li onclick="show()">
+                                    <div class="personnel-num">302室<span>(4人)</span></div>
+                                    <div class="dotPeople"><i class="iconfont icon-dot dotR"></i>党员家庭</div>
+                                </li>
+                                <li onclick="show()">
+                                    <div class="personnel-num">303室<span>(4人)</span></div>
+                                    <div class="dotPeople"><i class="iconfont icon-dot dotB"></i>本市户口</div>
+                                </li>
+                                <li onclick="show()">
+                                    <div class="personnel-num">304室<span>(4人)</span></div>
+                                    <div class="dotPeople"><i class="iconfont icon-dot dotY"></i>群租</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="layui-colla-item">
+                        <h2 class="layui-colla-title">
+                            <div class="colla-title"><span>四楼</span><span>4户</span></div>
+                        </h2>
+                        <div class="layui-colla-content">
+                            <ul class="personnel-list">
+                                <li onclick="show()">
+                                    <div class="personnel-num">401室<span>(4人)</span></div>
+                                    <div class="dotPeople"><i class="iconfont icon-dot dotG"></i>来沪人员</div>
+                                </li>
+                                <li onclick="show()">
+                                    <div class="personnel-num">402室<span>(4人)</span></div>
+                                    <div class="dotPeople"><i class="iconfont icon-dot dotR"></i>党员家庭</div>
+                                </li>
+                                <li onclick="show()">
+                                    <div class="personnel-num">403室<span>(4人)</span></div>
+                                    <div class="dotPeople"><i class="iconfont icon-dot dotB"></i>本市户口</div>
+                                </li>
+                                <li onclick="show()">
+                                    <div class="personnel-num">404室<span>(4人)</span></div>
+                                    <div class="dotPeople"><i class="iconfont icon-dot dotY"></i>群租</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="layui-colla-item">
+                        <h2 class="layui-colla-title">
+                            <div class="colla-title"><span>五楼</span><span>4户</span></div>
+                        </h2>
+                        <div class="layui-colla-content">
+                            <ul class="personnel-list">
+                                <li onclick="show()">
+                                    <div class="personnel-num">501室<span>(4人)</span></div>
+                                    <div class="dotPeople"><i class="iconfont icon-dot dotG"></i>来沪人员</div>
+                                </li>
+                                <li onclick="show()">
+                                    <div class="personnel-num">502室<span>(4人)</span></div>
+                                    <div class="dotPeople"><i class="iconfont icon-dot dotR"></i>党员家庭</div>
+                                </li>
+                                <li onclick="show()">
+                                    <div class="personnel-num">503室<span>(4人)</span></div>
+                                    <div class="dotPeople"><i class="iconfont icon-dot dotB"></i>本市户口</div>
+                                </li>
+                                <li onclick="show()">
+                                    <div class="personnel-num">504室<span>(4人)</span></div>
+                                    <div class="dotPeople"><i class="iconfont icon-dot dotY"></i>群租</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="layui-colla-item">
+                        <h2 class="layui-colla-title">
+                            <div class="colla-title"><span>六楼</span><span>4户</span></div>
+                        </h2>
+                        <div class="layui-colla-content">
+                            <ul class="personnel-list">
+                                <li onclick="show()">
+                                    <div class="personnel-num">601室<span>(4人)</span></div>
+                                    <div class="dotPeople"><i class="iconfont icon-dot dotG"></i>来沪人员</div>
+                                </li>
+                                <li onclick="show()">
+                                    <div class="personnel-num">602室<span>(4人)</span></div>
+                                    <div class="dotPeople"><i class="iconfont icon-dot dotR"></i>党员家庭</div>
+                                </li>
+                                <li onclick="show()">
+                                    <div class="personnel-num">603室<span>(4人)</span></div>
+                                    <div class="dotPeople"><i class="iconfont icon-dot dotB"></i>本市户口</div>
+                                </li>
+                                <li onclick="show()">
+                                    <div class="personnel-num">604室<span>(4人)</span></div>
+                                    <div class="dotPeople"><i class="iconfont icon-dot dotY"></i>群租</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="entranceB shade">
+                <div class="adorn">
+                    <img src="../images/adornA.png" alt="">
+                    <img src="../images/adornB.png" alt="">
+                    <img src="../images/adornC.png" alt="">
+                    <img src="../images/adornD.png" alt="">
+                </div>
+                <div class="layui-fluid">
+                    <div class="info-card">
+                        <div class="headBar">
+                            <h3><i></i>住户信息</h3>
+                            <div class="small">
+                                <div class="dotPeople"><i class="iconfont icon-dot"></i>来沪人员</div>
+                            </div>
+                        </div>
+                        <div class="layui-row layui-col-space15">
+                            <div class="layui-col-md6">
+                                <div class="media">
+                                    <div class="mediaLeft">
+                                        <img src="../images/people1.jpg" alt="" width="83" height="108">
+                                    </div>
+                                    <div class="mediaRight">
+                                        <address>
+                            <ul class="info">
+                          <li>
+                            <label for="">姓名</label>
+                            <p>王娟</p>
+                          </li>
+                          <li>
+                            <label for="">年龄</label>
+                            <p>24</p>
+                          </li>
+                          <li>
+                            <label for="">联系电话</label>
+                            <p>15236495689</p>
+                          </li>
+                        </ul>
+                      </address>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-col-md6">
+                                <div class="media">
+                                    <div class="mediaLeft">
+                                        <img src="../images/people2.jpg" alt="" width="83" height="108">
+                                    </div>
+                                    <div class="mediaRight">
+                                        <address>
+                            <ul class="info">
+                        <li>
+                          <label for="">姓名</label>
+                          <p>王三春</p>
+                        </li>
+                        <li>
+                          <label for="">年龄</label>
+                          <p>28</p>
+                        </li>
+                        <li>
+                          <label for="">联系电话</label>
+                          <p>13985623562</p>
+                        </li>
+                      </ul>
+                    </address>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-col-md6">
+                                <div class="media">
+                                    <div class="mediaLeft">
+                                        <img src="../images/people3.jpg" alt="" width="83" height="108">
+                                    </div>
+                                    <div class="mediaRight">
+                                        <address>
+                            <ul class="info">
+                      <li>
+                        <label for="">姓名</label>
+                        <p>赵姗姗</p>
+                      </li>
+                      <li>
+                        <label for="">年龄</label>
+                        <p>26</p>
+                      </li>
+                      <li>
+                        <label for="">联系电话</label>
+                        <p>15289565562</p>
+                      </li>
+                    </ul>
+                  </address>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-col-md6">
+                                <div class="media">
+                                    <div class="mediaLeft">
+                                        <img src="../images/people4.jpg" alt="" width="83" height="108">
+                                    </div>
+                                    <div class="mediaRight">
+                                        <address>
+                            <ul class="info">
+                          <li>
+                            <label for="">姓名</label>
+                            <p>陈静</p>
+                          </li>
+                          <li>
+                            <label for="">年龄</label>
+                            <p>18</p>
+                          </li>
+                          <li>
+                            <label for="">联系电话</label>
+                            <p>15258956236</p>
+                          </li>
+                        </ul>
+                      </address>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="headBar">
+                            <h3><i></i>历史问题</h3>
+
+                        </div>
+                        <table class="layui-table">
+                            <colgroup>
+                                <col width="30%">
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>发生事件</th>
+                                    <th>发生时间</th>
+                                    <th style="border-right: 0;">次数</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>高空抛物</td>
+                                    <td>2019-12-12-13:05</td>
+                                    <td style="border-right: 0;">3次</td>
+                                </tr>
+                                <tr>
+                                    <td>飞线充电</td>
+                                    <td>2019-12-12-13:05</td>
+                                    <td style="border-right: 0;">5数</td>
+                                </tr>
+                                <tr>
+                                    <td>乱丢垃圾</td>
+                                    <td>2019-12-12-13:05</td>
+                                    <td style="border-right: 0;">12数</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-chart">
+        <div class="layui-row layui-col-space15">
+            <div class="layui-col-md12">
+                <div class="layui-card basic-statistics">
+                    <div class="layui-card-header">
+                        <i class="layui-icon layui-icon-chart-screen"></i>基础统计
+                    </div>
+                    <div class="layui-card-body">
+                        <div class="basic-card">
+                            <h3>居委会统计</h3>
+                            <span class="num">1</span>
+                        </div>
+                        <div class="basic-card">
+                            <h3>小区统计</h3>
+                            <span class="num">2</span>
+                        </div>
+                        <div class="basic-card">
+                            <h3>物业统计</h3>
+                            <span class="num">2</span>
+                        </div>
+                        <div class="basic-card">
+                            <h3>人口统计</h3>
+                            <span class="num">4785</span>
+                        </div>
+                        <div class="basic-card">
+                            <h3>住户统计</h3>
+                            <span class="num">1384</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-md12">
+                <div class="layui-card">
+                    <div class="layui-card-header">
+                        <i class="layui-icon layui-icon-user"></i>人口统计
+                    </div>
+                    <div class="layui-card-body">
+                        <div class="layui-row">
+                            <div class="layui-col-md6">
+                                <div class="echarts" id="population1"></div>
+                            </div>
+                            <div class="layui-col-md6">
+                                <div class="echarts" id="population2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-md12">
+                <div class="layui-card intelligent-discovery">
+                    <div class="layui-card-header">
+                        <i class="iconfont icon-noopsyche"></i>智能发现
+                    </div>
+                    <div class="layui-card-body">
+                        <div class="layui-row">
+                            <div class="layui-col-md2">
+                                <div class="intelligent-card">
+                                    <img src="../images/iconA.png" alt="">
+                                    <p>乱丢垃圾</p>
+                                    <span>6</span>
+                                </div>
+                            </div>
+                            <div class="layui-col-md2">
+                                <div class="intelligent-card">
+                                    <img src="../images/iconB.png" alt="">
+                                    <p>狗便便</p>
+                                    <span>2</span>
+                                </div>
+                            </div>
+                            <div class="layui-col-md2">
+                                <div class="intelligent-card">
+                                    <img src="../images/iconC.png" alt="">
+                                    <p>乱停车</p>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div class="layui-col-md2">
+                                <div class="intelligent-card">
+                                    <img src="../images/iconD.png" alt="">
+                                    <p>高空抛物</p>
+                                    <span>3</span>
+                                </div>
+                            </div>
+                            <div class="layui-col-md2">
+                                <div class="intelligent-card">
+                                    <img src="../images/iconE.png" alt="">
+                                    <p>人员倒地</p>
+                                    <span>0</span>
+                                </div>
+                            </div>
+                            <div class="layui-col-md2">
+                                <div class="intelligent-card">
+                                    <img src="../images/iconF.png" alt="">
+                                    <p>打架</p>
+                                    <span>1</span>
+                                </div>
+                            </div>
+                            <div class="layui-col-md2">
+                                <div class="intelligent-card">
+                                    <img src="../images/iconG.png" alt="">
+                                    <p>火灾烟感</p>
+                                    <span>1</span>
+                                </div>
+                            </div>
+                            <div class="layui-col-md2">
+                                <div class="intelligent-card">
+                                    <img src="../images/iconH.png" alt="">
+                                    <p>飞线充电</p>
+                                    <span>4</span>
+                                </div>
+                            </div>
+                            <div class="layui-col-md2">
+                                <div class="intelligent-card">
+                                    <img src="../images/iconI.png" alt="">
+                                    <p>掩门</p>
+                                    <span>0</span>
+                                </div>
+                            </div>
+                            <div class="layui-col-md2">
+                                <div class="intelligent-card">
+                                    <img src="../images/iconJ.png" alt="">
+                                    <p>地下空间</p>
+                                    <span>1</span>
+                                </div>
+                            </div>
+                            <div class="layui-col-md2">
+                                <div class="intelligent-card">
+                                    <img src="../images/iconK.png" alt="">
+                                    <p>落水</p>
+                                    <span>0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-md12">
+                <div class="layui-card equipment-operation">
+                    <div class="layui-card-header">
+                        <i class="layui-icon layui-icon-component"></i>硬件设备运行
+                    </div>
+                    <div class="layui-card-body">
+                        <div class="layui-row">
+                            <div class="layui-col-md6">
+                                <div class="echarts" id="equipmentA"></div>
+                            </div>
+                            <div class="layui-col-md6">
+                                <div class="echarts" id="equipmentB"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../layui/layui.js"></script>
+    <script src="../javascript/echarts.min.js"></script>
+    <script src="../javascript/echartsItem.js"></script>
+    <script src="../javascript/lem_counter.js"></script>
+    <script src="../javascript/TweenLite.min.js"></script>
+    <script>
+        layui.use('element', function() {
+            var element = layui.element;
+        })
+        numberAnimate();
+        setInterval(numberAnimate, 1000 * 30);
+
+        window.addEventListener("scroll", this.scrollToTop);
+
+        function show() {
+            $(".entranceB").show()
+        }
+
+        function scrollToTop() {
+            const that = this;
+            let scrollTop =
+                window.pageYOffset ||
+                document.documentElement.scrollTop ||
+                document.body.scrollTop;
+            that.scrollTop = scrollTop;
+            if (that.scrollTop > 50) {
+                $(".switchover").css("top", '-999px')
+            } else {
+                $(".switchover").css("top", '15px')
+            }
+        }
+
+
+
+        function numberAnimate() {
+            $(".num").lemCounter({
+                value_to_from_content: true
+            });
+        }
+    </script>
+</body>
+
+</html>

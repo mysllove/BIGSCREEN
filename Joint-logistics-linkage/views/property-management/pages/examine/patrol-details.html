@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../../../css/admin.css">
+    <style>
+        .layui-table-page,
+        .layui-table-total {
+            margin-bottom: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="layui-fluid">
+        <div class="breadcrumb">
+            <span class="layui-breadcrumb" lay-separator=">>">
+                <a href="">物业管理</a>
+                <a href="">巡查记录</a>
+                <a><cite>详情</cite></a>
+            </span>
+        </div>
+        <div class="layui-card">
+            <div class="layui-card-header custom-header">巡查记录详情
+                <button class="layui-btn layui-btn-normal returnBtn" onclick="javascript:history.go(-1)">返回</button>
+            </div>
+            <div class="layui-card-body">
+                <form class="layui-form see-form">
+                    <div class="layui-row">
+                        <div class="layui-col-md6">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">姓名：</label>
+                                <div class="layui-form-mid">
+                                    王凯
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">巡逻时间：</label>
+                                <div class="layui-form-mid">
+                                    2019-12-24
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">巡逻区域：</label>
+                                <div class="layui-form-mid">
+                                    1单元至6单元
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">问题说明：</label>
+                                <div class="layui-form-mid">
+                                    发现6号楼202室友高空抛物问题
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="layui-col-md6">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">是否发现问题：</label>
+                                <div class="layui-form-mid">
+                                    是
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">状态：</label>
+                                <div class="layui-form-mid">
+                                    已完成
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../../../../layui/layui.js"></script>
+    <script>
+        layui.use(['element', 'table', 'layer'], function() {
+            var element = layui.element;
+
+        });
+    </script>
+</body>
+
+</html>

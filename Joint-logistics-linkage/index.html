@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>联勤联动微平台</title>
+    <link rel="stylesheet" href="layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="css/admin.css" media="all">
+    <link rel="stylesheet" href="https://g.alicdn.com/de/prismplayer/2.8.7/skins/default/aliplayer-min.css" />
+    <script type="text/javascript" charset="utf-8" src="https://g.alicdn.com/de/prismplayer/2.8.7/aliplayer-min.js"></script>
+    <script src="https://cdn.bootcss.com/skycons/1396634940/skycons.min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=arFeUtYLVLcifzFSbe3z0pbhGQaf7G0S">
+    </script>
+</head>
+
+<body class="layui-layout-body">
+    <div id="app">
+        <div class="layui-layout layui-layout-admin">
+            <div class="layui-header">
+                <h1>浦兴街道智慧社区联勤联动系统<span class="small">银桥居委</span ></h1>
+                <ul class="layui-nav layui-layout-right nav-list">
+                    <li class="layui-nav-item" lay-unselect="">
+                        <div class="site">所在小区：<span>银桥花苑</span></div>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;"><img src="//t.cn/RCzsdCq" class="layui-nav-img">admin</a>
+                <dl class="layui-nav-child layui-anim layui-anim-upbit">
+                    <dd><a lay-href="set/user/info.html">基本资料</a></dd>
+                    <dd><a lay-href="set/user/password.html">修改密码</a></dd>
+                    <hr>
+                    <dd layadmin-event="logout" style="text-align: center;"><a href="./login.html">退出</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <i class="layui-icon layui-icon-dialogue"></i>
+                    <span>信息</span>
+                </a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="./login.html">
+                    <i class="iconfont icon-stop"></i>
+                    <span>退出</span>
+                </a>
+            </li>
+            </ul>
+        </div>
+        <div class="nav-nav">
+            <ul class="layui-nav" lay-filter="navBar">
+                <li class="layui-nav-item layui-this"><a href="javascript:;" data-href="views/home-page.html"><i class="iconfont icon-safety"></i>安全分析</a></li>
+                <li class="layui-nav-item"><a href="javascript:;" data-href="views/operation-service"><i class="iconfont icon-Households"></i>用户档案</a></li>
+                <li class="layui-nav-item"><a href="javascript:;" data-href="views/property-management"><i class="iconfont icon-real"></i>物业管理</a></li>
+                <li class="layui-nav-item"><a href="javascript:;" data-href="views/rc-information"><i class="iconfont icon-committee"></i>居委信息</a></li>
+                <li class="layui-nav-item"><a href="javascript:;" data-href="views/Intelligent-discovery"><i class="iconfont icon-noopsyche"></i>智能发现</a></li>
+                <li class="layui-nav-item"><a href="javascript:;" data-href="views/operation-control"><i class="iconfont icon-operation"></i>运营管控</a></li>
+                <li class="layui-nav-item"><a href="javascript:;" data-href="views/system-service"><i class="iconfont icon-server"></i>系统服务</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <iframe src="views/home-page.html" frameborder="0" class="layadmin-iframe"></iframe>
+        </div>
+    </div>
+    </div>
+    <script src="javascript/jquery.min.js"></script>
+    <script src="layui/layui.js"></script>
+    <script>
+        layui.use('element', function() {
+            var element = layui.element;
+            const iframe = document.querySelector(".layadmin-iframe")
+            element.on('nav(navBar)', function(elem) {
+                let href = this.dataset.href
+                iframe.setAttribute("src", href)
+            });
+        });
+    </script>
+</body>
+
+</html>

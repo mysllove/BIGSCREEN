@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'iconfont';
+    /* project id 1558318 */
+    src: url('//at.alicdn.com/t/font_1558318_kjqueonudyn.eot');
+    src: url('//at.alicdn.com/t/font_1558318_kjqueonudyn.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_1558318_kjqueonudyn.woff2') format('woff2'), url('//at.alicdn.com/t/font_1558318_kjqueonudyn.woff') format('woff'), url('//at.alicdn.com/t/font_1558318_kjqueonudyn.ttf') format('truetype'), url('//at.alicdn.com/t/font_1558318_kjqueonudyn.svg#iconfont') format('svg');
+}
+
+.customFont {
+    font-family: "sanyl"
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-dot:before {
+    content: "\e605";
+}
+
+.icon-stop:before {
+    content: "\e600";
+}
+
+.icon-safety:before {
+    content: "\e64e";
+}
+
+.icon-Households:before {
+    content: "\e705";
+}
+
+.icon-real:before {
+    content: "\e604";
+}
+
+.icon-committee:before {
+    content: "\e602";
+}
+
+.icon-noopsyche:before {
+    content: "\e77e";
+}
+
+.icon-operation:before {
+    content: "\e603";
+}
+
+.icon-server:before {
+    content: "\e6d7";
+}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../../../css/admin.css">
+</head>
+
+<body>
+    <div class="layui-fluid">
+        <div class="breadcrumb">
+            <span class="layui-breadcrumb" lay-separator=">>">
+    <a href="">户档管理</a>
+    <a href="">房屋管理</a>
+    <a><cite>新增</cite></a>
+  </span>
+        </div>
+        <div class="layui-card">
+            <div class="layui-card-header custom-header">房屋管理新增
+                <button class="layui-btn layui-btn-normal returnBtn" onclick="javascript:history.go(-1)">返回</button>
+            </div>
+            <div class="layui-card-body">
+                <form class="layui-form add-form">
+                    <div class="layui-row">
+                        <div class="layui-col-md6">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">房产证号：</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input" placeholder="请输入">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">单元号：</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input" placeholder="请输入数字">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">楼号：</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input" placeholder="请输入名称">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">户室：</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input" placeholder="请输入">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">房屋面积：</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input" placeholder="请输入数字">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">房屋用途：</label>
+                                <div class="layui-input-inline">
+                                    <select>
+                                    <option value="">民宅</option>
+                                    <option value="0">住宅</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">房屋性质：</label>
+                                <div class="layui-input-inline">
+                                    <select>
+                                    <option value="">住宅</option>
+                                    <option value="0">学校</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">房屋类型：</label>
+                                <div class="layui-input-inline">
+                                    <select>
+                                    <option value="">多层</option>
+                                    <option value="0">1层</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">建成时间：</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" id="data" class="layui-input" placeholder="2016-02-02">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">物业管理：</label>
+                                <div class="layui-input-inline">
+                                    <select>
+                                    <option value="">物业公司</option>
+                                    <option value="0">阿萨德</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">状态：</label>
+                                <div class="layui-input-inline">
+                                    <select>
+                                    <option value="">正常</option>
+                                    <option value="0">已注销</option>
+                                </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-col-md6">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">所在市：</label>
+                                <div class="layui-input-inline">
+                                    <select>
+                                    <option value="">上海市</option>
+                                    <option value="0">合肥市</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">所在区：</label>
+                                <div class="layui-input-inline">
+                                    <select>
+                                    <option value="">浦东新区</option>
+                                    <option value="0">金安区</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">所在街道：</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input" placeholder="浦兴街道">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">所在居委：</label>
+                                <div class="layui-input-inline">
+                                    <select>
+                                    <option value="">银绣花苑居委会</option>
+                                    <option value="0">22</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">所在小区：</label>
+                                <div class="layui-input-inline">
+                                    <select>
+                                    <option value="">银绣花苑居委会</option>
+                                    <option value="0">22</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">住户数：</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input" placeholder="请输入数字">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">入住时间：</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" id="data3" class="layui-input" placeholder="请选择时间">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">入住人姓名：</label>
+                                <div class="layui-input-inline">
+                                    <select>
+                                    <option value="">请输入</option>
+                                    <option value="0">金安区</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">身份证号：</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input" placeholder="请输入">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">联系方式：</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" id="data3" class="layui-input" placeholder="请输入">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item bottomBar">
+                        <div class="layui-input-block">
+                            <button class="layui-btn layui-btn-normal" lay-submit lay-filter="formDemo">保存</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../../../../layui/layui.js"></script>
+    <script>
+        layui.use(['element', 'form', 'laydate', 'upload'], function() {
+            var element = layui.element;
+            var form = layui.form;
+            laydate.render({
+                elem: '#data' //指定元素
+            });
+
+            laydate.render({
+                elem: '#data2',
+                range: true //或 range: '~' 来自定义分割字符
+            });
+
+        })
+    </script>
+</body>
+
+</html>

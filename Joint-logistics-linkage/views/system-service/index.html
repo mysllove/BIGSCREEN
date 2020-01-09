@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+</head>
+
+<body>
+    <div class="layui-side layui-side-menu">
+        <div class="layui-side-scroll">
+            <div id="menu">
+            </div>
+        </div>
+    </div>
+    <div class="layui-body">
+        <iframe src="pages/change-password.html" frameborder="0" class="layadmin-iframe"></iframe>
+    </div>
+    <script src="../../javascript/jquery.min.js"></script>
+    <script src="../../layui/layui.js"></script>
+    <script>
+        // 导航菜单的间隔像素
+        var menuCell = 1;
+
+        layui.use('element', function() {
+            var element = layui.element;
+            var $ = layui.jquery;
+
+            data = [{
+                "name": "密码修改",
+                "url": "pages/a-home-a.html",
+                "childMenus": null
+            }]
+
+            console.log("data: " + data);
+            var liStr = "";
+            // 遍历生成主菜单
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].childMenus != null && data[i].childMenus.length > 0) {
+
+                    liStr += "<li class=\"layui-nav-item\"><a class=\"\" href=\"javascript:;\"><i class='layui-icon " + data[i].icon + "'></i> " + data[i].name + "</a>\n" +
+                        "<dl class=\"layui-nav-child\">\n";
+                    // 遍历获取子菜单
+                    for (var k = 0; k < data[i].childMenus.length; k++) {
+                        liStr += getChildMenu(data[i].childMenus[k], 0);
+                    }
+                    liStr += "</dl></li>";
+                } else {
+                    liStr += "<li class=\"layui-nav-item\"><a class=\"\" href=\"javascript:;\" data-url=\"" + data[i].url + "\"><i class='layui-icon " + data[i].icon + "'></i> " + data[i].name + "</a></li>";
+                }
+            };
+
+            $("#menu").html("<ul class=\"layui-nav layui-nav-tree\"  lay-filter=\"test\">\n" + liStr + "</ul>");
+            $(".layui-nav-tree .layui-nav-item:first-child").addClass("layui-this")
+            element.init();
+
+            // 页面切换
+            $(document).on('click', '#menu a', function() {
+                $(".layui-nav-child").addClass("layui-anim layui-anim-scale")
+                var thisPage = $(this).attr("data-url");
+                if (typeof(thisPage) != "undefined") {
+                    if ($('.layui-body iframe').attr('src') == thisPage) return;
+                    $('.layui-body iframe').attr('src', thisPage)
+                }
+            });
+        });
+
+        // 递归生成子菜单
+        function getChildMenu(subMenu, num) {
+            console.log("num: " + num);
+            num++;
+            var subStr = "";
+            if (subMenu.childMenus != null && subMenu.childMenus.length > 0) {
+                subStr += "<dd><ul><li class=\"layui-nav-item\" ><a style=\"text-indent: " + num * menuCell + "em\" class=\"\" href=\"javascript:;\"><i class='layui-icon " + subMenu.icon + "'></i> " + subMenu.name + "</a>" +
+                    "<dl class=\"layui-nav-child\">\n";
+                for (var j = 0; j < subMenu.childMenus.length; j++) {
+                    subStr += getChildMenu(subMenu.childMenus[j], num);
+                }
+                subStr += "</dl></li></ul></dd>";
+            } else {
+                subStr += "<dd><a style=\"text-indent:" + num * menuCell + "em\" href=\"javascript:;\" data-url=\"" + subMenu.url + "\"><i class='layui-icon " + subMenu.icon + "'></i> " + subMenu.name + "</a></dd>";
+            }
+            return subStr;
+        }
+    </script>
+</body>
+
+</html>

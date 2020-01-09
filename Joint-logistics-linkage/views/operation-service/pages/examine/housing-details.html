@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../../../css/admin.css">
+    <style>
+        .layui-table-page,
+        .layui-table-total {
+            margin-bottom: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="layui-fluid">
+        <div class="breadcrumb">
+            <span class="layui-breadcrumb" lay-separator=">>">
+                <a href="">户档管理</a>
+                <a href="">房屋管理</a>
+                <a><cite>详情</cite></a>
+            </span>
+        </div>
+        <div class="layui-card">
+            <div class="layui-card-header custom-header">房屋管理详情
+                <button class="layui-btn layui-btn-normal returnBtn" onclick="javascript:history.go(-1)">返回</button>
+            </div>
+            <div class="layui-card-body">
+                <form class="layui-form see-form">
+                    <div class="layui-row">
+                        <div class="layui-col-md6">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">房产证号：</label>
+                                <div class="layui-form-mid">
+                                    201912240016
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">单元号：</label>
+                                <div class="layui-form-mid">
+                                    6号
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">楼号：</label>
+                                <div class="layui-form-mid">
+                                    2楼
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">户室：</label>
+                                <div class="layui-form-mid">
+                                    201室
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">房屋面积：</label>
+                                <div class="layui-form-mid">
+                                    120m²
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">民屋用途：</label>
+                                <div class="layui-form-mid">
+                                    民宅
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">房屋类型：</label>
+                                <div class="layui-form-mid">
+                                    多屋
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">建成时间：</label>
+                                <div class="layui-form-mid">
+                                    2016-06-06
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">物业管理：</label>
+                                <div class="layui-form-mid">
+                                    物业公司
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">状态：</label>
+                                <div class="layui-form-mid">
+                                    正常
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-col-md6">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">所在市：</label>
+                                <div class="layui-form-mid">
+                                    上海市
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">所在区：</label>
+                                <div class="layui-form-mid">
+                                    浦东新区
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">所在街道：</label>
+                                <div class="layui-form-mid">
+                                    浦兴街道
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">所在居委：</label>
+                                <div class="layui-form-mid">
+                                    银绣花苑居委会
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">所在小区：</label>
+                                <div class="layui-form-mid">
+                                    银绣花苑
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">住户数：</label>
+                                <div class="layui-form-mid">
+                                    1人
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">入住时间：</label>
+                                <div class="layui-form-mid">
+                                    2012-10-31
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">入住人姓名：</label>
+                                <div class="layui-form-mid">
+                                    谢磊
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">身份证号：</label>
+                                <div class="layui-form-mid">
+                                    114034198601180285
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">联系方式：</label>
+                                <div class="layui-form-mid">
+                                    18558813824
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="layui-card">
+            <div class="layui-card-header" style="background-color: #72b8fd; color: #fff;">历史住户信息
+            </div>
+            <div class="layui-card-body">
+
+                <div class="layui-row">
+                    <div class="layui-col-md12">
+
+                        <div class="dataTable">
+                            <table id="demo" lay-filter="test"></table>
+                            <div class="dataTable-record">
+                                <span>总共5条记录，当前1/1页</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../../../layui/layui.js"></script>
+    <script>
+        layui.use(['element', 'table', 'layer'], function() {
+            var element = layui.element;
+            var table = layui.table;
+            var layer = layui.layer;
+            table.render({
+                elem: '#demo',
+                url: '../../../../json/table3.json',
+                page: true,
+                cols: [
+                    [ //表头
+                        {
+                            field: 'name',
+                            title: '姓名',
+                            align: 'center'
+                        }, {
+                            field: 'gender',
+                            title: '性别',
+                            width: '10%',
+                            align: 'center'
+                        }, {
+                            field: 'number',
+                            title: '身份证号',
+                            width: '10%',
+                            align: 'center'
+                        }, {
+                            field: 'phone',
+                            title: '联系方式',
+                            align: 'center'
+                        }, {
+                            field: 'time',
+                            title: '入住时间',
+                            align: 'center'
+                        }, {
+                            field: 'type',
+                            title: '状态',
+                            align: 'center'
+                        }, {
+                            fixed: 'right',
+                            title: '操作',
+                            toolbar: '#operationTools',
+                            align: 'center'
+                        }
+                    ]
+                ]
+            });
+            table.on('tool(test)', function(obj) {
+                var data = obj.data;
+
+                if (obj.event === 'edit') {
+                    layer.open({
+                        type: 2,
+                        title: '历史住户信息详情',
+                        shadeClose: true,
+                        area: ['1000px', '600px'],
+                        shade: 0.8,
+                        content: './housing-detail2.html',
+                    });
+                }
+            });
+
+        });
+    </script>
+    <script type="text/html" id="operationTools">
+        <a type="button" class="layui-btn layui-btn-normal" lay-event="edit">查看</a>
+    </script>
+</body>
+
+</html>

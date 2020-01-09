@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../../../css/admin.css">
+</head>
+
+<body>
+    <div class="layui-fluid">
+        <div class="breadcrumb">
+            <span class="layui-breadcrumb" lay-separator=">>">
+    <a href="">户档管理</a>
+    <a href="">一户一档</a>
+    <a><cite>新增</cite></a>
+  </span>
+        </div>
+        <div class="layui-card">
+            <div class="layui-card-header custom-header">一户一档新增
+                <button class="layui-btn layui-btn-normal returnBtn" onclick="javascript:history.go(-1)">返回</button>
+            </div>
+            <div class="layui-card-body">
+                <form class="layui-form add-form">
+                    <div class="layui-row">
+                        <div class="layui-col-md6">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">姓名：</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input" placeholder="请输入">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">性别：</label>
+                                <div class="layui-input-inline">
+                                    <select>
+                                    <option value="">请选择</option>
+                                    <option value="0">男</option>
+                                    <option value="1">女</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">民族：</label>
+                                <div class="layui-input-inline">
+                                    <select>
+                                    <option value="">汉</option>
+                                    <option value="0">维吾尔族</option>
+                                    <option value="1">朝鲜族</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">籍贯：</label>
+                                <div class="layui-input-inline">
+                                    <select>
+                                    <option value="">请选择</option>
+                                    <option value="0">上海</option>
+                                    <option value="1">合肥</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">户口类型：</label>
+                                <div class="layui-input-inline">
+                                    <select>
+                                    <option value="">请选择</option>
+                                    <option value="0">农村</option>
+                                    <option value="1">城市</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">户籍地址：</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input" placeholder="请输入">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">现居住地址：</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input" placeholder="请输入">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">居住楼宇：</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input" placeholder="请输入">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">出生日期：</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" id="data" class="layui-input" placeholder="2016-02-02">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">身份证号码：</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input" placeholder="请输入证件号码">
+                                </div>
+                                <div class="layui-input-mid mid">
+                                    <button type="button" class="layui-btn layui-btn-normal uploadBtn" id="test1"><i class="layui-icon layui-icon-upload-drag"></i></button>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">婚姻状况：</label>
+                                <div class="layui-input-inline">
+                                    <select>
+                                    <option value="">未婚</option>
+                                    <option value="0">已婚</option>
+                                </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-col-md6">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">文化程度：</label>
+                                <div class="layui-input-inline">
+                                    <select>
+                                    <option value="">本科</option>
+                                    <option value="0">专科</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">政治面貌：</label>
+                                <div class="layui-input-inline">
+                                    <select>
+                                    <option value="">群众</option>
+                                    <option value="0">军人</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">联系电话：</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input" placeholder="请输入">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">居住类型：</label>
+                                <div class="layui-input-inline">
+                                    <select>
+                                    <option value="">租户</option>
+                                    <option value="0">22</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">有无居住证：</label>
+                                <div class="layui-input-inline">
+                                    <select>
+                                    <option value="">有</option>
+                                    <option value="0">无</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">居住证编号：</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input" placeholder="请输入">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">有效期限：</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" id="data2" class="layui-input" placeholder="请选择时间">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">是否户主：</label>
+                                <div class="layui-input-inline">
+                                    <select>
+                                    <option value="">否</option>
+                                    <option value="0">是</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">入住时间：</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" id="data3" class="layui-input" placeholder="请选择时间">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">居住事由：</label>
+                                <div class="layui-input-inline">
+                                    <select>
+                                    <option value="">务工</option>
+                                    <option value="0">游玩</option>
+                                </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item bottomBar">
+                        <div class="layui-input-block">
+                            <button class="layui-btn layui-btn-normal" lay-submit lay-filter="formDemo">保存</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../../../../layui/layui.js"></script>
+    <script>
+        layui.use(['element', 'form', 'laydate', 'upload'], function() {
+            var element = layui.element;
+            var form = layui.form;
+            laydate.render({
+                elem: '#data' //指定元素
+            });
+
+            laydate.render({
+                elem: '#data2',
+                range: true //或 range: '~' 来自定义分割字符
+            });
+
+            laydate.render({
+                elem: '#data3' //指定元素
+            });
+
+            //普通图片上传
+            var uploadInst = upload.render({
+                elem: '#test1',
+                url: '/upload/',
+                before: function(obj) {
+                    //预读本地文件示例，不支持ie8
+                    obj.preview(function(index, file, result) {
+                        $('#demo1').attr('src', result); //图片链接（base64）
+                    });
+                },
+                done: function(res) {
+                    //如果上传失败
+                    if (res.code > 0) {
+                        return layer.msg('上传失败');
+                    }
+                    //上传成功
+                },
+                error: function() {
+                    //演示失败状态，并实现重传
+                    var demoText = $('#demoText');
+                    demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-xs demo-reload">重试</a>');
+                    demoText.find('.demo-reload').on('click', function() {
+                        uploadInst.upload();
+                    });
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>
