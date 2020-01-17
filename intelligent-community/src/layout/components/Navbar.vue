@@ -1,8 +1,6 @@
 <template>
   <div class="navbar">
-    <hamburger :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar" />
-
-    <!-- <breadcrumb class="breadcrumb-container" /> -->
+    <!-- <hamburger :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar" /> -->
     <h1 class="systemTitle">智慧社区联勤联动系统<span class="small">（银桥居委）</span></h1>
     <div class="right-menu">
       <div class="right-menu-container" trigger="click">
@@ -21,13 +19,11 @@
 
 <script>
 import { mapGetters } from 'vuex'
-// import Breadcrumb from '@/components/Breadcrumb'
-import Hamburger from '@/components/Hamburger'
+// import Hamburger from '@/components/Hamburger'
 
 export default {
   components: {
-    // Breadcrumb
-    Hamburger
+    // Hamburger
   },
   data() {
     return {

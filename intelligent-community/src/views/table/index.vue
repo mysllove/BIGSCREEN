@@ -80,7 +80,7 @@
     </el-table>
     <el-pagination
       :current-page="currentPage"
-      :page-sizes="[5, 10, 15, 20]"
+      :page-sizes="[10, 15, 20]"
       :page-size="100"
       layout="total, prev, pager, next, jumper , sizes"
       :total="total"
@@ -89,7 +89,7 @@
     />
     <el-dialog :title="textMap[dialogStatus]" :visible.sync="dialogFormVisibleAdd" top="1vh">
       <el-form
-        ref="dataForm"
+        ref="temp"
         :model="temp"
         label-position="right"
         label-width="120px"
@@ -98,79 +98,79 @@
           :gutter="10"
         >
           <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="12">
-            <el-form-item label="房产证号：">
-              <el-input v-model="temp.title" placeholder="请输入" />
+            <el-form-item label="房产证号：" prop="num1">
+              <el-input v-model="temp.num1" placeholder="请输入" />
             </el-form-item>
           </el-col>
           <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="12">
-            <el-form-item label="所在市：" prop="type">
-              <el-select v-model="temp.title" class="filter-item" placeholder="所在市">
+            <el-form-item label="所在市：" prop="num2">
+              <el-select v-model="temp.num2" class="filter-item" placeholder="所在市">
                 <el-option v-for="item in city" :key="item.key" :label="item.cityAddress" :value="item.key" />
               </el-select>
             </el-form-item>
           </el-col>
           <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="12">
-            <el-form-item label="单元号：">
-              <el-input v-model="temp.title" placeholder="请输入数字" />
+            <el-form-item label="单元号：" prop="num3">
+              <el-input v-model="temp.num3" placeholder="请输入数字" />
             </el-form-item>
           </el-col>
           <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="12">
-            <el-form-item label="所在区：" prop="type">
-              <el-select v-model="temp.title" class="filter-item" placeholder="所在区">
+            <el-form-item label="所在区：" prop="num4">
+              <el-select v-model="temp.num4" class="filter-item" placeholder="所在区">
                 <el-option label="浦东新区" value="pudong" />
                 <el-option label="普陀" value="putuo" />
               </el-select>
             </el-form-item>
           </el-col>
           <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="12">
-            <el-form-item label="楼号：">
-              <el-input v-model="temp.title" placeholder="请输入名称" />
+            <el-form-item label="楼号：" prop="num5">
+              <el-input v-model="temp.num5" placeholder="请输入名称" />
             </el-form-item>
           </el-col>
           <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="12">
-            <el-form-item label="所在街道：">
-              <el-input v-model="temp.title" placeholder="浦兴街道" />
+            <el-form-item label="所在街道：" prop="num6">
+              <el-input v-model="temp.num6" placeholder="浦兴街道" />
             </el-form-item>
           </el-col>
           <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="12">
-            <el-form-item label="户室：">
-              <el-input v-model="temp.title" placeholder="请输入户室" />
+            <el-form-item label="户室：" prop="num7">
+              <el-input v-model="temp.num7" placeholder="请输入户室" />
             </el-form-item>
           </el-col>
           <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="12">
-            <el-form-item label="所在居委：" prop="type">
-              <el-select v-model="temp.title" class="filter-item" placeholder="所在居委">
+            <el-form-item label="所在居委：" prop="num8">
+              <el-select v-model="temp.num8" class="filter-item" placeholder="所在居委">
                 <el-option label="银桥花园居委会" value="jwh" />
               </el-select>
             </el-form-item>
           </el-col>
           <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="12">
-            <el-form-item label="房屋面积：">
-              <el-input v-model="temp.title" placeholder="请输入数字" />
+            <el-form-item label="房屋面积：" prop="num9">
+              <el-input v-model="temp.num9" placeholder="请输入数字" />
             </el-form-item>
           </el-col>
           <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="12">
-            <el-form-item label="所在小区：" prop="type">
-              <el-select v-model="temp.title" class="filter-item" placeholder="所在小区">
+            <el-form-item label="所在小区：" prop="num10">
+              <el-select v-model="temp.num10" class="filter-item" placeholder="所在小区">
                 <el-option label="银桥花苑" value="jwh" />
               </el-select>
             </el-form-item>
           </el-col>
           <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="12">
-            <el-form-item label="房屋用途：" prop="type">
-              <el-select v-model="temp.title" class="filter-item" placeholder="房屋用途">
+            <el-form-item label="房屋用途：" prop="num11">
+              <el-select v-model="temp.num11" class="filter-item" placeholder="房屋用途">
                 <el-option label="民宅" value="jwh" />
               </el-select>
             </el-form-item>
           </el-col>
           <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="12">
-            <el-form-item label="住户数：" prop="type">
-              <el-input v-model="temp.title" placeholder="请输入数字" />
+            <el-form-item label="住户数：" prop="num12">
+              <el-input v-model="temp.num12" placeholder="请输入数字" />
             </el-form-item>
           </el-col>
           <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="12">
-            <el-form-item label="房屋性质：" prop="type">
-              <el-select v-model="temp.title" class="filter-item" placeholder="房屋用途">
+            <el-form-item label="房屋性质：" prop="num13">
+              <el-select v-model="temp.num13" class="filter-item" placeholder="房屋用途">
                 <el-option label="住宅" value="jwh" />
               </el-select>
             </el-form-item>
@@ -181,15 +181,15 @@
             </el-form-item>
           </el-col>
           <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="12">
-            <el-form-item label="房屋类型：" prop="type">
-              <el-select v-model="temp.title" class="filter-item" placeholder="房屋类型">
+            <el-form-item label="房屋类型：" prop="num14">
+              <el-select v-model="temp.num14" class="filter-item" placeholder="房屋类型">
                 <el-option label="多层" value="jwh" />
               </el-select>
             </el-form-item>
           </el-col>
           <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="12">
-            <el-form-item label="入住人姓名：">
-              <el-input v-model="temp.title" placeholder="请输入" />
+            <el-form-item label="入住人姓名：" prop="num15">
+              <el-input v-model="temp.num15" placeholder="请输入" />
             </el-form-item>
           </el-col>
           <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="12">
@@ -198,25 +198,25 @@
             </el-form-item>
           </el-col>
           <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="12">
-            <el-form-item label="身份证号：">
-              <el-input v-model="temp.title" placeholder="请输入" />
+            <el-form-item label="身份证号：" prop="num16">
+              <el-input v-model="temp.num16" placeholder="请输入" />
             </el-form-item>
           </el-col>
           <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="12">
-            <el-form-item label="物业管理：" prop="type">
-              <el-select v-model="temp.title" class="filter-item" placeholder="房屋类型">
+            <el-form-item label="物业管理：" prop="num17">
+              <el-select v-model="temp.num17" class="filter-item" placeholder="房屋类型">
                 <el-option label="物业公司" value="jwh" />
               </el-select>
             </el-form-item>
           </el-col>
           <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="12">
-            <el-form-item label="联系方式：">
-              <el-input v-model="temp.title" placeholder="请输入" />
+            <el-form-item label="联系方式：" prop="num18">
+              <el-input v-model="temp.num18" placeholder="请输入" />
             </el-form-item>
           </el-col>
           <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="12">
-            <el-form-item label="状态：" prop="type">
-              <el-select v-model="temp.title" class="filter-item" placeholder="房屋类型">
+            <el-form-item label="状态：" prop="num19">
+              <el-select v-model="temp.num19" class="filter-item" placeholder="房屋类型">
                 <el-option label="正常" value="jwh" />
               </el-select>
             </el-form-item>
@@ -227,7 +227,7 @@
         <el-button type="primary" @click="dialogStatus==='create'?createData():updateData()">
           保存
         </el-button>
-        <el-button @click="dialogFormVisible = false">
+        <el-button plain @click="resetForm('temp')">
           重置
         </el-button>
       </div>
@@ -285,13 +285,28 @@ export default {
       pagesize: 10, //    每页的数据
       total: 400,
       temp: {
-        id: undefined,
-        importance: 1,
-        remark: '',
-        timestamp: new Date(),
-        title: '',
-        type: '',
-        status: 'published'
+        num1: '',
+        num2: '',
+        num3: '',
+        num4: '',
+        num5: '',
+        num6: '',
+        num7: '',
+        num8: '',
+        num9: '',
+        num10: '',
+        num11: '',
+        num12: '',
+        num13: '',
+        num14: '',
+        num15: '',
+        num16: '',
+        num17: '',
+        num18: '',
+        num19: '',
+        date1: '',
+        date2: '',
+        date3: ''
       },
       formInline: {
         unitNumber: '',
@@ -304,6 +319,10 @@ export default {
     this.fetchData()
   },
   methods: {
+    resetForm(formName) {
+      alert(2)
+      this.$refs[formName].resetFields()
+    },
     fetchData() {
       this.listLoading = true
       getList().then(response => {
@@ -354,7 +373,7 @@ export default {
       this.dialogFormVisible = true
       this.tempData = Object.assign({}, row)
       this.statusValue = '详情'
-      console.log(this.statusValue)
+      console.log(this.tempData)
     },
     handleModifyStatus(row, status) {
       this.$message({
@@ -364,13 +383,19 @@ export default {
       row.status = status
     },
     handleDelete(row, index) {
-      this.$notify({
-        title: 'Success',
-        message: 'Delete Successfully',
-        type: 'success',
-        duration: 2000
+      this.$confirm('确认删除该记录吗?', '提示', {
+        type: 'warning'
       })
-      this.list.splice(index, 1)
+        .then(() => {
+          this.$notify({
+            title: 'Success',
+            message: 'Delete Successfully',
+            type: 'success',
+            duration: 2000
+          })
+          this.list.splice(row, 1)
+        })
+        .catch(() => {})
     },
     // 初始页currentPage、初始每页数据数pagesize和数据data
     handleSizeChange: function(size) {
@@ -386,14 +411,5 @@ export default {
 }
 </script>
 <style>
-  .form-container{
-        padding-top: 22px;
-    border: 1px solid #EBEEF5;
-    border-radius: 5px;
-    /* -webkit-box-shadow: rgba(110,110,110,0.4) 0px 1px 1px 1px; */
-    /* box-shadow: rgba(235, 238, 245, 0.4) 1px 1px 1px 0px; */
-    margin-bottom: 20px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
+
 </style>

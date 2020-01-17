@@ -1,3 +1,4 @@
+
 <template>
   <section class="app-main">
     <transition name="fade-transform" mode="out-in">
@@ -22,12 +23,16 @@ export default {
   @import "~@/styles/variables.scss";
 .app-main {
   /*50 = navbar  */
-  min-height: calc(100vh - 60px);
-  height: 100%;
-  margin-left: #{$sideBarWidth};
-  position: relative;
-  overflow: hidden;
-  transition: margin-left .28s;
+     /* min-height: calc(100vh - 60px); */
+    height: calc(100vh - 60px);
+    margin-left: $sideBarWidth;
+    position: relative;
+    overflow-y: auto;
+        overflow-x: hidden;
+    -webkit-transition: margin-left .28s;
+    transition: margin-left .28s;
+    left: 0;
+    right: 0;
 }
 .fixed-header+.app-main {
   padding-top: 50px;

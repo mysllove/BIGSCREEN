@@ -1,100 +1,54 @@
+
 <template>
-  <div :class="{'hidden':hidden}" class="pagination-container">
+  <div class="pagination">
     <el-pagination
-      :background="background"
-      :current-page.sync="currentPage"
-      :page-size.sync="pageSize"
-      :layout="layout"
-      :page-sizes="pageSizes"
-      :total="total"
-      v-bind="$attrs"
-      @size-change="handleSizeChange"
+      v-if="pageTotal > 0"
+      background
+      :page-sizes="paginations.pageSizes"
+      :page-size="paginations.pageSize"
+      :layout="paginations.layout"
+      :total="pageTotal"
+      :current-page="paginations.pageIndex"
       @current-change="handleCurrentChange"
+      @size-change="handleSizeChange"
     />
   </div>
 </template>
 
 <script>
-import { scrollTo } from '@/utils/scroll-to'
 export default {
   name: 'Pagination',
-  props: {
-    total: {
-      required: true,
-      type: Number
-    },
-    page: {
-      type: Number,
-      default: 1
-    },
-    limit: {
-      type: Number,
-      default: 20
-    },
-    pageSizes: {
-      type: Array,
-      default() {
-        return [10, 20, 30, 50]
+
+  data() {
+    return {
+      paginations: {
+        pageIndex: 1, // 当前位于哪页
+        pageSize: 20, // 1页显示多少条
+        pageSizes: [5, 10, 15, 20], // 每页显示多少条
+        layout: 'total, sizes, prev, pager, next, jumper' // 翻页属性
       }
-    },
-    layout: {
-      type: String,
-      default: 'total, sizes, prev, pager, next, jumper'
-    },
-    background: {
-      type: Boolean,
-      default: true
-    },
-    autoScroll: {
-      type: Boolean,
-      default: true
-    },
-    hidden: {
-      type: Boolean,
-      default: false
     }
   },
-  computed: {
-    currentPage: {
-      get() {
-        return this.page
-      },
-      set(val) {
-        this.$emit('update:page', val)
-      }
-    },
-    pageSize: {
-      get() {
-        return this.limit
-      },
-      set(val) {
-        this.$emit('update:limit', val)
-      }
-    }
+  created() {
+  },
+  mounted() {
   },
   methods: {
-    handleSizeChange(val) {
-      this.$emit('pagination', { page: this.currentPage, limit: val })
-      if (this.autoScroll) {
-        scrollTo(0, 800)
-      }
+    // 上下分页 pageIndex
+    handleCurrentChange(page) {
+      this.$emit('handleCurrentChange', page)
     },
-    handleCurrentChange(val) {
-      this.$emit('pagination', { page: val, limit: this.pageSize })
-      if (this.autoScroll) {
-        scrollTo(0, 800)
-      }
+    // 每页多少条切换 pageSize
+    handleSizeChange(page_size) {
+      this.$emit('handleSizeChange', page_size)
     }
   }
 }
 </script>
 
-<style scoped>
-.pagination-container {
-  background: #fff;
-  padding: 32px 16px;
-}
-.pagination-container.hidden {
-  display: none;
-}
+<style lang="scss" scoped>
+    .pagination{
+        text-align: right;
+        padding: 10px 18px;
+    }
 </style>

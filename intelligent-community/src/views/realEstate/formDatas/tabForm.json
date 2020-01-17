@@ -1,0 +1,190 @@
+{
+    "committee": {
+        "title": "居委会",
+        "propertyManagement": [{
+                "show": true,
+                "key1": "居委会名称：",
+                "key2": "电话：",
+                "key3": "地址：",
+                "key4": "创建日期：",
+                "key5": "身份证号：",
+                "key6": "所在街道：",
+                "key7": "资质证书号：",
+                "key8": "所在居委：",
+                "key9": "资质等级：",
+                "key10": "所在小区：",
+                "key11": "合同有效期：",
+                "item1": "银桥居委",
+                "item2": "上海市浦东新区长岛路1560弄",
+                "item3": "1",
+                "item4": "2010-01-03",
+                "item5": "13122175721",
+                "item6": "金地物业",
+                "item7": "上海市浦东新区金杨路1055弄23号",
+                "item8": "15703413581",
+                "item9": "银桥花苑",
+                "item10": "正常"
+            },
+            {
+                "key1": "居委会名称：",
+                "key2": "电话：",
+                "key3": "地址：",
+                "key4": "创建日期：",
+                "key5": "身份证号：",
+                "key6": "所在街道：",
+                "key7": "资质证书号：",
+                "key8": "所在居委：",
+                "key9": "资质等级：",
+                "key10": "所在小区：",
+                "key11": "合同有效期：",
+                "item1": "银桥居委",
+                "item2": "上海市浦东新区长岛路1560弄",
+                "item3": "1",
+                "item4": "2010-01-03",
+                "item5": "13122175721",
+                "item6": "金地物业2",
+                "item7": "上海市浦东新区金杨路1055弄23号",
+                "item8": "15703413581",
+                "item9": "银桥花苑",
+                "item10": "正常"
+            }
+
+        ],
+        "formConfig": {
+            "formItemList": [{
+                    "type": "input",
+                    "prop": "unit",
+                    "label": "居委会名称：",
+                    "placeholder": "请输入"
+                },
+                {
+                    "type": "select",
+                    "prop": "rank",
+                    "label": "状态：",
+                    "placeholder": "请选择",
+                    "optList": [{ "value": 1, "label": "正常" }]
+                },
+                {
+                    "type": "input",
+                    "prop": "legal",
+                    "label": "电话：",
+                    "placeholder": "请输入"
+                }
+            ],
+            "operate": [{
+                "icon": "el-icon-search",
+                "type": "primary",
+                "name": "查询"
+            }, {
+                "name": "新增居委",
+                "handleClick": "this.add",
+                "plain": true
+            }]
+        },
+        "form": {}
+    },
+    "personnel": {
+        "title": "人员",
+        "personnelManagement": [{
+                "show": false,
+                "key1": "姓名：",
+                "key2": "身份证号码：",
+                "key3": "性别：",
+                "key4": "婚姻状况：",
+                "key5": "民族：",
+                "key6": "文化程度：",
+                "key7": "籍贯：",
+                "key8": "政治面貌：",
+                "key9": "户口类型：",
+                "key10": "联系电话：",
+                "key11": "户籍地址：",
+                "key12": "入职时间：",
+                "key13": "现居住地址：",
+                "key14": "职位：",
+                "key15": "出生日期：",
+                "key16": "状态：",
+                "item1": "王凯",
+                "item2": "141032198201240125",
+                "item3": "男",
+                "item4": "已婚",
+                "item5": "汉",
+                "item6": "本科",
+                "item7": "湖南长沙",
+                "item8": "群众",
+                "item9": "城市",
+                "item10": "18808313582",
+                "item11": "湖南省长沙市",
+                "item12": "2016-10-01",
+                "item13": "上海市宝山区振华路",
+                "item14": "保安",
+                "item15": "1982-02-24",
+                "item16": "在职"
+            },
+            {
+                "key1": "姓名2：",
+                "key2": "身份证号码：",
+                "key3": "性别：",
+                "key4": "婚姻状况：",
+                "key5": "民族：",
+                "key6": "文化程度：",
+                "key7": "籍贯：",
+                "key8": "政治面貌：",
+                "key9": "户口类型：",
+                "key10": "联系电话：",
+                "key11": "户籍地址：",
+                "key12": "入职时间：",
+                "key13": "现居住地址：",
+                "key14": "职位：",
+                "key15": "出生日期：",
+                "key16": "状态：",
+                "item1": "王凯",
+                "item2": "141032198201240125",
+                "item3": "男",
+                "item4": "已婚",
+                "item5": "汉",
+                "item6": "本科",
+                "item7": "湖南长沙",
+                "item8": "群众",
+                "item9": "城市",
+                "item10": "18808313582",
+                "item11": "湖南省长沙市",
+                "item12": "2016-10-01",
+                "item13": "上海市宝山区振华路",
+                "item14": "保安",
+                "item15": "1982-02-24",
+                "item16": "在职"
+            }
+        ],
+        "formConfig": {
+            "formItemList": [{
+                    "type": "input",
+                    "prop": "unit2",
+                    "label": "人员姓名：",
+                    "placeholder": "请输入"
+                },
+                {
+                    "type": "select",
+                    "prop": "status",
+                    "label": "状态：",
+                    "placeholder": "请选择",
+                    "optList": [{ "value": 1, "label": "在职" }]
+                }, {
+                    "type": "select",
+                    "prop": "rank",
+                    "label": "文化程度：",
+                    "placeholder": "请选择",
+                    "optList": [{ "value": 1, "label": "本科" }]
+                }
+            ],
+            "operate": [{
+                "icon": "el-icon-search",
+                "type": "primary",
+                "name": "查询"
+            }, {
+                "name": "新增人员",
+                "handleClick": "this.addP",
+                "plain": true
+            }]
+        }
+    }
+}

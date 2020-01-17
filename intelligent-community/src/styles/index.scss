@@ -58,6 +58,12 @@ div:focus {
     }
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 // main-container global css
 .app-container {
     padding: 20px;
@@ -66,4 +72,15 @@ div:focus {
 @font-face {
     font-family: sanyl;
     src: url('../assets/font/fashion.ttf');
+}
+
+.form-container {
+    padding-top: 22px;
+    border: 1px solid #EBEEF5;
+    border-radius: 5px;
+    /* -webkit-box-shadow: rgba(110,110,110,0.4) 0px 1px 1px 1px; */
+    /* box-shadow: rgba(235, 238, 245, 0.4) 1px 1px 1px 0px; */
+    margin-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
 }

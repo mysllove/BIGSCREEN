@@ -20,6 +20,7 @@
         </div>
       </div>
     </div>
+    {{ normalizedFullName }}
   </div>
 </template>
 
@@ -28,10 +29,22 @@
 // import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
-  name: "home"
-  // components: {
-  //   HelloWorld
-  // }
+  name: "home",
+  data() {
+    return {
+      fullName: "duan"
+    };
+  },
+  computed: {
+    normalizedFullName() {
+      return this.fullName
+        .split(" ")
+        .map(function(word) {
+          return word[0].toUpperCase() + word.slice(1);
+        })
+        .join(" ");
+    }
+  }
 };
 </script>
 <style>

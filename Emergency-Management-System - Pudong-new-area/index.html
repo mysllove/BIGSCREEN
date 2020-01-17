@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>浦东新区应急管理局</title>
+    <link rel="stylesheet" href="layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="css/admin.css" media="all">
+</head>
+
+<body>
+    <div id="app">
+        <div class="layui-layout layui-layout-admin">
+            <div class="layui-header">
+                <div class="layui-layout-container">
+                    <div class="layui-logo" lay-href="">
+                    </div>
+                    <div>
+                        <h1 class="system-title">上海浦东新区应急管理局<small>Shanghai pudong new area emergency management bureau</small></h1>
+                    </div>
+                    <div class="motto">
+                        <p class="motto__first">海纳百川 新无极限 忧患在前 敢为人先</p>
+                        <p class="motto__last">联合即时 协同 智能</p>
+                    </div>
+                </div>
+            </div>
+            <div class="nav">
+                <div class="layui-layout-container">
+                    <ul class="layui-nav" lay-filter="">
+                        <li class="layui-nav-item layui-this"><a href="">首页</a></li>
+                        <li class="layui-nav-item"><a href="">组织机构</a></li>
+                        <li class="layui-nav-item"><a href="">政府公开</a></li>
+                        <li class="layui-nav-item"><a href="">政策文件</a></li>
+                        <li class="layui-nav-item"><a href="">应急预案</a></li>
+                        <li class="layui-nav-item"><a href="">工作状态</a></li>
+                        <li class="layui-nav-item"><a href="">新闻资讯</a></li>
+                        <li class="layui-nav-item"><a href="">党建园地</a></li>
+                        <li class="layui-nav-item"><a href="">通告公告</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="layui-layout-container">
+                <div class="hot-plate">
+                    <div class="hot-plate__rank">
+                        <div class="hot-plate__rank--left">
+                            <img src="../images/hotRank.png" alt="">
+                            <span>热点<br>排行</span>
+                        </div>
+                        <div class="hot-plate__rank--right">
+                            <div class="layui-carousel" id="carousel">
+                                <div carousel-item>
+                                    <div>
+                                        <div class="layui-row layui-col-space16">
+                                            <div class="layui-col-md6">
+                                                <div class="hotNews-item">
+                                                    <span class="hotNews-item__span hotNews-item__span--styleA">1</span>
+                                                    <a>上海社科院迎来4位新所长 在职人员一半以上博士学位</a>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-md6">
+                                                <div class="hotNews-item">
+                                                    <span class="hotNews-item__span hotNews-item__span--styleB">2</span>
+                                                    <a>上海市十五届人大三次会议将于2020年1月15日至20日召开</a>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-md6">
+                                                <div class="hotNews-item">
+                                                    <span class="hotNews-item__span hotNews-item__span--styleC">3</span>
+                                                    <a>上海市政协委员届中调整，增补姚兆亮等12名市政协委员</a>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-md6">
+                                                <div class="hotNews-item">
+                                                    <span class="hotNews-item__span hotNews-item__span--styleD">4</span>
+                                                    <a>上海市政协十三届三次会议明年1月14日举行</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="layui-row layui-col-space16">
+                                            <div class="layui-col-md6">
+                                                <div class="hotNews-item">
+                                                    <span class="hotNews-item__span hotNews-item__span--styleA">5</span>
+                                                    <a>上海社科院迎来4位新所长 在职人员一半以上博士学位</a>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-md6">
+                                                <div class="hotNews-item">
+                                                    <span class="hotNews-item__span hotNews-item__span--styleB">6</span>
+                                                    <a>上海市十五届人大三次会议将于2020年1月15日至20日召开</a>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-md6">
+                                                <div class="hotNews-item">
+                                                    <span class="hotNews-item__span hotNews-item__span--styleC">7</span>
+                                                    <a>上海市政协委员届中调整，增补姚兆亮等12名市政协委员</a>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-md6">
+                                                <div class="hotNews-item">
+                                                    <span class="hotNews-item__span hotNews-item__span--styleD">8</span>
+                                                    <a>上海市政协十三届三次会议明年1月14日举行</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="layui-row layui-col-space16">
+                                            <div class="layui-col-md6">
+                                                <div class="hotNews-item">
+                                                    <span class="hotNews-item__span hotNews-item__span--styleA">9</span>
+                                                    <a>上海社科院迎来4位新所长 在职人员一半以上博士学位</a>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-md6">
+                                                <div class="hotNews-item">
+                                                    <span class="hotNews-item__span hotNews-item__span--styleB">10</span>
+                                                    <a>上海市十五届人大三次会议将于2020年1月15日至20日召开</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-row layui-space20">
+                    <div class="layui-col-md12">
+                        <div class="layui-card mediaNews">
+                            <div class="layui-card-header header-layout-between">
+                                <h3>图片新闻</h3>
+                                <a href="">更多<i class="layui-icon layui-icon-next"></i></a>
+                            </div>
+                            <div class="layui-card-body" style="padding-left: 0;padding-bottom: 0;">
+                                <div class="layui-row">
+                                    <div class="layui-col-md6">
+                                        <div class="mediaNews__carousel">
+                                            <div class="layui-carousel" id="carouselNews">
+                                                <div carousel-item>
+                                                    <div>
+                                                        <img src="images/tu.png" alt="" width="100%" height="100%">
+                                                        <p>上海与央企接连签约</p>
+                                                    </div>
+                                                    <div>
+                                                        <img src="images/tu.png" alt="" width="100%" height="100%">
+                                                        <p>上海与央企接连签约</p>
+                                                    </div>
+                                                    <div>
+                                                        <img src="images/tu.png" alt="" width="100%" height="100%">
+                                                        <p>上海与央企接连签约</p>
+                                                    </div>
+                                                    <div>
+                                                        <img src="images/tu.png" alt="" width="100%" height="100%">
+                                                        <p>上海与央企接连签约</p>
+                                                    </div>
+                                                    <div>
+                                                        <img src="images/tu.png" alt="" width="100%" height="100%">
+                                                        <p>上海与央企接连签约</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="layui-col-md6">
+                                        <div class="mediaNews__body" style="padding-left: 10px;">
+                                            <div class="recommend">
+                                                <a href="">
+                                                    <p><img src="../images/new.png" alt=""> 今日21号线全线通车 快收好这份换乘攻略！结合世界级生态岛建设“海上花岛”第十届中国花。
+                                                    </p>
+                                                    <time>2019-10-19</time>
+                                                </a>
+                                            </div>
+                                            <ul class="news-list">
+                                                <li>
+                                                    <a href="">
+                                                       今日21号线全线通车 快收好这份换乘攻略！
+                                                    </a>
+                                                    <time>2019-10-19</time>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                       结合世界级生态岛建设”海上花园“第十届中国花
+                                                    </a>
+                                                    <time>2019-10-19</time>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        #海外安全#【提醒：莫因“小意外”让亲人“大揪发萨法沙发发生飞洒飞洒飞洒飞洒发
+                                                    </a>
+                                                    <time>2019-10-19</time>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        要求全力做好2020年春运工作。</p>
+                                                    </a>
+                                                    <time>2019-10-19</time>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        社保经办服务”一窗通办“
+                                                    </a>
+                                                    <time>2019-10-19</time>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                       浦东新区生态环境局召开2019年年中工作报告
+                                                    </a>
+                                                    <time>2019-10-19</time>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                       上海水务海洋发布：【絮凝、臭氧活性炭、超滤膜发射点发给客服撒娇咖啡碱撒计划
+                                                    </a>
+                                                    <time>2019-10-19</time>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        浦东新区生态环境局召开2019年年中工作报告
+                                                    </a>
+                                                    <time>2019-10-19</time>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layui-col-md12">
+                        <div class="layui-row layui-col-space20">
+                            <div class="layui-col-md8">
+                                <div class="layui-card">
+                                    <div class="layui-card-header header-layout-between">
+                                        <h3>工作状态</h3>
+                                        <a href="">更多<i class="layui-icon layui-icon-next"></i></a>
+                                    </div>
+                                    <div class="layui-card-body" style="padding: 0;">
+                                        <ul class="common-list noBg">
+                                            <li><a href="">局领导动态</a></li>
+                                            <li><a href="">业务处室动态</a></li>
+                                            <li><a href="">运城中心动态</a></li>
+                                            <li><a href="">安监大队动态</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="layui-card">
+                                    <div class="layui-card-header header-layout-between">
+                                        <h3>基层信息</h3>
+                                        <a href="">更多<i class="layui-icon layui-icon-next"></i></a>
+                                    </div>
+                                    <div class="layui-card-body" style="padding: 0;">
+                                        <ul class="common-list noBg">
+                                            <li><a href="">今日21号线全线通车 快收好这份换乘攻略！结合世界级生态岛建设“海上花岛”第十届中国花。</a><time>2019-10-19</time></li>
+                                            <li><a href="">结合世界级生态岛建设“海上花岛”第十届中国花</a><time>2019-10-19</time></li>
+                                            <li><a href="">#海外安全#【提醒：莫因“小意外”让亲人“大揪发萨法沙发发生飞洒飞洒飞洒飞洒发归属感</a><time>2019-10-19</time></li>
+                                            <li><a href="">#海外安全#【提醒：莫因“小意外”让亲人“大揪发萨法大概多少给多少沙发发生飞洒飞洒飞洒飞洒发</a><time>2019-10-19</time></li>
+                                            <li><a href="">结合世界级生态岛建设“海上花岛”第十届大概多少中国花</a><time>2019-10-19</time></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="layui-card">
+                                    <div class="layui-card-header header-layout-between">
+                                        <h3>工作简报</h3>
+                                        <a href="">更多<i class="layui-icon layui-icon-next"></i></a>
+                                    </div>
+                                    <div class="layui-card-body" style="padding: 0;">
+                                        <ul class="common-list noBg">
+                                            <li><a href="">今日21号线全线通车 快收好这份换乘攻略！结合世界级生态岛建设“海上花岛”第十届中国花。</a><time>2019-10-19</time></li>
+                                            <li><a href="">结合世界级生态岛建设“海上花岛”第十届中国花个大傻瓜大傻瓜</a><time>2019-10-19</time></li>
+                                            <li><a href="">#海外安全#【提醒：莫因“小意外”让亲人“大揪发萨法沙发发生飞洒飞洒飞洒飞洒发根深蒂固的四个</a><time>2019-10-19</time></li>
+                                            <li><a href="">#海外安全#【提醒：莫因“小意外”让亲人“大揪发萨法沙发发生飞洒飞洒飞洒飞洒发更多是根深蒂固</a><time>2019-10-19</time></li>
+                                            <li><a href="">结合世界级生态岛建设“海上花岛”第十届中国花身高多少给多少</a><time>2019-10-19</time></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="layui-card">
+                                    <div class="layui-card-header header-layout-between">
+                                        <h3>他山之石</h3>
+                                        <a href="">更多<i class="layui-icon layui-icon-next"></i></a>
+                                    </div>
+                                    <div class="layui-card-body" style="padding: 0;">
+                                        <ul class="common-list noBg">
+                                            <li><a href="">今日21号线全线通车 快收好这份换乘攻略！结合世界级生态岛建设“海上花岛”第十届中国花。</a><time>2019-10-19</time></li>
+                                            <li><a href="">结合世界级生态岛建设“海上花岛”第十届中国花过段时间给i送几个iOS的</a><time>2019-10-19</time></li>
+                                            <li><a href="">#海外安全#【提醒：莫因“小意外”让亲人“大揪发萨法沙发发生飞洒飞洒飞洒飞洒发给多少给多少给多少</a><time>2019-10-19</time></li>
+                                            <li><a href="">#海外安全#【提醒：莫因“小意外”让亲人“大揪发萨法沙发发生飞洒飞洒飞洒飞洒发地方都是广东省</a><time>2019-10-19</time></li>
+                                            <li><a href="">结合世界级生态岛建设“海上花岛”第十届中国花个大傻瓜大傻瓜</a><time>2019-10-19</time></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="layui-card downLoad">
+                                    <div class="layui-card-header header-layout-between">
+                                        <h3>下载区</h3>
+                                        <ul class="switch-list">
+                                            <li class="list_this">政策法规</li>
+                                            <li>常用表格</li>
+                                            <li>工具软件</li>
+                                        </ul>
+                                        <a href="">更多<i class="layui-icon layui-icon-next"></i></a>
+                                    </div>
+                                    <div class="layui-card-body" style="padding: 0;">
+                                        <div class="switch-container">
+                                            <div class="switch-item switch-show">
+                                                <ul class="common-list noBg">
+                                                    <li><a>今日21号线全线通车 </a><span>2019-10-19</span><button class="layui-btn layui-btn-sm  layui-btn-normal"><i class="iconfont icon-download"></i></button></li>
+                                                    <li><a>今日21号线全线通车 </a><span>2019-10-19</span><button class="layui-btn layui-btn-sm  layui-btn-normal"><i class="iconfont icon-download"></i></button></li>
+                                                    <li><a>今日21号线全线通车 </a><span>2019-10-19</span><button class="layui-btn layui-btn-sm  layui-btn-normal"><i class="iconfont icon-download"></i></button></li>
+                                                    <li><a>今日21号线全线通车 </a><span>2019-10-19</span><button class="layui-btn layui-btn-sm  layui-btn-normal"><i class="iconfont icon-download"></i></button></li>
+                                                    <li><a>今日21号线全线通车 </a><span>2019-10-19</span><button class="layui-btn layui-btn-sm  layui-btn-normal"><i class="iconfont icon-download"></i></button></li>
+                                                </ul>
+                                            </div>
+                                            <div class="switch-item">2</div>
+                                            <div class="switch-item">3</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-col-md4">
+                                <div class="layui-card">
+                                    <div class="layui-card-header header-layout-between">
+                                        <h3>最新公告</h3>
+                                        <a href="">更多<i class="layui-icon layui-icon-next"></i></a>
+                                    </div>
+                                    <div class="layui-card-body" style="padding: 0;">
+                                        <ul class="notice-list">
+                                            <li><a href="">今日21号线全线通车 快收好这份换乘攻略！</a></li>
+                                            <li><a href="">结合世界生态岛建设“海上花岛”第十的挂号费是否接受飞机迪斯科</a></li>
+                                            <li><a href="">#海外安全#【】提醒：莫因“小意外”让法艰苦拉萨附近啊看来飞机阿克洛夫</a></li>
+                                            <li><a href="">要求全力做好2020春运工作。</a></li>
+                                            <li><a href="">社保经办服务“一窗通办”。</a></li>
+                                            <li><a href="">浦东新区生态环境局召开2019年年中工看过哈师大空间规划撒旦发顺丰就看啥</a></li>
+                                            <li><a href="">上海水务海洋发布：【絮凝、臭氧活性炭刚开始的关键的时刻关键时刻两国军事对抗】</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="layui-row layui-col-space10">
+                                    <div class="layui-col-md6">
+                                        <img src="images/space1.png" alt="" height="65" width="100%">
+                                    </div>
+                                    <div class="layui-col-md6">
+                                        <img src="images/space2.png" alt="" height="65" width="100%">
+                                    </div>
+                                    <div class="layui-col-md12">
+                                        <img src="images/space3.png" alt="" height="64" width="100%">
+                                    </div>
+                                </div>
+                                <div class="layui-form" style="margin-top: 16px;">
+                                    <div class="layui-form-item">
+                                        <select name="" id="">
+                                    <option value="">请选择进入其它系统</option>
+                                  </select>
+                                    </div>
+                                </div>
+                                <div class="layui-card">
+                                    <div class="layui-card-header header-layout-center">
+                                        党风廉政
+                                    </div>
+                                    <div class="layui-card-body" style="padding: 0;">
+                                        <ul class="common-list">
+                                            <li><a href="">扛稳抓实全面从严治党主体责任</a></li>
+                                            <li><a href="">推动党风廉政建设工作做细做实</a></li>
+                                            <li><a href="">推动党风廉政建设工作做细做实</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="layui-card schedule">
+                                    <div class="layui-card-header header-layout-center">
+                                        日程安排
+                                    </div>
+                                    <div class="layui-card-body" style="padding: 0;">
+                                        <ul class="common-list">
+                                            <li><a href="">局领导动态</a></li>
+                                            <li><a href="">业务处室动态</a></li>
+                                            <li><a href="">运城中心动态</a></li>
+                                            <li><a href="">安监大队动态</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="layui-card">
+                                    <div class="layui-card-header header-layout-between">
+                                        <h3>信息统计</h3>
+                                    </div>
+                                    <div class="layui-card-body" style="padding: 10px;">
+                                        <div class="layui-row layui-col-space10">
+                                            <div class="layui-col-md6">
+                                                <div class="infor">
+                                                    <div class="infor__item infor__item--line">
+                                                        <img src="images/statistics1.png" alt="">
+                                                        <p>文章总数</p>
+                                                    </div>
+                                                    <span class="infor--num">22018</span>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-md6">
+                                                <div class="infor">
+                                                    <div class="infor__item">
+                                                        <img src="images/statistics2.png" alt="">
+                                                        <p>访问次数</p>
+                                                    </div>
+                                                    <span class="infor--num">7173893</span>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-md4">
+                                                <img src="images/QR-code1.png" alt="">
+                                                <p class="QR-text">应急管理指挥app</p>
+                                            </div>
+                                            <div class="layui-col-md4">
+                                                <img src="images/QR-code2.png" alt="">
+                                                <p class="QR-text">浦东e家园</p>
+                                            </div>
+                                            <div class="layui-col-md4">
+                                                <img src="images/QR-code3.png" alt="">
+                                                <p class="QR-text">xxx</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="main">
+                <iframe src="views/home-page.html" frameborder="0" class="layadmin-iframe"></iframe>
+            </div> -->
+            <div class="footer">
+                <div class="footer__form layui-form">
+                    <div class="footer-layout">
+                        <div class="input-container">
+                            <div class="layui-input-inline">
+                                <select name="">
+                    <option value="">新区政府部门</option>
+                  </select>
+                            </div>
+                            <div class="layui-input-inline">
+                                <select name="">
+                    <option value="">其他应急管理局</option>
+                  </select>
+                            </div>
+                            <div class="layui-input-inline">
+                                <select name="">
+                    <option value="">开发（管委会）网站</option>
+                  </select>
+                            </div>
+                            <div class="layui-input-inline">
+                                <select name="">
+                    <option value="">新区重要机构</option>
+                  </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_infor">
+                    <div class="footer-layout">
+                        <address>
+                    <p>网站地图 | 上海市浦东新区人民政府主办</p>
+                    <p>总机：021-58788388 | 网站标识码：3101150060</p>
+                    <p>区总政府地址：上海市浦东新区世纪大道2001号</p>
+                    <p><img src="images/smallLogo.png" alt="">沪公网安备 31011502006420号 | 沪ICP备05031394号</p>
+                  </address>
+                        <img src="images/sponsorA.png" alt="" class="sponsorA">
+                        <img src="images/sponsorB.png" alt="" class="sponsorB">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="javascript/jquery.min.js"></script>
+    <script src="layui/layui.js"></script>
+    <script>
+        $(function() {
+            $(".switch-list li").each(function(index) {
+                $(this).click(function() {
+                    $(".switch-list li").removeClass("list_this");
+                    $(this).addClass("list_this");
+                    $(".switch-item").eq(index).addClass("switch-show").siblings().removeClass("switch-show");
+                })
+            })
+
+        })
+        layui.use(['element', 'form', 'carousel'], function() {
+            var element = layui.element;
+            var form = layui.form;
+            var carousel = layui.carousel;
+            carousel.render({
+                elem: '#carousel',
+                width: '100%',
+                height: '60',
+                indicator: 'none',
+                arrow: 'hover',
+                autoplay: true
+            });
+            carousel.render({
+                elem: '#carouselNews',
+                width: '100%',
+                height: '316',
+                arrow: 'none',
+                autoplay: true
+            });
+        });
+        // layui.use(['element', 'form'], function() {
+        //     var element = layui.element;
+        //     var form = layui.form;
+        //     const iframe = document.querySelector(".layadmin-iframe")
+        //     element.on('nav(navBar)', function(elem) {
+        //         let href = this.dataset.href
+        //         iframe.setAttribute("src", href)
+        //     });
+        // });
+    </script>
+
+</body>
+
+</html>
